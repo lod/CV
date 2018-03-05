@@ -1,0 +1,59 @@
+<html moznomarginboxes mozdisallowselectionprint>
+	<head>
+<style>
+@page { margin: 0; }
+@media print {
+}
+
+.timeline .years {
+	flex-direction: row;
+	display: flex;
+	margin-top: 2em;
+}
+.timeline .year {
+	display: block;
+	flex-grow: 1;
+	position: relative;
+	text-align: center;
+}
+.timeline .year::before {
+	display: block;
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: -1.5em;
+	width: 1px;
+	height: 0.8em;
+	background: #222;
+}
+.timeline .period {
+	background: #999;
+	left: 42%;
+	position: absolute;
+	width: 24%;
+	text-align: center;
+	padding: 0.2em 0;
+}
+.timeline .period a {
+	text-decoration: none;
+	color: #000;
+}
+</style>
+</head>
+<body class="timeline">
+	<div class="years">
+		<div class="year">2018</div>
+		<div class="year">2017</div>
+		<div class="year">2016</div>
+		<div class="year">2015</div>
+		<div class="year">2014</div>
+		<div class="year">2013</div>
+		<div class="year">2012</div>
+		<div class="year">2011</div>
+		<div class="year">2010</div>
+	</div>
+	<div>
+		<div class="period" timeline-end="2014-10-01" timeline-start="2012-07-01"><a href="#m5-network-security">M5 Network Security</a></div>
+	</div>
+</body>
+</html>
