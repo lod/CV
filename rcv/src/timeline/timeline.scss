@@ -2,36 +2,60 @@
 @media print {
 }
 
-.timeline .years {
-	flex-direction: row;
-	display: flex;
-	margin-top: 2em;
-}
-.timeline .year {
-	display: block;
-	flex-grow: 1;
-	position: relative;
-	text-align: center;
-}
-.timeline .year::before {
-	display: block;
-	content: "";
-	position: absolute;
-	left: 50%;
-	top: -1.5em;
-	width: 1px;
-	height: 0.8em;
-	background: #222;
-}
-.timeline .period {
-	background: #999;
-	left: 42%;
-	position: absolute;
-	width: 24%;
-	text-align: center;
-	padding: 0.2em 0;
-}
-.timeline .period a {
-	text-decoration: none;
-	color: #000;
+.timeline {
+	.years {
+		flex-direction: row;
+		display: flex;
+		margin-top: 2em;
+		margin-left: 100px;
+	}
+	.content {
+		position: relative;
+		margin-left: 100px;
+
+		.heading {
+			position: absolute;
+			left: -100px;
+			margin: 0;
+		}
+	}
+
+	.content > div {
+		height: 2.5em;
+	}
+
+	.year {
+		display: block;
+		flex-grow: 1;
+		position: relative;
+		text-align: center;
+	}
+	.year::before {
+		display: block;
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: -1.5em;
+		width: 1px;
+		height: 0.8em;
+		background: #222;
+	}
+	.period {
+		display: block;
+		background: #999;
+		position: absolute;
+		text-align: center;
+		padding: 0.2em 0;
+		box-shadow: 5px 5px 10px rgba(0,0,0,0.7);
+		text-decoration: none;
+		color: #000;
+	}
+	.event {
+		border-radius: 50%;
+		width: 1em;
+		height: 1em;
+		position: absolute;
+		background: #F04050;
+	}
+
 }
