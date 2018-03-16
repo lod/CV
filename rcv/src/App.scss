@@ -1,0 +1,56 @@
+/* @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300'); */
+/*@import url('https://fonts.googleapis.com/css?family=Cardo|Pathway+Gothic+One');
+*/
+@import url(https://fonts.googleapis.com/css?family=Cardo|Lato:700,400);
+ @import "./variables.scss";
+
+$font-heading: 'Cardo', serif;
+
+
+body {
+	/*
+	font-family: 'Pathway Gothic One', sans-serif;
+	font-size: 20px;
+	letter-spacing: 0.01em;
+	*/
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+}
+
+
+.titleblock {
+	& {
+		display: flex;
+	}
+
+	.name {
+		font-family: $font-heading;
+		font-size: 48px;
+		letter-spacing: 0.05em;
+	}
+	.role {
+		font-family: $font-heading;
+		font-size: 32px;
+		letter-spacing: 0.02em;
+	}
+	
+	dl {
+		margin-left: auto; /* right align flex */
+	}
+
+	dt {
+		float: left;
+		clear: left;
+		width: 100px;
+		text-align: right;
+		font-weight: bold;
+		color: green;
+	}
+	/* dt::after { content: ":"; } */
+	dd {
+		margin: 0 0 0 110px;
+		padding: 0 0 0.5em 0;
+	}
+}
+
+

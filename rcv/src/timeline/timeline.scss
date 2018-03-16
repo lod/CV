@@ -42,20 +42,22 @@
 	}
 	.period {
 		display: block;
-		background: #999;
+		background: #c8d0ea;
 		position: absolute;
 		text-align: center;
 		padding: 0.2em 0;
 		box-shadow: 5px 5px 10px rgba(0,0,0,0.7);
 		text-decoration: none;
-		color: #000;
+		color: rgba(0,0,0,0.8);
 	}
 	.event {
 		border-radius: 50%;
 		width: 1em;
 		height: 1em;
 		position: absolute;
-		background: #F04050;
+		background: #7E24D1;
+		border: 1px solid rgba(0,0,0,0.3);
+		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
 	}
 
 }

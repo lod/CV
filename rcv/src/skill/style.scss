@@ -1,0 +1,29 @@
+.skill {
+
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+
+	.spacer {
+		flex-grow: 1;
+	}
+
+	.star {
+		border-radius: 50%;
+		width: 0.8em;
+		height: 0.8em;
+		background-color: #63cdff;
+		margin: auto 0.1em;
+	}
+
+}
+
+.skills {
+	display: flex;
+	flex-direction: row;
+
+	.group {
+		display: block;
+		flex-grow: 1;
+	}
+}

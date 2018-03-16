@@ -3,3 +3,13 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+body {
+	/* Don't use black - going with a blue tint */
+	color: #236;
+}
+
+a:link    { color: #3556bc }  /* unvisited links */
+a:visited { color: #3556bc }  /* visited links   */
+a:hover   { color: #3556bc }  /* user hovers     */
+a:active  { color: #3556bc }  /* active links    */
