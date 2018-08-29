@@ -2,7 +2,7 @@
 
     display: flex;
     flex-direction: row;
-    width: 200px;
+    width: 300px;
 
 	.spacer {
 		flex-grow: 1;
@@ -21,9 +21,11 @@
 .skills {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 
 	.group {
 		display: block;
 		flex-grow: 1;
+		margin: 10px;
 	}
 }

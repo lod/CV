@@ -1,0 +1,25 @@
+.speaking {
+		width: 300px;
+		text-align: left;
+		margin-left: 30px;
+
+		.company {
+			font-weight: 800;
+		}
+
+		.period {
+			display: none;
+		}
+
+		.responsibilities {
+			& {
+				padding-left: 0;
+			}
+			li {
+				list-style: none;
+				border-left: thick solid #00AA00;
+				padding-left: 10px;
+			}
+		}
+	}
+

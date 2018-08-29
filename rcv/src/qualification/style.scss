@@ -1,6 +1,14 @@
+.qualifications {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
 .qualification {
 	& {
 		margin: 0.8em 0;
+		padding: 1em;
+		width: 35%;
 	}
 
 	.title {
