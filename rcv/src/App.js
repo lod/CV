@@ -9,7 +9,6 @@ import './App.scss';
 // Employment and volunteering format inconsistent
 // story vs dot points
 // Make all story
-// Fix page margins
 // Fix whitespace alignment
 // Bulk up content a little, what I did/achieved
 //
@@ -24,7 +23,12 @@ class App extends Component {
 						<div className="name">David Tulloh</div>
 						<div className="role">Software Developer, Electronics Engineer, Inventor</div>
 			<div className="summary">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id condimentum velit, eget interdum lectus. Donec quam sapien, efficitur blandit tristique eu, ultrices a mauris. Nullam bibendum justo lectus, vitae bibendum justo consectetur ut. Aenean euismod massa sed lorem eleifend dignissim. Etiam at blandit tortor, vel hendrerit dolor. Aenean venenatis tortor ac finibus tempus. Etiam dignissim mauris urna. Curabitur mattis bibendum nulla ac placerat. 
+				<p>
+					David Tulloh is an experienced engineer with a broad range of skills having delivered electronics projects, software projects as well as working a technical facilitator for multiple fields.
+				</p>
+				<p>
+					While pursuing private projects David is looking for short term contract work to provide social contact, technical growth and financing.
+				</p>
 			</div>
 					</div>
 					<dl>
@@ -78,10 +82,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id condimentum veli
 					]}
 					href="http://www.northropgrumman.com/BusinessVentures/M5NetworkSecurity/About/Pages/default.aspx"
 				>
+			<p>
 				M5 Network Security, a branch of Northrop Grumman's Information Systems Sector, designs and manufactures
 				devices to facilitate secure communications across insecure networks. The work included designing hardware,
 				firmware, operating system drivers, client software and server infrastructure. All certified to military and civilian
 				standards.
+			</p>
+			<p>
+				My primary task was to develop the firmware for the next generation of product with six different microprocessors performing multiple functions. Architectures used were the Cypress PSoC 5LP and the Xilinx Microblaze. Duties also included reviewing and documenting the electronics circuit design, testing boards, diagnosing faults, designing modifications and certifying the system. I also assisted the work of the software development team and support team.
+			</p>
 
 				</Job>
 
@@ -98,9 +107,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id condimentum veli
 					]}
 					href="http://www.antarctica.gov.au/science"
 				>
+			<p>
 					The Australian Antarctic Division maintains several stations on Antarctica to support scientific research. As the
-				electronics support engineer at Davis Station, I was responsible for providing technical assistance to short and long
-				term biological studies, glaciology research and a variety of atmospheric studies.
+				electronics support engineer I spent three seasons living at Davis Station. Living and working closely with a diverse group of people significantly improved my social and people skills. In addition to my technical duties I led field teams, visits to foreign stations and fulfilled station roles.
+			</p>
+			<p>
+			I was responsible for providing technical assistance to over twenty different experiments, primarily atmospheric instruments but also including biology, geology and glaciology experiments. My duties included daily monitoring, routine maintenance, annual maintenance programs, emergency and scheduled repairs, process improvement and other tasks as required.
+			</p>
+			
 				</Job>
 
 				<Job
@@ -116,13 +130,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id condimentum veli
 						"Contribute to analysis reports",
 					]}
 				>
-					<ul>
-						<li>Discovered a flaw in ADS-B altimitery data.</li>
-						<li>Contributed to reports on Sydney Airport runway approaches and lower level surveillance in Western Australia.</li>
-						<li>Co-authored a paper for the International Separation and Airspace Safety Panel.</li>
-						<li>Extended and modified existing VBA and Matlab applications to meet changing requirements.</li>
-						<li>Developed a range of Perl modules to abstract the vulgarities of the data from processing tasks.</li>
-					</ul>
+					<p>
+			The Airservices Australia safety team is responsible for ensuring the safety of Australian flying experience. As part of the qualitive and quantitive analysis teams I supported routine reporting, targetted studies and expanded the teams capability.
+					</p>
+			<p>
+			I worked with a team from USA's Federal Aviation Administration to perform the first statistical analysis of altimeter errors using ADS-B data. In the process I identified and compensated for errors in the ADS-B reporting. I also contributed to multiple internal agency reports and a paper submitted to the International Separation and Airspace Safety Panel.
+			</p>
+			<p>
+			While my primary role was to prepare data for analysis I also liased with multiple other internal and external teams to collect data. In doing so I expanded the breadth of available data, allowing new analysis, and worked towards improved access to data, reducing workload for my collegues and increasing the frequency of reporting.
+			</p>
 				</Job>
 
 				<div className="pagebreak"></div>

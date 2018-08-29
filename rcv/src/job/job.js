@@ -28,9 +28,7 @@ export default class Job extends Component {
 					</p>
 				</div>
 				<div className="description">
-					<p>
 					{ this.props.children }
-					</p>
 				</div>
 			</div>
 		);
