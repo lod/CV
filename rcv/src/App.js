@@ -6,13 +6,6 @@ import Speaking from './speaking';
 import Qualification from './qualification';
 import './App.scss';
 
-// Employment and volunteering format inconsistent
-// story vs dot points
-// Make all story
-// Fix whitespace alignment
-// Bulk up content a little, what I did/achieved
-//
-
 class App extends Component {
 	render() {
 		const now = new Date().toISOString();
@@ -36,7 +29,7 @@ class App extends Component {
 						<dt>webpage</dt><dd>https://david.tulloh.id.au/</dd>
 						<dt>phone</dt><dd>+61 439 069 336</dd>
 						<dt>github</dt><dd>https://github.com/lod</dd>
-						<dt>online cv</dt><dd>https://david.tulloh.id.au/cv.pdf</dd>
+						<dt>online cv</dt><dd>https://david.tulloh.id.au/cv/</dd>
 					</dl>
 				</div>
 				<Timeline startYear={2010} endYear={2018}>
@@ -60,11 +53,14 @@ class App extends Component {
 					"Software development",
 					"Marketing",
 				]}
+				href="https://youtu.be/R3DADx5z-XY"
 			>
 			<p>
-			Enabled by my partner's move interstate and inspired by a terrible microwave purchase I decided to start a new business developing a new microwave.  After the microwave project failed due to difficulties finding a manufacturing partner I designed a PIR sensor replacement that didn't require movement and an alarm system for hotel travellers.
+			Enabled by my partner’s move interstate for work, I established myself working on independent projects to meet gaps in the market I personally experienced.  The major project I have worked on is a heat sensor based microwave (to allow heating of food based on internal temperature rather than power and time).  I produced a hardware prototype and presented on the software at Linux Conference Australia before concluding that, while technically sound, it was not commercially viable for me to pursue.  Other projects I have worked on include developing a PIR movement sensor replacement that used thermal vision to avoid the movement requirement, an alarm system for travellers staying in hotel rooms, and a flexible LED sign to allow scrolling messages at football matches. All products developed to an initial prototype stage. 
 			</p>
+
 			<p>
+			This experience has built my liaison skills working directly with suppliers and manufacturers both in Australia and overseas.  It has also been invaluable in building my business, marketing and finance skills.
 			</p>
 
 				</Job>
@@ -89,7 +85,7 @@ class App extends Component {
 				standards.
 			</p>
 			<p>
-				My primary task was to develop the firmware for the next generation of product with six different microprocessors performing multiple functions. Architectures used were the Cypress PSoC 5LP and the Xilinx Microblaze. Duties also included reviewing and documenting the electronics circuit design, testing boards, diagnosing faults, designing modifications and certifying the system. I also assisted the work of the software development team and support team.
+				My primary task was to develop the firmware for the next generation of product with six different microprocessors performing multiple functions. Architectures used were the Cypress PSoC 5LP and the Xilinx Microblaze. Duties also included reviewing and documenting the electronics circuit design, testing boards, diagnosing faults, designing modifications and certifying the system. I also assisted the work of the software development and support teams.
 			</p>
 
 				</Job>
@@ -131,13 +127,13 @@ class App extends Component {
 					]}
 				>
 					<p>
-			The Airservices Australia safety team is responsible for ensuring the safety of Australian flying experience. As part of the qualitive and quantitive analysis teams I supported routine reporting, targetted studies and expanded the teams capability.
+			The Airservices Australia safety team is responsible for ensuring the safety of Australian flying experience. As part of the qualitative and quantitative analysis teams I supported routine reporting, targeted studies and expanded the teams capability.
 					</p>
 			<p>
 			I worked with a team from USA's Federal Aviation Administration to perform the first statistical analysis of altimeter errors using ADS-B data. In the process I identified and compensated for errors in the ADS-B reporting. I also contributed to multiple internal agency reports and a paper submitted to the International Separation and Airspace Safety Panel.
 			</p>
 			<p>
-			While my primary role was to prepare data for analysis I also liased with multiple other internal and external teams to collect data. In doing so I expanded the breadth of available data, allowing new analysis, and worked towards improved access to data, reducing workload for my collegues and increasing the frequency of reporting.
+			While my primary role was to prepare data for analysis I also liaised with multiple other internal and external teams to collect data. In doing so I expanded the breadth of available data, allowing new analysis, and worked towards improved access to data, reducing workload for my colleagues and increasing the frequency of reporting.
 			</p>
 				</Job>
 
@@ -207,14 +203,14 @@ class App extends Component {
 					]}
 				>
 			<p>
-					Member of the VICSES, a volunteer emergency response service responsible for storm, floor, rescue and assisting other agencies in the Bellarine peninsula.
+					I am a senior member of the VICSES, a volunteer emergency response service responsible for storm, floor, rescue and assisting other emergency agencies on the Bellarine peninsula.
 			</p>
-			<ul>
-			<li>Attending emergency callouts, performing a variety of tasks.</li>
-			<li>Certified training in a wide range of skills including first aid, chainsaw operation, road crash rescue and operational leadership.</li>
-			<li>Performed as divisional commander, leading over eighty members at a time from around the state</li>
-			<li>As Deputy Controller of Operations, manage a team which monitors, maintains and expands the unit's operational capability</li>
-			</ul>
+			<p>
+				As a volunteer I have attended numerous callouts assisting members of the public when they are having bad days. These jobs range from clearing fallen trees, reassuring people of their safety, performing road crash rescues and informing people that we will not be providing assistance. I have also worked with police, fire and ambulance personnel to support their work.
+			</p>
+			<p>
+			As an operational leader I have led crews in tackling complex tasks, managed disputes between members, and ensured physical and mental well being of volunteers. For larger events I have performed the role of divisional commander, liaising with incident control staff, bringing in other agencies and coordinating multiple day responses to events with hundreds of calls for assistance, leading over eighty responding personnel.
+			</p>
 				</Job>
 
 				<Job
@@ -229,13 +225,10 @@ class App extends Component {
 						"Extend skills of advanced students",
 					]}
 				>
-				<p>The CSIRO STEM Professionals in Schools program matches school teachers with STEM professionals to enhance STEM learning in classrooms.</p>
-				<ul>
-			<li>Attend the classroom weekly for consistency of learning.</li>
-			<li>Extend students breadth and depth of knowledge.</li>
-			<li>Support the teacher with technical expertise.</li>
-			<li>Provide private tutoring.</li>
-			</ul>
+				<p>The CSIRO STEM Professionals in Schools program matches school teachers with STEM professionals to enhance science and technical learning in classrooms.</p>
+			<p>
+			For several years I have attended the Bellarine Secondary College weekly to assist the IT teacher with senior classes. Working predominantly with year twelve students I assist with specific technical problems, help guide their learning and provide real world grounding for what they learn. Having an extra pair of hands in the classroom allows for extra one on one guidance for students who are struggling or students who are open to extension activities to help them grow.
+			</p>
 
 				</Job>
 					
@@ -275,24 +268,23 @@ class App extends Component {
 					<div className="group">
 						<h2>Databases</h2>
 							<Skill num="4">SQL design</Skill>
-							<Skill num="3">KeyStore</Skill>
+							<Skill num="3">Key Store</Skill>
 							<Skill num="3">PgSQL scripting</Skill>
 							<Skill num="3">Version control</Skill>
 					</div>
 					<div className="group">
 						<h2>Networking</h2>
-						<Skill num="3">Full OSI 1-7 layer experience</Skill>
+						<Skill num="4">Full OSI 1-7 layer experience</Skill>
 						<Skill num="3">Military grade security</Skill>
-						<Skill num="3">Encryption</Skill>
+						<Skill num="3">Encryption techniques</Skill>
 					</div>
 					<div className="group">
 						<h2>General skills</h2>
+						<Skill num="5">Explaining technical concepts</Skill>
+						<Skill num="4">Teaching</Skill>
 						<Skill num="3">Marketing</Skill>
 						<Skill num="2">Management</Skill>
-
 					</div>
-
-
 				</div>
 
 			<div className="qualifications">
@@ -320,7 +312,7 @@ class App extends Component {
 			/>
 
 			<Qualification
-				title="Australian Security clearance NV1"
+				title="Australian Security Clearance NV1"
 				details="currently inactive"
 			/>
 

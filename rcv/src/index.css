@@ -1,15 +1,10 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+	font-family: sans-serif;
+	color: #236; /* Don't use black - going with a blue tint */
 }
 
-body {
-	/* Don't use black - going with a blue tint */
-	color: #236;
-}
-
-a:link    { color: #3556bc }  /* unvisited links */
-a:visited { color: #3556bc }  /* visited links   */
-a:hover   { color: #3556bc }  /* user hovers     */
-a:active  { color: #3556bc }  /* active links    */
+a:link    { color: #3556bc }
+a:visited { color: #3556bc }
+a:hover   { color: #3556bc }
+a:focus   { color: #3556bc }
+a:active  { color: #3556bc }

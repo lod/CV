@@ -1,8 +1,12 @@
 .timeline {
+	& {
+		margin-bottom: 2rem;
+	}
+
 	.years {
 		flex-direction: row;
 		display: flex;
-		margin-top: 2em;
+		padding-top: 2em; /* Draw the year dashes here */
 		margin-left: 100px;
 	}
 	.content {
@@ -13,6 +17,7 @@
 			position: absolute;
 			left: -100px;
 			margin: 0;
+			font-weight: 800;
 		}
 	}
 
