@@ -68,6 +68,13 @@ Event.contextTypes = {
 };
 
 class Timeline extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			mql: window.matchMedia("(max-device-width: 767px)"),
+		}
+	}
+
 	getChildContext() {
 		return {
 			startYear: Number(this.props.startYear),
@@ -80,6 +87,14 @@ class Timeline extends Component {
 		const end = Number(this.props.endYear);
 		const years = Array.from(new Array(end-start+1),(v,i)=>i+start).reverse();
 		// Marker is at the start of the year, covers six months either side
+		
+		console.log("TL RENDER", this.state.mql, this.state.mql.matches);
+
+		if (this.state.mql.matches) {
+			// Mobile mode
+			return "";
+		}
+
 		return (
 			<div className="timeline">
 				<div className="years">
