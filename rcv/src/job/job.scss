@@ -5,6 +5,10 @@
 		margin-bottom: 3rem;
 	}
 
+	@media screen and (max-width: 767px) {
+		flex-direction: column;
+	}
+
 	.metadata {
 		width: 300px;
 		@media print {
@@ -13,6 +17,12 @@
 		}
 		text-align: left;
 		margin-left: 30px;
+
+		@media screen and (max-width: 767px) {
+			margin-left: 0;
+			padding-bottom: 1.5em;
+		}
+
 
 		.company {
 			font-weight: 800;

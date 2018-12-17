@@ -41,22 +41,24 @@ h2 {
 	div {
 		flex-grow: 1;
 	}
-}
 
-.skills {
-	margin-left: 20px; /* +10 inside the flex box */
+	@media screen and (max-width: 767px) {
+		flex-direction: column;
+	}
 }
-
-.qualifications {
-	margin-left: 30px;
-	margin-top: 4rem;
-}
-
 
 .titleblock {
 	& {
 		display: flex;
 		margin-bottom: 1rem;
+	}
+
+	@media screen and (max-width: 767px) {
+		flex-direction: column;
+	}
+
+	> * {
+		padding-bottom: 2em;
 	}
 
 	.name {
