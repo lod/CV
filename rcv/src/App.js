@@ -36,9 +36,9 @@ class App extends Component {
 					<div>
 						<p className="heading">Employment</p>
 						<Period start='2015-01-01' end={now} href="#inventing">Inventoring</Period>
-						<Period start='2012-07-01' end='2014-10-01' href="#m5-network-security">M5 Network Security</Period>
-						<Period start='2010-08-14' end='2012-04-01' href="#aad">Australian Antarctic Division</Period>
-						<Period start='2009-11-01' end='2010-08-01' href="#airservices">Airservices Australia</Period>
+						<Period start='2012-07-01' end='2014-10-01' href="#m5-network-security" short="NG">Northrop</Period>
+						<Period start='2010-08-14' end='2012-04-01' href="#aad" short="AAD">AAD</Period>
+						<Period start='2009-11-01' end='2010-08-01' href="#airservices" short="AA">AA</Period>
 					</div>
 				</Timeline>
 
@@ -153,7 +153,9 @@ class App extends Component {
 					</div>
 					<div>
 						<Period start='2015-01-01' end={now}>CSIRO SIS</Period>
-						<Period start='2012-09-01' end='2013-02-05'>LCA</Period>
+						{/* Extended the period to get the element big enough
+						    real dates, start='2012-09-01' end='2013-02-05' */}
+						<Period start='2012-08-01' end='2013-02-05'>LCA</Period>
 					</div>
 				</Timeline>
 
@@ -234,6 +236,7 @@ class App extends Component {
 					
 					
 
+			<div className="pagebreak"></div>
 
 			<h1>Skills</h1>
 

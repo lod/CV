@@ -10,7 +10,7 @@
 	}
 
 	.metadata {
-		width: 300px;
+		width: 350px;
 		@media print {
 			max-width: 70mm;
 			padding-right: 10mm;
@@ -21,6 +21,11 @@
 		@media screen and (max-width: 767px) {
 			margin-left: 0;
 			padding-bottom: 1.5em;
+		}
+
+		@media print {
+			/* Tighter horizontal space, line up left edge */
+			margin-left: 0;
 		}
 
 
@@ -45,7 +50,9 @@
 		}
 
 		.link {
-			overflow-wrap: break-word;
+			// overflow-wrap: break-word;
+			overflow-wrap: anywhere;
+			word-break: break-all;
 		}
 	}
 

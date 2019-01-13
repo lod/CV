@@ -11,6 +11,11 @@
 	}
 }
 
+.App {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
 
 body {
 	/*
@@ -109,6 +114,6 @@ h2 {
 		page-break-before: always;
 	}
 	@media not print {
-		height: 100px;
+		margin-top: 100px;
 	}
 }

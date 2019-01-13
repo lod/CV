@@ -3,6 +3,16 @@ import PropTypes from 'prop-types';
 import './timeline.scss';
 
 export class Period extends Component {
+	// See https://stackoverflow.com/a/21015393/2438650
+	getTextWidth(text, font) {
+		// re-use canvas object for better performance
+		var canvas = this.canvas || (this.canvas = document.createElement("canvas"));
+		var context = canvas.getContext("2d");
+		context.font = font;
+		var metrics = context.measureText(text);
+		return metrics.width;
+	}
+
 	render() {
 		// Position period vs timeline, using left and width
 		// Percentage based values make us impervious to resizing
@@ -17,6 +27,11 @@ export class Period extends Component {
 
 		const left_p = (tend_ms-pend_ms)/twidth_ms*100;
 		const width_p = (pend_ms-pstart_ms)/twidth_ms*100;
+
+		// Determine if the content is going to fit in the box
+		// if (this.getTextWidth(this.props.children, "16px Lato") > 
+		// "Lato", sans-serif
+
 
 		console.log({year_ms, tend_ms, twidth_ms, pstart_ms, pend_ms, left_p, width_p});
 
