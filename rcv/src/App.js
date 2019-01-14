@@ -12,31 +12,34 @@ class App extends Component {
 		return (
 			<div className="App">
 				<div className="titleblock">
-					<div>
-						<div className="name">David Tulloh</div>
-						<div className="role">Software Developer, Electronics Engineer, Inventor</div>
-			<div className="summary">
-				<p>
-					David Tulloh is an experienced engineer with a broad range of skills having delivered electronics projects, software projects as well as working a technical facilitator for multiple fields.
-				</p>
-				<p>
-				David has decided to end the seachange period of his life and return to city dwelling, commuting in traffic and in person socialising. He is looking for a meaningful job to engage him and utilise his breath of skills.
-				</p>
-			</div>
+					<div className="row">
+						<div>
+							<div className="name">David Tulloh</div>
+							<div className="role">Software Developer, Electronics Engineer, Inventor</div>
+						</div>
+						<dl>
+							<dt>email</dt><dd>david@tulloh.id.au</dd>
+							<dt>webpage</dt><dd>https://david.tulloh.id.au/</dd>
+							<dt>phone</dt><dd>+61 439 069 336</dd>
+							<dt>github</dt><dd>https://github.com/lod</dd>
+							<div className="printonly">
+								<dt>online cv</dt><dd>https://david.tulloh.id.au/cv/</dd>
+							</div>
+							<div className="screenonly">
+								<dt>printable cv</dt><dd><a href="https://david.tulloh.id.au/cv/david_tulloh.pdf">david_tulloh.pdf</a></dd>
+							</div>
+						</dl>
 					</div>
-					<dl>
-						<dt>email</dt><dd>david@tulloh.id.au</dd>
-						<dt>webpage</dt><dd>https://david.tulloh.id.au/</dd>
-						<dt>phone</dt><dd>+61 439 069 336</dd>
-						<dt>github</dt><dd>https://github.com/lod</dd>
-						<div className="printonly">
-							<dt>online cv</dt><dd>https://david.tulloh.id.au/cv/</dd>
-						</div>
-						<div className="screenonly">
-							<dt>printable cv</dt><dd><a href="https://david.tulloh.id.au/cv/david_tulloh.pdf">david_tulloh.pdf</a></dd>
-						</div>
-					</dl>
+					<div className="summary">
+						<p>
+							David Tulloh is an experienced engineer with a broad range of skills having delivered electronics projects, software projects as well as working a technical facilitator for multiple fields.
+						</p>
+						<p>
+						David has decided to end the seachange period of his life and return to city dwelling, commuting in traffic and in person socialising. He is looking for a meaningful job to engage him and utilise his breath of skills.
+						</p>
+					</div>
 				</div>
+
 				<Timeline startYear={2010} endYear={2018}>
 					<div>
 						<p className="heading">Employment</p>
@@ -61,7 +64,7 @@ class App extends Component {
 				href="https://youtu.be/R3DADx5z-XY"
 			>
 			<p>
-			Enabled by my partner’s move interstate for work, I established myself working on independent projects to meet gaps in the market I personally experienced.  The major project I have worked on is a heat sensor based microwave (to allow heating of food based on internal temperature rather than power and time).  I produced a hardware prototype and presented on the software at Linux Conference Australia before concluding that, while technically sound, it was not commercially viable for me to pursue.  Other projects I have worked on include developing a PIR movement sensor replacement that used thermal vision to avoid the movement requirement, an alarm system for travellers staying in hotel rooms, and a flexible LED sign to allow scrolling messages at football matches. All products developed to an initial prototype stage. 
+			Enabled by my partner’s move interstate for work, I established myself working on independent projects to meet gaps I observed in the market.  The major project I have worked on is a heat sensor based microwave (to allow heating of food based on internal temperature rather than power and time).  I produced a hardware prototype and presented on the software at Linux Conference Australia before concluding that, while technically sound, it was not commercially viable for me to pursue.  Other projects I have worked on include developing a PIR movement sensor replacement that used thermal vision to avoid the movement requirement, an alarm system for travellers staying in hotel rooms, and a flexible LED sign to allow scrolling messages at football matches. All products developed to an initial prototype stage.
 			</p>
 
 			<p>
@@ -122,7 +125,7 @@ class App extends Component {
 					id="airservices"
 					company="Airservices Australia"
 					title="Research Programmer"
-					start='2009-11-01' end='2010-08-01' 
+					start='2009-11-01' end='2010-08-01'
 					href="http://www.airservicesaustralia.com/"
 					responsibilities={[
 						"Prepare data for processing",
@@ -141,6 +144,39 @@ class App extends Component {
 			While my primary role was to prepare data for analysis I also liaised with multiple other internal and external teams to collect data. In doing so I expanded the breadth of available data, allowing new analysis, and worked towards improved access to data, reducing workload for my colleagues and increasing the frequency of reporting.
 			</p>
 				</Job>
+
+			<Job
+				id="signav"
+				company="SigNav"
+				title="Embedded Systems Engineer"
+				start='2006-07-01' end='2009-07-01'
+				href="https://www.u-blox.com/en/press-release/u-blox-acquires-signav-ip"
+				responsibilities={[
+					"Manufacturing testing",
+					"Development testing",
+					"Firmware development",
+				]}
+			>
+				<p>
+					SigNav was a venture capital based startup developing GPS modules targeting weak signal timing markets such as femtocells. As a member of the hardware team I developed non-core firmware such as the programming firmware, functional tester, and supporting microprocessors. I automated several development tests allowing for significant improvements to the RF chain. The manufacturing tests I designed allowed the manufacture of over 35,000 devices with under 1% rejected by the client. I also contributed functionality to the core firmware and coordinated staff performing in testing roles.
+				</p>
+			</Job>
+
+			<Job
+				id="cmhr"
+				company="Centre for Mental Health Research"
+				title="Lead Developer"
+				start="2005-03-01" end="2006-03-01"
+				href="http://cmhr.anu.edu.au/"
+				responsibilities={[
+					"Developed web framework for online cognitive behaviour therapy",
+					"Supported other online projects",
+				]}
+			>
+				<p>
+					The Centre for Mental Health Research is a grant funded research group embedded in the Australian National University. The centre specialises in online based research and treatment programs, I developed a product called E-Couch which was designed to provide online cognitive behaviour therapy, produce data for research programs and allow easy repurposing for new languages and specialised research programs.
+				</p>
+			</Job>
 
 				<div className="pagebreak"></div>
 
@@ -210,16 +246,14 @@ class App extends Component {
 					]}
 				>
 			<p>
-					I am a senior member of the VICSES, a volunteer emergency response service responsible for storm, floor, rescue and assisting other emergency agencies on the Bellarine peninsula.
+					I am a senior member of the VICSES, a volunteer emergency response service responsible for storm, flood, rescue and assisting other emergency agencies on the Bellarine peninsula.
 			</p>
 			<p>
-				As a volunteer I have attended numerous callouts assisting members of the public when they are having bad days. These jobs range from clearing fallen trees, reassuring people of their safety, performing road crash rescues and informing people that we will not be providing assistance. I have also worked with police, fire and ambulance personnel to support their work.
+			As Deputy Controller of Operations of the Bellarine unit I developed my leadership skills.  Managing a team of six volunteers we ensured our operational readiness through ongoing maintenance, scheduling and planning. Working with highly skilled members I enabled their work by liaising with external stakeholders, acquiring the equipment and coordinating significant work. As a member of the unit management team I also intervened on personnel issues, particularly those arising during operations.
 			</p>
 			<p>
-			As an operational leader I have led crews in tackling complex tasks, managed disputes between members, and ensured physical and mental well being of volunteers. For larger events I have performed the role of divisional commander, liaising with incident control staff, bringing in other agencies and coordinating multiple day responses to events with hundreds of calls for assistance, leading over eighty responding personnel.
+			I have also performed the role of divisional commander setting the strategy for the response to significant events such as multiday operations or large events with 550 calls for assistance.  This involved coordinating teams on the ground, managing logistics such as meals and fatigue, triaging jobs, liaising with incident control staff, and managing CFA support. During these events I led over eighty responding personnel at the Bellarine unit.
 			</p>
-			<p>
-			Taking on the role of Deputy Controller of Operations I managed a team of six volunteers who ensured our operational readiness through ongoing maintenance, scheduling and planning. Working with highly skilled members I enabled their work by managing external stakeholders and providing the equipment that they required. As a member of the unit management team I also intervened on personal issues, particularly those arising during operations.</p>
 				</Job>
 
 				<Job

@@ -51,7 +51,7 @@
 		display: block;
 		background: #c8d0ea;
 		@media print {
-			background: #edf0f8; /* lighter shade */
+			background: #edf0f8; /* lighter shade, for grayscale */
 		}
 		position: absolute;
 		text-align: center;
@@ -68,6 +68,9 @@
 		background: #7E24D1;
 		border: 1px solid rgba(0,0,0,0.3);
 		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+		@media print {
+			box-shadow: none;
+		}
 	}
 
 }
