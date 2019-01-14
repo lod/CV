@@ -50,6 +50,9 @@
 	.period {
 		display: block;
 		background: #c8d0ea;
+		@media print {
+			background: #edf0f8; /* lighter shade */
+		}
 		position: absolute;
 		text-align: center;
 		padding: 0.2em 0;

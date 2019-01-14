@@ -20,7 +20,7 @@ class App extends Component {
 					David Tulloh is an experienced engineer with a broad range of skills having delivered electronics projects, software projects as well as working a technical facilitator for multiple fields.
 				</p>
 				<p>
-					While pursuing private projects David is looking for short term contract work to provide social contact, technical growth and financing.
+				David has decided to end the seachange period of his life and return to city dwelling, commuting in traffic and in person socialising. He is looking for a meaningful job to engage him and utilise his breath of skills.
 				</p>
 			</div>
 					</div>
@@ -29,7 +29,12 @@ class App extends Component {
 						<dt>webpage</dt><dd>https://david.tulloh.id.au/</dd>
 						<dt>phone</dt><dd>+61 439 069 336</dd>
 						<dt>github</dt><dd>https://github.com/lod</dd>
-						<dt>online cv</dt><dd>https://david.tulloh.id.au/cv/</dd>
+						<div className="printonly">
+							<dt>online cv</dt><dd>https://david.tulloh.id.au/cv/</dd>
+						</div>
+						<div className="screenonly">
+							<dt>printable cv</dt><dd><a href="https://david.tulloh.id.au/cv/david_tulloh.pdf">david_tulloh.pdf</a></dd>
+						</div>
 					</dl>
 				</div>
 				<Timeline startYear={2010} endYear={2018}>
@@ -213,6 +218,8 @@ class App extends Component {
 			<p>
 			As an operational leader I have led crews in tackling complex tasks, managed disputes between members, and ensured physical and mental well being of volunteers. For larger events I have performed the role of divisional commander, liaising with incident control staff, bringing in other agencies and coordinating multiple day responses to events with hundreds of calls for assistance, leading over eighty responding personnel.
 			</p>
+			<p>
+			Taking on the role of Deputy Controller of Operations I managed a team of six volunteers who ensured our operational readiness through ongoing maintenance, scheduling and planning. Working with highly skilled members I enabled their work by managing external stakeholders and providing the equipment that they required. As a member of the unit management team I also intervened on personal issues, particularly those arising during operations.</p>
 				</Job>
 
 				<Job
@@ -272,7 +279,7 @@ class App extends Component {
 						<h2>Databases</h2>
 							<Skill num="4">SQL design</Skill>
 							<Skill num="3">Key Store</Skill>
-							<Skill num="3">PgSQL scripting</Skill>
+							<Skill num="3">Database scripting</Skill>
 							<Skill num="3">Version control</Skill>
 					</div>
 					<div className="group">
@@ -316,10 +323,11 @@ class App extends Component {
 
 			<Qualification
 				title="Australian Security Clearance NV1"
-				details="currently inactive"
+				details="Currently inactive"
 			/>
 
 			</div>
+
 
 			</div>
 		);
