@@ -31,12 +31,55 @@ class App extends Component {
 						</dl>
 					</div>
 					<div className="summary">
+
+			{/*
+			Goal:
+			Broad skills
+			Technical Mastery
+			Soft skills
+			*/}
+			{/*
+<p>
+			An experienced engineer with a broad range of both technical and soft skills including project management, people leadership, software development, and electronics design.
+</p><p>
+			A proven track record of delivering customer focussed results in defence, scientific community and start up environments.
+
+</p><p>
+			I am currently looking for an opportunity in Canberra that will allow me to expand on my existing breath and depth of skills.
+
+</p>
+*/}
+			<p>
+An experienced software and hardware engineer, I am ending an invention sabatical and returning to the employed workforce. I am looking for engaging work with a skilled team.
+</p><p>
+I offer demonstrated technical proficiency, leadership capability, and creativity developed across diverse fields of experience.  I have the skills and the insight to add value to projects and teams.
+</p>
+
+
+			{/*
 						<p>
 							David Tulloh is an experienced engineer with a broad range of skills having delivered electronics projects, software projects as well as working a technical facilitator for multiple fields.
 						</p>
 						<p>
 						David has decided to end the seachange period of his life and return to city dwelling, commuting in traffic and in person socialising. He is looking for a meaningful job to engage him and utilise his breath of skills.
 						</p>
+With a broad range of skills and experience I bring multiple insights to solving technical problems.
+						*/}
+
+{/*
+Who - skills - strengths - goals
+4-6 sentances, 50-200 words
+
+An experienced software and hardware engineer, I am ending an invention sabatical and returning to the employed workforce. I am looking for engaging work with a skilled team.
+
+I offer demonstrated technical proficiency, leadership capability, and creativity developed across diverse fields of experience.  I have the skills and the insight to add value to projects and teams.
+
+
+
+*/}
+
+
+
 					</div>
 				</div>
 
@@ -64,11 +107,14 @@ class App extends Component {
 				href="https://youtu.be/R3DADx5z-XY"
 			>
 			<p>
-			Enabled by my partner’s move interstate for work, I established myself working on independent projects to meet gaps I observed in the market.  The major project I have worked on is a heat sensor based microwave (to allow heating of food based on internal temperature rather than power and time).  I produced a hardware prototype and presented on the software at Linux Conference Australia before concluding that, while technically sound, it was not commercially viable for me to pursue.  Other projects I have worked on include developing a PIR movement sensor replacement that used thermal vision to avoid the movement requirement, an alarm system for travellers staying in hotel rooms, and a flexible LED sign to allow scrolling messages at football matches. All products developed to an initial prototype stage.
+			Enabled by my partner’s move interstate for work, I established myself working on independent projects to meet gaps I observed in the market.
+			</p>
+			<p>
+			The major project I have worked on is a heat sensor based microwave (to allow heating of food based on internal temperature rather than power and time).  I produced a hardware prototype and presented on the software at Linux Conference Australia before concluding that, while technically sound, it was not commercially viable for me to pursue.  Other projects I have worked on include developing a PIR movement sensor replacement that used thermal vision to avoid the movement requirement, an alarm system for travellers staying in hotel rooms, and a flexible LED sign to allow scrolling messages at football matches. All products developed to an initial prototype stage.
 			</p>
 
 			<p>
-			This experience has built my liaison skills working directly with suppliers and manufacturers both in Australia and overseas.  It has also been invaluable in building my business, marketing and finance skills.
+			This experience has built my liaison skills working directly with suppliers and manufacturers both in Australia and overseas.  It has also been invaluable in building my business, marketing and financial skills.
 			</p>
 
 				</Job>
@@ -89,11 +135,11 @@ class App extends Component {
 			<p>
 				M5 Network Security, a branch of Northrop Grumman's Information Systems Sector, designs and manufactures
 				devices to facilitate secure communications across insecure networks. The work included designing hardware,
-				firmware, operating system drivers, client software and server infrastructure. All certified to military and civilian
+				firmware, operating system drivers, client software and server infrastructure certified to military and civilian
 				standards.
 			</p>
 			<p>
-				My primary task was to develop the firmware for the next generation of product with six different microprocessors performing multiple functions. Architectures used were the Cypress PSoC 5LP and the Xilinx Microblaze. Duties also included reviewing and documenting the electronics circuit design, testing boards, diagnosing faults, designing modifications and certifying the system. I also assisted the work of the software development and support teams.
+				My primary task was to develop the firmware for the next generation of product with six different microprocessors performing multiple functions. Architectures used were the Cypress PSoC 5LP and the Xilinx Microblaze. My duties also included reviewing and documenting the electronics circuit design, testing boards, diagnosing faults, designing modifications and certifying the system. I also assisted the work of the software development and support teams.
 			</p>
 
 				</Job>
@@ -113,10 +159,13 @@ class App extends Component {
 				>
 			<p>
 					The Australian Antarctic Division maintains several stations on Antarctica to support scientific research. As the
-				electronics support engineer I spent three seasons living at Davis Station. Living and working closely with a diverse group of people significantly improved my social and people skills. In addition to my technical duties I led field teams, visits to foreign stations and fulfilled station roles.
+				electronics support engineer I spent three seasons living at Davis Station.
 			</p>
 			<p>
 			I was responsible for providing technical assistance to over twenty different experiments, primarily atmospheric instruments but also including biology, geology and glaciology experiments. My duties included daily monitoring, routine maintenance, annual maintenance programs, emergency and scheduled repairs, process improvement and other tasks as required.
+			</p>
+			<p>
+			Living and working closely with a diverse group of people significantly improved my social and people skills. In addition to my technical duties I led field teams, visits to foreign stations and fulfilled station roles.
 			</p>
 			
 				</Job>
@@ -135,13 +184,13 @@ class App extends Component {
 					]}
 				>
 					<p>
-			The Airservices Australia safety team is responsible for ensuring the safety of Australian flying experience. As part of the qualitative and quantitative analysis teams I supported routine reporting, targeted studies and expanded the teams capability.
+			The Airservices Australia safety team is responsible for ensuring the safety of Australian flying experience. As part of the qualitative and quantitative analysis team's I supported routine reporting, targeted studies and expanded the teams capability.
 					</p>
 			<p>
 			I worked with a team from USA's Federal Aviation Administration to perform the first statistical analysis of altimeter errors using ADS-B data. In the process I identified and compensated for errors in the ADS-B reporting. I also contributed to multiple internal agency reports and a paper submitted to the International Separation and Airspace Safety Panel.
 			</p>
 			<p>
-			While my primary role was to prepare data for analysis I also liaised with multiple other internal and external teams to collect data. In doing so I expanded the breadth of available data, allowing new analysis, and worked towards improved access to data, reducing workload for my colleagues and increasing the frequency of reporting.
+			While my primary role was to prepare data for analysis I also liaised with multiple other internal and external teams to collect data. In doing so I expanded the breadth of available data, allowing new analysis, and worked towards improved access to data. In doing this I reduced the workload for my colleagues and increasing the frequency of reporting.
 			</p>
 				</Job>
 
@@ -158,7 +207,7 @@ class App extends Component {
 				]}
 			>
 				<p>
-					SigNav was a venture capital based startup developing GPS modules targeting weak signal timing markets such as femtocells. As a member of the hardware team I developed non-core firmware such as the programming firmware, functional tester, and supporting microprocessors. I automated several development tests allowing for significant improvements to the RF chain. The manufacturing tests I designed allowed the manufacture of over 35,000 devices with under 1% rejected by the client. I also contributed functionality to the core firmware and coordinated staff performing in testing roles.
+					SigNav was a venture capital based startup developing GPS modules targeting weak signal timing markets such as femtocells. As a member of the hardware team I developed the programming firmware, functional tester, and firmware for supporting microprocessors. I automated several development tests allowing for significant improvements to the RF chain. The manufacturing tests I designed enabled the manufacture of over 35,000 devices with under 1% rejected by the client. I also contributed functionality to the core firmware and coordinated staff performing in testing roles.
 				</p>
 			</Job>
 
@@ -174,7 +223,7 @@ class App extends Component {
 				]}
 			>
 				<p>
-					The Centre for Mental Health Research is a grant funded research group embedded in the Australian National University. The centre specialises in online based research and treatment programs, I developed a product called E-Couch which was designed to provide online cognitive behaviour therapy, produce data for research programs and allow easy repurposing for new languages and specialised research programs.
+					The Centre for Mental Health Research is a grant funded research group embedded in the Australian National University specialising in online based research and treatment programs.  I developed a product called E-Couch which was designed to provide online cognitive behaviour therapy, produce data for research programs and allow easy repurposing for new languages and specialised research programs.
 				</p>
 			</Job>
 
@@ -196,7 +245,7 @@ class App extends Component {
 						<Period start='2015-01-01' end={now}>CSIRO SIS</Period>
 						{/* Extended the period to get the element big enough
 						    real dates, start='2012-09-01' end='2013-02-05' */}
-						<Period start='2012-08-01' end='2013-02-05'>LCA</Period>
+						<Period start='2012-06-01' end='2013-03-05'>LCA</Period>
 					</div>
 				</Timeline>
 
@@ -249,10 +298,12 @@ class App extends Component {
 					I am a senior member of the VICSES, a volunteer emergency response service responsible for storm, flood, rescue and assisting other emergency agencies on the Bellarine peninsula.
 			</p>
 			<p>
-			As Deputy Controller of Operations of the Bellarine unit I developed my leadership skills.  Managing a team of six volunteers we ensured our operational readiness through ongoing maintenance, scheduling and planning. Working with highly skilled members I enabled their work by liaising with external stakeholders, acquiring the equipment and coordinating significant work. As a member of the unit management team I also intervened on personnel issues, particularly those arising during operations.
+			As Deputy Controller of Operations of the Bellarine unit I developed my leadership and management skills.  I managed a team of six volunteers with responsibility for ensuring our operational readiness through ongoing maintenance, scheduling and planning. Working with highly skilled members I enabled their work by liaising with external stakeholders, acquiring the equipment and coordinating significant work. As a member of the unit management team I also intervened on personnel issues, particularly those arising during operations.
 			</p>
 			<p>
-			I have also performed the role of divisional commander setting the strategy for the response to significant events such as multiday operations or large events with 550 calls for assistance.  This involved coordinating teams on the ground, managing logistics such as meals and fatigue, triaging jobs, liaising with incident control staff, and managing CFA support. During these events I led over eighty responding personnel at the Bellarine unit.
+			During significant localised storm events I have performed the role of divisional commander setting the strategy for the response.
+
+			This involved coordinating teams on the ground, managing logistics such as meals and transport, ensuring team member wellbeing including managing fatigue, triaging jobs, liaising with incident control staff, and managing CFA support. During these events I led over eighty responding personnel at the Bellarine unit.
 			</p>
 				</Job>
 
@@ -270,7 +321,7 @@ class App extends Component {
 				>
 				<p>The CSIRO STEM Professionals in Schools program matches school teachers with STEM professionals to enhance science and technical learning in classrooms.</p>
 			<p>
-			For several years I have attended the Bellarine Secondary College weekly to assist the IT teacher with senior classes. Working predominantly with year twelve students I assist with specific technical problems, help guide their learning and provide real world grounding for what they learn. Having an extra pair of hands in the classroom allows for extra one on one guidance for students who are struggling or students who are open to extension activities to help them grow.
+			For four years I have attended the Bellarine Secondary College weekly to assist the IT teacher with senior classes. Working predominantly with year twelve students, I assist with specific technical problems, help guide their learning and provide real world grounding for what they learn. Having an extra pair of hands in the classroom allows for extra one on one guidance for students who are struggling or students who are open to extension activities to help them grow.
 			</p>
 
 				</Job>
@@ -325,13 +376,16 @@ class App extends Component {
 					<div className="group">
 						<h2>General skills</h2>
 						<Skill num="5">Explaining technical concepts</Skill>
+						<Skill num="4">Management and Leadership</Skill>
 						<Skill num="4">Teaching</Skill>
 						<Skill num="3">Marketing</Skill>
-						<Skill num="2">Management</Skill>
 					</div>
 				</div>
 
+			<h1>Qualifications</h1>
+
 			<div className="qualifications">
+
 			<Qualification
 				title="Bachelor of Information Technology"
 				institution="Australian National University"

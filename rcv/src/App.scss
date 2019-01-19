@@ -19,6 +19,18 @@
 	margin-bottom: 10mm;
 }
 
+/* So, ideally we want to margin the first page differently,
+ * This doesn't work currently
+ * Supplied pdf is generated manually in two batches and smooshed
+ */
+@page:first {
+	margin-top: 10mm; /* doesn't seem to work :( */
+}
+@page :not(:first) {
+	margin-top: 20mm;
+	margin-bottom: 20mm;
+}
+
 @media print {
 	body {
 		color: #000; /* When printing, actually go black */
@@ -95,6 +107,7 @@ h2 {
 		font-size: 32px;
 		letter-spacing: 0.02em;
 		margin: 1rem 0;
+		margin-bottom: 0; /* summary paragraphs have a top margin, doesn't collapse for some reason */
 	}
 	.summary {
 		max-width: 500px;
