@@ -1,5 +1,5 @@
 # generated
-/cv.pdf
+/david_tulloh.pdf
 
 # dependencies
 /node_modules
@@ -9,6 +9,7 @@
 
 # production
 /build
+/build.tar.bz2
 
 # misc
 .DS_Store
