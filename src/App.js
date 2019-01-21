@@ -31,55 +31,17 @@ class App extends Component {
 						</dl>
 					</div>
 					<div className="summary">
-
-			{/*
-			Goal:
-			Broad skills
-			Technical Mastery
-			Soft skills
-			*/}
-			{/*
-<p>
-			An experienced engineer with a broad range of both technical and soft skills including project management, people leadership, software development, and electronics design.
-</p><p>
-			A proven track record of delivering customer focussed results in defence, scientific community and start up environments.
-
-</p><p>
-			I am currently looking for an opportunity in Canberra that will allow me to expand on my existing breath and depth of skills.
-
-</p>
-*/}
-			<p>
-An experienced software and hardware engineer, I am ending an invention sabatical and returning to the employed workforce. I am looking for engaging work with a skilled team.
-</p><p>
-I offer demonstrated technical proficiency, leadership capability, and creativity developed across diverse fields of experience.  I have the skills and the insight to add value to projects and teams.
-</p>
-
-
-			{/*
+						{/* Goal:
+							*    Broad skills
+							*    Technical Mastery
+							*    Soft skills
+						  */}
 						<p>
-							David Tulloh is an experienced engineer with a broad range of skills having delivered electronics projects, software projects as well as working a technical facilitator for multiple fields.
+							An experienced software and hardware engineer, I am ending an invention sabatical and returning to the employed workforce. I am looking for engaging work with a skilled team.
 						</p>
 						<p>
-						David has decided to end the seachange period of his life and return to city dwelling, commuting in traffic and in person socialising. He is looking for a meaningful job to engage him and utilise his breath of skills.
+							I offer demonstrated technical proficiency, leadership capability, and creativity developed across diverse fields of experience.  I have the skills and the insight to add value to projects and teams.
 						</p>
-With a broad range of skills and experience I bring multiple insights to solving technical problems.
-						*/}
-
-{/*
-Who - skills - strengths - goals
-4-6 sentances, 50-200 words
-
-An experienced software and hardware engineer, I am ending an invention sabatical and returning to the employed workforce. I am looking for engaging work with a skilled team.
-
-I offer demonstrated technical proficiency, leadership capability, and creativity developed across diverse fields of experience.  I have the skills and the insight to add value to projects and teams.
-
-
-
-*/}
-
-
-
 					</div>
 				</div>
 
