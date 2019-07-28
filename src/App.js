@@ -37,7 +37,7 @@ class App extends Component {
 							*    Soft skills
 						  */}
 						<p>
-							An experienced software and hardware engineer, I am ending an invention sabatical and returning to the employed workforce. I am looking for engaging work with a skilled team.
+							An experienced software and hardware engineer, I am ending an invention sabbatical and returning to the employed workforce. I am looking for engaging work with a skilled team.
 						</p>
 						<p>
 							I offer demonstrated technical proficiency, leadership capability, and creativity developed across diverse fields of experience.  I have the skills and the insight to add value to projects and teams.
@@ -45,20 +45,47 @@ class App extends Component {
 					</div>
 				</div>
 
-				<Timeline startYear={2010} endYear={2018}>
+				<Timeline startYear={2010} endYear={2019}>
 					<div>
 						<p className="heading">Employment</p>
-						<Period start='2015-01-01' end={now} href="#inventing">Inventoring</Period>
+						<Period start='2019-04-25' end={now} href="#space">UNSW Space</Period>
+						<Period start='2015-01-01' end='2019-01-01' href="#inventing">Inventoring</Period>
 						<Period start='2012-07-01' end='2014-10-01' href="#m5-network-security" short="NG">Northrop</Period>
 						<Period start='2010-08-14' end='2012-04-01' href="#aad" short="AAD">AAD</Period>
 						<Period start='2009-11-01' end='2010-08-01' href="#airservices" short="AA">AA</Period>
 					</div>
 				</Timeline>
+			<Job
+				id="space"
+				company="UNSW Canberra Space"
+				start='2015-01-01' end='2019-01-01'
+				title="Electronics Engineer"
+				responsibilities={[
+					"Electronics assembly",
+					"Electronics testing",
+					"Firmware development",
+				]}
+				href="https://www.unsw.adfa.edu.au/space-research/"
+			>
+
+			<p>
+			The UNSW Canberra Space is a group based at ADFA designing and building cubesats for research purposes. It has a mix of research orientated professors and students, and an engineering team to produce and operate the satellites.
+			</p>
+
+			<p>
+			I am employed on a casual basis to assist the electronics team. I assembled and tested a number of flight boards. This included following specialised handling and cleaning procedures for high reliability use in the vacuum of space.
+			</p>
+
+			<p>
+			In addition to the assembly work I also developed firmware for testing purposes and a space subsystem, designed a PCB, developed test procedures and assisted reworking the development processes.
+			</p>
+
+				</Job>
 
 			<Job
 				id="self-employed"
 				company="Self Employed"
-				start='2015-01-01'
+				start='2015-01-01' end='2019-01-01'
 				title="Founder"
 				responsibilities={[
 					"Product development",
