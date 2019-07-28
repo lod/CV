@@ -58,26 +58,29 @@ class App extends Component {
 			<Job
 				id="space"
 				company="UNSW Canberra Space"
-				start='2015-01-01' end='2019-01-01'
+				start='2019-04-25' end={now}
 				title="Electronics Engineer"
 				responsibilities={[
-					"Electronics assembly",
-					"Electronics testing",
 					"Firmware development",
+					"Electronics assembly",
 				]}
 				href="https://www.unsw.adfa.edu.au/space-research/"
 			>
 
 			<p>
-			The UNSW Canberra Space is a group based at ADFA designing and building cubesats for research purposes. It has a mix of research orientated professors and students, and an engineering team to produce and operate the satellites.
+			UNSW Canberra Space is a group based at ADFA designing and building cubesats for research purposes. It has a mix of research orientated professors and students, and an engineering team to produce and operate the satellites.
 			</p>
 
 			<p>
-			I am employed on a casual basis to assist the electronics team. I assembled and tested a number of flight boards. This included following specialised handling and cleaning procedures for high reliability use in the vacuum of space.
+			Supporting the electronics team I developed firmware for a camera module, developed an application to exercise and test a different camera system, and firmware to test the compute modules.
 			</p>
 
 			<p>
-			In addition to the assembly work I also developed firmware for testing purposes and a space subsystem, designed a PCB, developed test procedures and assisted reworking the development processes.
+			I assembled and tested a number of flight boards. This included following specialised handling and cleaning procedures for high reliability use in the vacuum of space.
+			</p>
+			
+			<p>
+			I also worked with the electronics lead to introduce source control procedures for the electronics projects. Adapting git to an electronics workflow, establishing a standard structure and serverside rules to enforce consistency.
 			</p>
 
 				</Job>
@@ -89,8 +92,8 @@ class App extends Component {
 				title="Founder"
 				responsibilities={[
 					"Product development",
-					"Electronics design",
 					"Software development",
+					"Electronics design",
 					"Marketing",
 				]}
 				href="https://youtu.be/R3DADx5z-XY"
@@ -99,11 +102,11 @@ class App extends Component {
 			Enabled by my partner’s move interstate for work, I established myself working on independent projects to meet gaps I observed in the market.
 			</p>
 			<p>
-			The major project I have worked on is a heat sensor based microwave (to allow heating of food based on internal temperature rather than power and time).  I produced a hardware prototype and presented on the software at Linux Conference Australia before concluding that, while technically sound, it was not commercially viable for me to pursue.  Other projects I have worked on include developing a PIR movement sensor replacement that used thermal vision to avoid the movement requirement, an alarm system for travellers staying in hotel rooms, and a flexible LED sign to allow scrolling messages at football matches. All products developed to an initial prototype stage.
+			The major project I worked on is a heat sensor based microwave to allow heating of food based on internal temperature rather than power and time.  I produced a prototype and presented on the software at Linux Conference Australia before concluding that, while technically sound, it was not commercially viable for me to pursue.  Other projects included developing a PIR movement sensor replacement that used thermal vision to avoid the movement requirement, an alarm system for travellers staying in hotel rooms, and a flexible LED sign to allow scrolling messages at football matches. All products developed to an initial prototype stage.
 			</p>
 
 			<p>
-			This experience has built my liaison skills working directly with suppliers and manufacturers both in Australia and overseas.  It has also been invaluable in building my business, marketing and financial skills.
+			This built my whole of system design experience, bringing together a product from concept to selecting each component of the system, building the environment, software and hardware. It has also been invaluable in building my business, marketing and financial skills.
 			</p>
 
 				</Job>
@@ -123,8 +126,7 @@ class App extends Component {
 				>
 			<p>
 				M5 Network Security, a branch of Northrop Grumman's Information Systems Sector, designs and manufactures
-				devices to facilitate secure communications across insecure networks. The work included designing hardware,
-				firmware, operating system drivers, client software and server infrastructure certified to military and civilian
+				devices to facilitate secure communications across insecure networks. The work included designing firmware, hardware, operating system drivers, client software and server infrastructure certified to military and civilian
 				standards.
 			</p>
 			<p>
@@ -148,7 +150,7 @@ class App extends Component {
 				>
 			<p>
 					The Australian Antarctic Division maintains several stations on Antarctica to support scientific research. As the
-				electronics support engineer I spent three seasons living at Davis Station.
+				support engineer I spent three seasons living at Davis Station.
 			</p>
 			<p>
 			I was responsible for providing technical assistance to over twenty different experiments, primarily atmospheric instruments but also including biology, geology and glaciology experiments. My duties included daily monitoring, routine maintenance, annual maintenance programs, emergency and scheduled repairs, process improvement and other tasks as required.
@@ -176,10 +178,10 @@ class App extends Component {
 			The Airservices Australia safety team is responsible for ensuring the safety of Australian flying experience. As part of the qualitative and quantitative analysis team's I supported routine reporting, targeted studies and expanded the teams capability.
 					</p>
 			<p>
-			I worked with a team from USA's Federal Aviation Administration to perform the first statistical analysis of altimeter errors using ADS-B data. In the process I identified and compensated for errors in the ADS-B reporting. I also contributed to multiple internal agency reports and a paper submitted to the International Separation and Airspace Safety Panel.
+			While my primary role was to prepare data for analysis I also liaised with multiple other internal and external teams to collect data. In doing so I expanded the breadth of available data, allowing new analysis, and worked towards improved access to data. In doing this I reduced the workload for my colleagues and increasing the frequency of reporting.
 			</p>
 			<p>
-			While my primary role was to prepare data for analysis I also liaised with multiple other internal and external teams to collect data. In doing so I expanded the breadth of available data, allowing new analysis, and worked towards improved access to data. In doing this I reduced the workload for my colleagues and increasing the frequency of reporting.
+			I worked with a team from USA's Federal Aviation Administration to perform the first statistical analysis of altimeter errors using ADS-B data. In the process I identified and compensated for errors in the ADS-B reporting. I also contributed to multiple internal agency reports and a paper submitted to the International Separation and Airspace Safety Panel.
 			</p>
 				</Job>
 
@@ -190,9 +192,9 @@ class App extends Component {
 				start='2006-07-01' end='2009-07-01'
 				href="https://www.u-blox.com/en/press-release/u-blox-acquires-signav-ip"
 				responsibilities={[
+					"Firmware development",
 					"Manufacturing testing",
 					"Development testing",
-					"Firmware development",
 				]}
 			>
 				<p>
@@ -227,11 +229,11 @@ class App extends Component {
 					</div>
 					<div>
 						<p className="heading">Volunteering</p>
-						<Period start='2015-01-01' end={now}>VICSES</Period>
+						<Period start='2015-01-01' end='2019-04-21'>VICSES</Period>
 						<Period start='2010-01-01' end='2014-01-01'>TADACT</Period>
 					</div>
 					<div>
-						<Period start='2015-01-01' end={now}>CSIRO SIS</Period>
+						<Period start='2015-01-01' end='2019-04-21'>CSIRO SIS</Period>
 						{/* Extended the period to get the element big enough
 						    real dates, start='2012-09-01' end='2013-02-05' */}
 						<Period start='2012-06-01' end='2013-03-05'>LCA</Period>
@@ -275,7 +277,7 @@ class App extends Component {
 					id="ses"
 					company="Victoria State Emergency Service, Bellarine Unit"
 					title="Deputy Controller of Operations"
-					start='2015-01-01' end={now}
+					start='2015-01-01' end='2019-04-21'
 					href="https://www.ses.vic.gov.au/"
 					responsibilities={[
 						"Member of unit management team",
@@ -284,14 +286,13 @@ class App extends Component {
 					]}
 				>
 			<p>
-					I am a senior member of the VICSES, a volunteer emergency response service responsible for storm, flood, rescue and assisting other emergency agencies on the Bellarine peninsula.
+					I was a senior member of the VICSES, a volunteer emergency response service responsible for storm, flood, rescue and assisting other emergency agencies on the Bellarine peninsula.
 			</p>
 			<p>
 			As Deputy Controller of Operations of the Bellarine unit I developed my leadership and management skills.  I managed a team of six volunteers with responsibility for ensuring our operational readiness through ongoing maintenance, scheduling and planning. Working with highly skilled members I enabled their work by liaising with external stakeholders, acquiring the equipment and coordinating significant work. As a member of the unit management team I also intervened on personnel issues, particularly those arising during operations.
 			</p>
 			<p>
-			During significant localised storm events I have performed the role of divisional commander setting the strategy for the response.
-
+			During significant localised storm events I performed the role of divisional commander setting the strategy for the response.
 			This involved coordinating teams on the ground, managing logistics such as meals and transport, ensuring team member wellbeing including managing fatigue, triaging jobs, liaising with incident control staff, and managing CFA support. During these events I led over eighty responding personnel at the Bellarine unit.
 			</p>
 				</Job>
@@ -300,7 +301,7 @@ class App extends Component {
 					id="csiro"
 					company="CSIRO STEM Professionals in Schools"
 					title="Mentor"
-					start='2015-01-01' end={now}
+					start='2015-01-01' end='2019-04-21'
 					href="https://www.csiro.au/en/Education/Programs/STEM-Professionals-in-Schools"
 					responsibilities={[
 						"Support and guide year 12 IT students",
@@ -310,7 +311,7 @@ class App extends Component {
 				>
 				<p>The CSIRO STEM Professionals in Schools program matches school teachers with STEM professionals to enhance science and technical learning in classrooms.</p>
 			<p>
-			For four years I have attended the Bellarine Secondary College weekly to assist the IT teacher with senior classes. Working predominantly with year twelve students, I assist with specific technical problems, help guide their learning and provide real world grounding for what they learn. Having an extra pair of hands in the classroom allows for extra one on one guidance for students who are struggling or students who are open to extension activities to help them grow.
+			For four years I attended the Bellarine Secondary College weekly to assist the IT teacher with senior classes. Working predominantly with year twelve students, I assisted with specific technical problems, helped guide their learning and provide real world grounding for what they learn. Having an extra pair of hands in the classroom allows for extra one on one guidance for students who are struggling or students who are open to extension activities to help them grow.
 			</p>
 
 				</Job>
