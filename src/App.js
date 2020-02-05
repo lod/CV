@@ -37,18 +37,18 @@ class App extends Component {
 							*    Soft skills
 						  */}
 						<p>
-							An experienced software and hardware engineer, I am ending an invention sabbatical and returning to the employed workforce. I am looking for engaging work with a skilled team.
+							An experienced software and hardware engineer. I am looking for engaging work with a skilled team.
 						</p>
 						<p>
-							I offer demonstrated technical proficiency, leadership capability, and creativity developed across diverse fields of experience.  I have the skills and the insight to add value to projects and teams.
+							I offer a broad base of demonstrated technical proficiency, leadership capability, and creativity developed across diverse fields of experience.  I have the skills and the insight to add value to projects and teams.
 						</p>
 					</div>
 				</div>
 
-				<Timeline startYear={2010} endYear={2019}>
+				<Timeline startYear={2010} endYear={2020}>
 					<div>
 						<p className="heading">Employment</p>
-						<Period start='2019-04-25' end={now} href="#space">UNSW Space</Period>
+						<Period start='2019-04-25' end={now} href="#space">UNSW</Period>
 						<Period start='2015-01-01' end='2019-01-01' href="#inventing">Inventoring</Period>
 						<Period start='2012-07-01' end='2014-10-01' href="#m5-network-security" short="NG">Northrop</Period>
 						<Period start='2010-08-14' end='2012-04-01' href="#aad" short="AAD">AAD</Period>
@@ -61,6 +61,7 @@ class App extends Component {
 				start='2019-04-25' end={now}
 				title="Electronics Engineer"
 				responsibilities={[
+					"Electronics design",
 					"Firmware development",
 					"Electronics assembly",
 				]}
@@ -68,19 +69,24 @@ class App extends Component {
 			>
 
 			<p>
-			UNSW Canberra Space is a group based at ADFA designing and building cubesats for research purposes. It has a mix of research orientated professors and students, and an engineering team to produce and operate the satellites.
+			UNSW Canberra Space is a group based at ADFA designing and satellites for research purposes. It has a mix of researchers and an engineering team to produce and operate the satellites.
+			As a member of the electronics team I developed hardware, firmware, software, performed manufacturing, testing, and process improvement.
 			</p>
 
 			<p>
-			Supporting the electronics team I developed firmware for a camera module, developed an application to exercise and test a different camera system, and firmware to test the compute modules.
+			Working with hardware I manufactured and tested a number of flight boards following specialised handling and cleaning procedures to ensure high reliability and to avoid issues that arise from the vacuum of space. I also was training in bonding solar panels to PCBs and large components to mitigate vibration failures. I worked in a clean room environment to assist with assembly and testing.
 			</p>
 
 			<p>
-			I assembled and tested a number of flight boards. This included following specialised handling and cleaning procedures for high reliability use in the vacuum of space.
+			I participated in designing the next generation satellite system with a new mechanical layout and bus to improve capability and manufacturability from the current designs. I designed multiple boards for the next generation satellite. I also actively persued and implemented new technologies to improve our capability and reliability.
 			</p>
-			
+
 			<p>
-			I also worked with the electronics lead to introduce source control procedures for the electronics projects. Adapting git to an electronics workflow, establishing a standard structure and serverside rules to enforce consistency.
+			The satellites carry a secondary camera system which I developed the firmware for, including testing and documentation. I also developed firmware and scripts for hardware testing. Software to enable optical testing and calibtation, and improvements to the ground station software system.
+			</p>
+
+			<p>
+			I also worked with the electronics lead on process improvements to the team. This included introducing source control procedures for the electronics projects using git, component inventory management, and exploring options to improve the manufacturing speed and capability.
 			</p>
 
 				</Job>
@@ -111,6 +117,7 @@ class App extends Component {
 
 				</Job>
 
+				<div className="pagebreak"></div>
 
 				<Job
 					id="m5-network-security"
@@ -220,9 +227,10 @@ class App extends Component {
 
 				<div className="pagebreak"></div>
 
-				<Timeline startYear={2010} endYear={2018}>
+				<Timeline startYear={2010} endYear={2020}>
 					<div>
 						<p className="heading">Speaking</p>
+						<Event date='2020-01-15'>Linux.conf.au Speaker</Event>
 						<Event date='2018-01-24'>Linux.conf.au Speaker</Event>
 						<Event date='2017-08-04'>PyCon Australia Speaker</Event>
 						<Event date='2016-02-03'>Linux.conf.au Speaker</Event>
@@ -242,6 +250,14 @@ class App extends Component {
 
 			<h1>Speaking</h1>
 			<div className="row">
+				<Speaking
+					id="lca2020"
+					company="linux.conf.au"
+					date="2020-01-15"
+					title="Kicad for software developers (tutorial)"
+					href="https://youtu.be/0MzvESM0ZFE"
+				>
+				</Speaking>
 
 				<Speaking
 					id="lca2018"
@@ -348,7 +364,6 @@ class App extends Component {
 						<Skill num="4">Windows</Skill>
 						<Skill num="4">Virtual Machines</Skill>
 						<Skill num="3">Containerisation</Skill>
-						<Skill num="3">Cisco iOS</Skill>
 					</div>
 					<div className="group">
 						<h2>Databases</h2>
