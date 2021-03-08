@@ -18,12 +18,12 @@ class App extends Component {
 							<div className="role">Software Developer, Electronics Engineer, Inventor</div>
 						</div>
 						<dl>
-							<dt>email</dt><dd>david@tulloh.id.au</dd>
-							<dt>webpage</dt><dd>https://david.tulloh.id.au/</dd>
-							<dt>phone</dt><dd>+61 439 069 336</dd>
-							<dt>github</dt><dd>https://github.com/lod</dd>
+							<dt>email</dt><dd><a href="mailto:david@tulloh.id.au">david@tulloh.id.au</a></dd>
+							<dt>webpage</dt><dd><a href="https://david.tulloh.id.au/">https://david.tulloh.id.au</a></dd>
+							<dt>phone</dt><dd><a href="tel:+61-439-069-336">+61 439 069 336</a></dd>
+							<dt>github</dt><dd><a href="https://github.com/lod">https://github.com/lod</a></dd>
 							<div className="printonly">
-								<dt>online cv</dt><dd>https://david.tulloh.id.au/cv/</dd>
+								<dt>online cv</dt><dd><a href="https://david.tulloh.id.au/cv/">https://david.tulloh.id.au/cv/</a></dd>
 							</div>
 							<div className="screenonly">
 								<dt>printable cv</dt><dd><a href="https://david.tulloh.id.au/cv/david_tulloh.pdf">david_tulloh.pdf</a></dd>
@@ -48,7 +48,8 @@ class App extends Component {
 				<Timeline startYear={2010} endYear={2020}>
 					<div>
 						<p className="heading">Employment</p>
-						<Period start='2019-04-25' end={now} href="#space">UNSW</Period>
+			      <Period start='2020-03-23' end={now} href="#fd">FD</Period>
+						<Period start='2019-04-25' end='2020-03-20' href="#space">UNSW</Period>
 						<Period start='2015-01-01' end='2019-01-01' href="#inventing">Inventoring</Period>
 						<Period start='2012-07-01' end='2014-10-01' href="#m5-network-security" short="NG">Northrop</Period>
 						<Period start='2010-08-14' end='2012-04-01' href="#aad" short="AAD">AAD</Period>
@@ -56,9 +57,30 @@ class App extends Component {
 					</div>
 				</Timeline>
 			<Job
+				id="fd"
+				company="FifthDomain"
+				start='2019-04-25' end='2020-03-20'
+				title="Engineering Manager"
+				responsibilities={[
+					"SRE and backend team manager",
+					"Project manager",
+				]}
+				href="https://www.fifthdomain.com.au/"
+			>
+			<p>
+			FifthDomain is a startup which produces and runs a platform for cyber skills training and evaluation.  With a platform comprising of educational labs, exercise ranges and capture the flag challenges. FifthDomain provides ongoing environments to educators in Universities and TAFEs, as well as special project deliviers to customers such as Defence.
+			</p>
+			<p>
+			As a member of the engineering leadership team I led a team of people, comprising up to eight staff members divided into one or two squads. Duties included day to day management, sprint planning, interfacing with other areas of the company, influencing company policy, and technical leadership. Tasks tackled under my leadership included a backend rearchitecture, automating deployments, improved testing, increased monitoring, calculated scaling, and implemented new features.
+			</p>
+			<p>
+			Additionally, I led a number of special project deliveries as a project manager and technical lead. I delivered multiple large cyber range platforms to provide training environments for defence. This work involved liasing with defence, working with them to design the product, coordinating with subcontractors, leading the team to produce the product, manage defence staff embedded in my team, and working embedded in a defence group to deliver the training. I also stepped up when the project manager went on leave to deliver multiple substatiantial capture the flag projects, including the annual Defence Cyber Skills Challenge with 700 participants. This included liasing with the client and managing the delivery of the project.
+			</p>
+			</Job>
+			<Job
 				id="space"
 				company="UNSW Canberra Space"
-				start='2019-04-25' end={now}
+				start='2019-04-25' end='2020-03-20'
 				title="Electronics Engineer"
 				responsibilities={[
 					"Electronics design",
@@ -69,8 +91,8 @@ class App extends Component {
 			>
 
 			<p>
-			UNSW Canberra Space is a group based at ADFA designing and satellites for research purposes. It has a mix of researchers and an engineering team to produce and operate the satellites.
-			As a member of the electronics team I developed hardware, firmware, software, performed manufacturing, testing, and process improvement.
+			UNSW Canberra Space is a group based at ADFA designing and satellites for research purposes. It has a mix of researchers and engineers to produce and operate the satellites.
+			As a member of the electronics engineering team I developed hardware, firmware, software, performed manufacturing, testing, and process improvement.
 			</p>
 
 			<p>
@@ -78,21 +100,21 @@ class App extends Component {
 			</p>
 
 			<p>
-			I participated in designing the next generation satellite system with a new mechanical layout and bus to improve capability and manufacturability from the current designs. I designed multiple boards for the next generation satellite. I also actively persued and implemented new technologies to improve our capability and reliability.
+			I participated in designing the next generation satellite system with a new mechanical layout and bus to improve capability and manufacturability from the current designs. I designed multiple boards for the next generation satellite. I also actively pursued and implemented new technologies to improve our capability and reliability.
 			</p>
 
 			<p>
-			The satellites carry a secondary camera system which I developed the firmware for, including testing and documentation. I also developed firmware and scripts for hardware testing. Software to enable optical testing and calibtation, and improvements to the ground station software system.
+			The satellites carry a secondary camera system which I developed the firmware for, including testing and documentation. I also developed firmware and scripts for hardware testing. Software to enable optical testing and calibration, and improvements to the ground station software system.
 			</p>
 
 			<p>
-			I also worked with the electronics lead on process improvements to the team. This included introducing source control procedures for the electronics projects using git, component inventory management, and exploring options to improve the manufacturing speed and capability.
+			I also worked on process improvements for the team. This included introducing source control procedures for the electronics projects using git, component inventory management, and exploring options to improve the manufacturing speed and capability.
 			</p>
 
 				</Job>
 
 			<Job
-				id="self-employed"
+				id="inventing"
 				company="Self Employed"
 				start='2015-01-01' end='2019-01-01'
 				title="Founder"
@@ -225,7 +247,7 @@ class App extends Component {
 				</p>
 			</Job>
 
-				<div className="pagebreak"></div>
+				<div className="pagebreak vspace"></div>
 
 				<Timeline startYear={2010} endYear={2020}>
 					<div>
@@ -237,11 +259,11 @@ class App extends Component {
 					</div>
 					<div>
 						<p className="heading">Volunteering</p>
-						<Period start='2015-01-01' end='2019-04-21'>VICSES</Period>
+						<Period start='2015-01-01' end='2019-04-21' href="#ses">VICSES</Period>
 						<Period start='2010-01-01' end='2014-01-01'>TADACT</Period>
 					</div>
 					<div>
-						<Period start='2015-01-01' end='2019-04-21'>CSIRO SIS</Period>
+						<Period start='2015-01-01' end='2019-04-21' href="#csiro">CSIRO SIS</Period>
 						{/* Extended the period to get the element big enough
 						    real dates, start='2012-09-01' end='2013-02-05' */}
 						<Period start='2012-06-01' end='2013-03-05'>LCA</Period>
@@ -377,6 +399,14 @@ class App extends Component {
 						<Skill num="4">Full OSI 1-7 layer experience</Skill>
 						<Skill num="3">Military grade security</Skill>
 						<Skill num="3">Encryption techniques</Skill>
+					</div>
+					<div className="group">
+						<h2>Cloud Orchestration</h2>
+						<Skill num="4">Terraform</Skill>
+						<Skill num="3">Ansible</Skill>
+						<Skill num="3">AWS</Skill>
+						<Skill num="3">Google Cloud</Skill>
+						<Skill num="3">Kubernetes</Skill>
 					</div>
 					<div className="group">
 						<h2>General skills</h2>
