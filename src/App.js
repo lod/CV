@@ -72,35 +72,29 @@ class App extends Component {
 			  description="A cyber security training provider, delivering a platform and services to Defence and educational institutions."
 			>
 			<p>
-			As an engineering manager I lead up to eight people divided into two squads.
-			Duties included:
+			Managing multiple project specific teams to deliver SRE improvements, implement new product features, and deliver special projects.
+			Additionally, reporting directly to the CEO, managing stakeholder relationships and delivering client tailored solutions.
 			</p>
-			<ul>
-			<li>day to day management;</li>
-			<li>sprint planning;</li>
-			<li>interfacing with other areas of the company;</li>
-			<li>influencing company policy;</li>
-			<li>providing technical leadership;</li>
-			</ul>
 
 			<p>
-			Additionally, I led a number of special project deliveries as a project manager and technical lead. This work included:
+			Key achievements in this role include:
 			</p>
 
 			<ul>
-			<li>Liasing with the customer to design and manage the project;</li>
-		  <li>Coordinating with subcontractors;</li>
-		  <li>Leading the team to deliver the project;</li>
-		  <li>Managing internal and client secondees;</li>
-		  <li>Working on site with the client;</li>
+			<li>Managing a small team and partner organisation to deliver a major cyber range to Defence in a truncated timeframe eliciting positive feedback from the client.</li>
+
+			<li>Led the deliver of Defence's premier cyber skills competition with over 700 domestic and international participants.</li>
+
+			<li>Developed and pitched an innovative server security solution for inclusion in the Defence budget cycle.</li>
+
+			<li>
+			Assisted junior team members in developing their technical and professional skills to achieve their career goals.</li>
+
 			</ul>
 
-			<p style={{display: "none"}}>
-			As a member of the engineering leadership team I led a team of people, comprising up to eight staff members divided into one or two squads. Duties included day to day management, sprint planning, interfacing with other areas of the company, influencing company policy, and technical leadership. Tasks tackled under my leadership included a backend rearchitecture, automating deployments, improved testing, increased monitoring, calculated scaling, and implemented new features.
-			</p>
-			<p style={{display: "none"}}>
-			Additionally, I led a number of special project deliveries as a project manager and technical lead. I delivered multiple large cyber range platforms to provide training environments for defence. This work involved liasing with defence, working with them to design the product, coordinating with subcontractors, leading the team to produce the product, manage defence staff embedded in my team, and working embedded in a defence group to deliver the training. I also stepped up when the project manager went on leave to deliver multiple substatiantial capture the flag projects, including the annual Defence Cyber Skills Challenge with 700 participants. This included liasing with the client and managing the delivery of the project.
-			</p>
+
+
+
 			</Job>
 			<Job
 				id="space"
