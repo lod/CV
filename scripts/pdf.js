@@ -27,7 +27,7 @@ const footerTemplate = '<footer style="background: red; font-size: 16px; font-fa
 (async () => {
 	const browser = await puppeteer.launch();
 	const page = await browser.newPage();
-	await page.goto('http://localhost:3000/', {waitUntil: 'networkidle2'});
+	await page.goto('http://localhost:3001/', {waitUntil: 'networkidle2'});
 
 	await page.mainFrame().addStyleTag({content: css_first_page});
 	await page.pdf({
@@ -60,7 +60,7 @@ const footerTemplate = '<footer style="background: red; font-size: 16px; font-fa
 		*/
 	});
 
-	await page.goto('http://localhost:3000/footer.html', {waitUntil: 'networkidle2'});
+	await page.goto('http://localhost:3001/footer.html', {waitUntil: 'networkidle2'});
 	await page.pdf({
 		path: 'footer.pdf',
 		format: 'A4',

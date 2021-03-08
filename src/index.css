@@ -8,3 +8,12 @@ a:visited { color: #3556bc }
 a:hover   { color: #3556bc }
 a:focus   { color: #3556bc }
 a:active  { color: #3556bc }
+
+/* Accessibility, provide focus for keyboard navigation */
+a { padding: 0 0.2em }
+a { transition: all 0.3s ease }
+a:focus {
+	outline: none;
+	background-color: #dc9bee; /* pink */
+	color: #152452; /* Darken to stay visible against bg */
+}

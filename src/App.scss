@@ -57,6 +57,9 @@ body {
 	font-family: "Lato", sans-serif;
 	font-weight: 400;
 	margin: 1rem;
+
+	/* Fix underscores under links */
+	text-decoration-skip-ink: none;
 }
 
 h1 {
@@ -157,6 +160,9 @@ h2 {
 		page-break-before: always;
 	}
 	@media not print {
-		margin-top: 100px;
 	}
+}
+
+.vspace {
+	margin-top: 50px;
 }

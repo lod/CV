@@ -7,6 +7,12 @@ export default class Job extends Component {
 		return (
 			<div className="job" id={this.props.id}>
 				<div className="metadata">
+					<p className="title">{this.props.title}</p>
+					<ul className="responsibilities">
+						{ this.props.responsibilities && this.props.responsibilities.map(r => 
+							<li key={r}>{r}</li>
+						) }
+					</ul>
 					<p className="company">{this.props.company}</p>
 					<p className="period">
 						<span className="start">
@@ -17,12 +23,7 @@ export default class Job extends Component {
 							{new Date(this.props.end).toLocaleString(["en-au", "en-us"], { month: "short", year: "numeric" })}
 						</span>
 					</p>
-					<p className="title">{this.props.title}</p>
-					<ul className="responsibilities">
-						{ this.props.responsibilities && this.props.responsibilities.map(r => 
-							<li key={r}>{r}</li>
-						) }
-					</ul>
+			        <p className="description">{this.props.description}</p>
 					<p className="link">
 						<a href={this.props.href}>{this.props.href}</a>
 					</p>

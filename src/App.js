@@ -15,7 +15,7 @@ class App extends Component {
 					<div className="row">
 						<div>
 							<div className="name">David Tulloh</div>
-							<div className="role">Software Developer, Electronics Engineer, Inventor</div>
+							<div className="role">Manager, Developer, Engineer</div>
 						</div>
 						<dl>
 							<dt>email</dt><dd><a href="mailto:david@tulloh.id.au">david@tulloh.id.au</a></dd>
@@ -45,15 +45,18 @@ class App extends Component {
 					</div>
 				</div>
 
-				<Timeline startYear={2010} endYear={2020}>
+				<Timeline startYear={2011} endYear={2021}>
 					<div>
 						<p className="heading">Employment</p>
-			      <Period start='2020-03-23' end={now} href="#fd">FD</Period>
+						{/* FD start adjusted to look prettier */}
+			      <Period start='2020-04-01' end={now} href="#fd">FD</Period>
 						<Period start='2019-04-25' end='2020-03-20' href="#space">UNSW</Period>
 						<Period start='2015-01-01' end='2019-01-01' href="#inventing">Inventoring</Period>
 						<Period start='2012-07-01' end='2014-10-01' href="#m5-network-security" short="NG">Northrop</Period>
 						<Period start='2010-08-14' end='2012-04-01' href="#aad" short="AAD">AAD</Period>
-						<Period start='2009-11-01' end='2010-08-01' href="#airservices" short="AA">AA</Period>
+			{/*
+				<Period start='2009-11-01' end='2010-08-01' href="#airservices" short="AA">AA</Period>
+				*/}
 					</div>
 				</Timeline>
 			<Job
@@ -62,18 +65,40 @@ class App extends Component {
 				start='2019-04-25' end='2020-03-20'
 				title="Engineering Manager"
 				responsibilities={[
-					"SRE and backend team manager",
-					"Project manager",
+					"SRE and backend team managing",
+					"Project managing",
 				]}
 				href="https://www.fifthdomain.com.au/"
+			  description="A cyber security training provider, delivering a platform and services to Defence and educational institutions."
 			>
 			<p>
-			FifthDomain is a startup which produces and runs a platform for cyber skills training and evaluation.  With a platform comprising of educational labs, exercise ranges and capture the flag challenges. FifthDomain provides ongoing environments to educators in Universities and TAFEs, as well as special project deliviers to customers such as Defence.
+			As an engineering manager I lead up to eight people divided into two squads.
+			Duties included:
 			</p>
+			<ul>
+			<li>day to day management;</li>
+			<li>sprint planning;</li>
+			<li>interfacing with other areas of the company;</li>
+			<li>influencing company policy;</li>
+			<li>providing technical leadership;</li>
+			</ul>
+
 			<p>
+			Additionally, I led a number of special project deliveries as a project manager and technical lead. This work included:
+			</p>
+
+			<ul>
+			<li>Liasing with the customer to design and manage the project;</li>
+		  <li>Coordinating with subcontractors;</li>
+		  <li>Leading the team to deliver the project;</li>
+		  <li>Managing internal and client secondees;</li>
+		  <li>Working on site with the client;</li>
+			</ul>
+
+			<p style={{display: "none"}}>
 			As a member of the engineering leadership team I led a team of people, comprising up to eight staff members divided into one or two squads. Duties included day to day management, sprint planning, interfacing with other areas of the company, influencing company policy, and technical leadership. Tasks tackled under my leadership included a backend rearchitecture, automating deployments, improved testing, increased monitoring, calculated scaling, and implemented new features.
 			</p>
-			<p>
+			<p style={{display: "none"}}>
 			Additionally, I led a number of special project deliveries as a project manager and technical lead. I delivered multiple large cyber range platforms to provide training environments for defence. This work involved liasing with defence, working with them to design the product, coordinating with subcontractors, leading the team to produce the product, manage defence staff embedded in my team, and working embedded in a defence group to deliver the training. I also stepped up when the project manager went on leave to deliver multiple substatiantial capture the flag projects, including the annual Defence Cyber Skills Challenge with 700 participants. This included liasing with the client and managing the delivery of the project.
 			</p>
 			</Job>
