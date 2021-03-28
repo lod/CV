@@ -81,16 +81,28 @@
 			}
 			margin: 0 auto;
 			text-align: justify;
-			margin-bottom: 1.5em;
+			margin-bottom: 1.2em;
 			&:last-child {
 				margin-bottom: 0; /* Flex won't collapse margins */
 			}
 		}
 
+
 		ul {
-			list-style: inside;
+			list-style: outside;
+			margin-top: -0.7em; /* Get closer: 1.5-0.8em */
 			li {
-				margin-bottom: 0.2em; /* Override * 1.5em */
+				margin-bottom: 0.5em; /* Override * 1.5em */
+				margin-left: 1em; /* Line bullets up with adjacent <p> */
+			}
+		}
+
+		.tools {
+			ul {
+				margin-top: -1.2em; /* Get closer: 1.5-0.3em */
+			}
+			li {
+				margin-bottom: 0.3em; /* Make it tighter */
 			}
 		}
 	}

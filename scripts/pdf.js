@@ -22,9 +22,10 @@ const { spawnSync } = require( 'child_process' );
 const css_shrink = '.summary > p { height: 10px; }';
 const css_body_page = '@page { margin-top: 20mm; margin-bottom: 20mm }';
 const css_first_page = '@page { margin-top: 10mm; margin-bottom: 10mm }';
+const css_single_page = '@page { margin-left: 0mm; margin-right: 0mm; margin-top:0mm; }';
 const footerTemplate = '<footer style="background: red; font-size: 16px; font-family: \"Lato\", sans-serif; font-weight: 400; position: fixed; bottom: 0; right: 0">David Tulloh &nbsp;&emdash;&nbsp; david@tulloh.id.au</footer>';
 
-(async () => {
+async function main() {
 	const browser = await puppeteer.launch();
 	const page = await browser.newPage();
 	await page.goto('http://localhost:3001/', {waitUntil: 'networkidle2'});
@@ -79,5 +80,29 @@ const footerTemplate = '<footer style="background: red; font-size: 16px; font-fa
 
 
 	console.log("Generated david_tulloh.pdf");
-})();
+}
 
+async function us() {
+	const browser = await puppeteer.launch();
+	const page = await browser.newPage();
+	await page.goto('http://localhost:3001/US', {waitUntil: 'networkidle2'});
+
+	await page.mainFrame().addStyleTag({content: css_single_page});
+
+	await page.pdf({
+		path: 'david_tulloh_us.pdf',
+		format: 'A4',
+		pageRanges: '1',
+		printBackground: true,
+		displayHeaderFooter: false,
+	});
+
+	await browser.close();
+
+	console.log("Generated david_tulloh_us.pdf");
+}
+
+// Chain, puppeteer seems to occasionally trip over itself in parellel
+main()
+.then(us)
+.then(() => console.log("Generate complete"));

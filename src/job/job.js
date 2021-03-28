@@ -4,6 +4,8 @@ import './job.scss';
 
 export default class Job extends Component {
 	render() {
+		const start_date = new Date(this.props.start);
+		const end_date = new Date(this.props.end);
 		return (
 			<div className="job" id={this.props.id}>
 				<div className="metadata">
@@ -16,11 +18,11 @@ export default class Job extends Component {
 					<p className="company">{this.props.company}</p>
 					<p className="period">
 						<span className="start">
-							{new Date(this.props.start).toLocaleString(["en-au", "en-us"], { month: "short", year: "numeric" })}
+							{start_date.toLocaleString(["en-au", "en-us"], { month: "short", year: "numeric" })}
 						</span>
 						<span className="seperator"> &#8680; </span>
 						<span className="end">
-							{new Date(this.props.end).toLocaleString(["en-au", "en-us"], { month: "short", year: "numeric" })}
+							{isNaN(end_date) ? this.props.end : end_date.toLocaleString(["en-au", "en-us"], { month: "short", year: "numeric" })}
 						</span>
 					</p>
 			        <p className="description">{this.props.description}</p>

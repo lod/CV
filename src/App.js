@@ -36,12 +36,13 @@ class App extends Component {
 							*    Technical Mastery
 							*    Soft skills
 						  */}
-						<p>
-							An experienced software and hardware engineer. I am looking for engaging work with a skilled team.
-						</p>
-						<p>
-							I offer a broad base of demonstrated technical proficiency, leadership capability, and creativity developed across diverse fields of experience.  I have the skills and the insight to add value to projects and teams.
-						</p>
+			 <p>
+          An SRE manager with experience in both software and hardware devolopment.
+          I am looking for engaging work with a skilled team.
+        </p>
+        <p>
+          I offer a broad base of demonstrated technical proficiency, leadership, and creativity developed across diverse fields of experience.  I have the skills and the insight to add value to projects and teams.
+        </p>
 					</div>
 				</div>
 
@@ -62,11 +63,12 @@ class App extends Component {
 			<Job
 				id="fd"
 				company="FifthDomain"
-				start='2019-04-25' end='2020-03-20'
+				start='2019-04-25' end='present'
 				title="Engineering Manager"
 				responsibilities={[
-					"SRE and backend team managing",
-					"Project managing",
+					"Managing multiple squads",
+					"Leading project delivery",
+					"SRE improvements"
 				]}
 				href="https://www.fifthdomain.com.au/"
 			  description="A cyber security training provider, delivering a platform and services to Defence and educational institutions."
@@ -83,7 +85,7 @@ class App extends Component {
 			<ul>
 			<li>Managing a small team and partner organisation to deliver a major cyber range to Defence in a truncated timeframe eliciting positive feedback from the client.</li>
 
-			<li>Led the deliver of Defence's premier cyber skills competition with over 700 domestic and international participants.</li>
+			<li>Led the delivery of Defence's premier cyber skills competition with over 700 domestic and international participants.</li>
 
 			<li>Developed and pitched an innovative server security solution for inclusion in the Defence budget cycle.</li>
 
@@ -107,30 +109,40 @@ class App extends Component {
 					"Electronics assembly",
 				]}
 				href="https://www.unsw.adfa.edu.au/space-research/"
+			  description="UNSW Canberra Space designs and builds satellites for research purposes."
 			>
 
 			<p>
-			UNSW Canberra Space is a group based at ADFA designing and satellites for research purposes. It has a mix of researchers and engineers to produce and operate the satellites.
-			As a member of the electronics engineering team I developed hardware, firmware, software, performed manufacturing, testing, and process improvement.
+			As a member of the electronics engineering team I developed hardware, firmware, and software, as well as performed manufacturing, testing, and process improvement.
 			</p>
 
 			<p>
-			Working with hardware I manufactured and tested a number of flight boards following specialised handling and cleaning procedures to ensure high reliability and to avoid issues that arise from the vacuum of space. I also was training in bonding solar panels to PCBs and large components to mitigate vibration failures. I worked in a clean room environment to assist with assembly and testing.
+			Key achievements in this role include:
 			</p>
 
-			<p>
-			I participated in designing the next generation satellite system with a new mechanical layout and bus to improve capability and manufacturability from the current designs. I designed multiple boards for the next generation satellite. I also actively pursued and implemented new technologies to improve our capability and reliability.
-			</p>
+			<ul>
+			<li>
+			Manufactured, tested and cleaned flight boards used in a working satellite.
+			</li>
 
-			<p>
-			The satellites carry a secondary camera system which I developed the firmware for, including testing and documentation. I also developed firmware and scripts for hardware testing. Software to enable optical testing and calibration, and improvements to the ground station software system.
-			</p>
+			<li>
+			Designed a next generation satellite system, including negotiating buyin from stakeholders for cutting edge technologies to take advantage of the inherent radiation tolerance of new chip layouts.
+			</li>
 
-			<p>
-			I also worked on process improvements for the team. This included introducing source control procedures for the electronics projects using git, component inventory management, and exploring options to improve the manufacturing speed and capability.
-			</p>
+			<li>
+			Developed the firmware for the secondary camera system as well as test scripts and ground station improvements.
+			</li>
+
+			<li>
+			Drove process improvements such as electronics source control, component inventory management and explored manufacturing capability improvements.
+			</li>
+
+			</ul>
+
 
 				</Job>
+
+				<div className="pagebreak"></div>
 
 			<Job
 				id="inventing"
@@ -144,13 +156,22 @@ class App extends Component {
 					"Marketing",
 				]}
 				href="https://youtu.be/R3DADx5z-XY"
+			  description="Worked on independent products to meet gaps I observed in the market."
 			>
 			<p>
 			Enabled by my partner’s move interstate for work, I established myself working on independent projects to meet gaps I observed in the market.
 			</p>
+
 			<p>
-			The major project I worked on is a heat sensor based microwave to allow heating of food based on internal temperature rather than power and time.  I produced a prototype and presented on the software at Linux Conference Australia before concluding that, while technically sound, it was not commercially viable for me to pursue.  Other projects included developing a PIR movement sensor replacement that used thermal vision to avoid the movement requirement, an alarm system for travellers staying in hotel rooms, and a flexible LED sign to allow scrolling messages at football matches. All products developed to an initial prototype stage.
+			Key achievements in this role include:
 			</p>
+
+			<ul>
+			<li>Developed a heat sensor based microwave that was not commercially viable.</li>
+			<li>Prototyped a presence sensor using thermal vision to replace PIR systems.</li>
+			<li>Prototyped a personal alarm system for travellers in hotel rooms.</li>
+			<li>Prototyped a flexible programmable LED sign.</li>
+			</ul>
 
 			<p>
 			This built my whole of system design experience, bringing together a product from concept to selecting each component of the system, building the environment, software and hardware. It has also been invaluable in building my business, marketing and financial skills.
@@ -158,7 +179,6 @@ class App extends Component {
 
 				</Job>
 
-				<div className="pagebreak"></div>
 
 				<Job
 					id="m5-network-security"
@@ -170,16 +190,25 @@ class App extends Component {
 						"Hardware development",
 						"Compliance testing",
 					]}
-					href="http://www.northropgrumman.com/BusinessVentures/M5NetworkSecurity/About/Pages/default.aspx"
+					href="https://www.northropgrumman.com/who-we-are/global-locations/australian-intelligence-cyber-solutions/"
+					description="M5 Network security, a branch of NG, designs and manufactures devices to facilitate secure communications over insecure networks."
 				>
 			<p>
-				M5 Network Security, a branch of Northrop Grumman's Information Systems Sector, designs and manufactures
-				devices to facilitate secure communications across insecure networks. The work included designing firmware, hardware, operating system drivers, client software and server infrastructure certified to military and civilian
-				standards.
-			</p>
+				Developed firmware for multiple systems as well as contributing to the electronics design, testing and certification processes.
+				</p>
+
+
 			<p>
-				My primary task was to develop the firmware for the next generation of product with six different microprocessors performing multiple functions. Architectures used were the Cypress PSoC 5LP and the Xilinx Microblaze. My duties also included reviewing and documenting the electronics circuit design, testing boards, diagnosing faults, designing modifications and certifying the system. I also assisted the work of the software development and support teams.
+			Key achievements in this role include:
 			</p>
+
+			<ul>
+			<li>Developed firmware for the next generation of product across multiple cooperating microcontrollers.</li>
+			<li>Supported the support team and developed fixes for older, contractor developed products.</li>
+			<li>Achieved Australian telecommunications certifications.</li>
+			<li>Performed Tempest testing and certification.</li>
+			<li>Liaised between hardware and software development teams.</li>
+			</ul>
 
 				</Job>
 
@@ -195,80 +224,28 @@ class App extends Component {
 						"Support field experiments",
 					]}
 					href="http://www.antarctica.gov.au/science"
+					description="The AAD maintains several stations on Antarctica to support scientific research."
 				>
 			<p>
-					The Australian Antarctic Division maintains several stations on Antarctica to support scientific research. As the
-				support engineer I spent three seasons living at Davis Station.
-			</p>
+As the support engineer I spent three seasons living at Davis Station, I was responsible for providing technical assistance to over twenty different experiments.
+</p>
+
 			<p>
-			I was responsible for providing technical assistance to over twenty different experiments, primarily atmospheric instruments but also including biology, geology and glaciology experiments. My duties included daily monitoring, routine maintenance, annual maintenance programs, emergency and scheduled repairs, process improvement and other tasks as required.
+			Key achievements in this role include:
 			</p>
-			<p>
-			Living and working closely with a diverse group of people significantly improved my social and people skills. In addition to my technical duties I led field teams, visits to foreign stations and fulfilled station roles.
-			</p>
-			
+
+			<ul>
+			<li>Maintained equipment including atmospheric radars, lidars, and observation systems.</li>
+			<li>Lived and worked closely with a diverse group of people.</li>
+			<li>Led multiple field teams and performed deep field work.</li>
+			<li>Led visits to foreign stations.</li>
+			</ul>
+
 				</Job>
-
-				<Job
-					id="airservices"
-					company="Airservices Australia"
-					title="Research Programmer"
-					start='2009-11-01' end='2010-08-01'
-					href="http://www.airservicesaustralia.com/"
-					responsibilities={[
-						"Prepare data for processing",
-						"Develop new data sources",
-						"Produce data visualisations",
-						"Contribute to analysis reports",
-					]}
-				>
-					<p>
-			The Airservices Australia safety team is responsible for ensuring the safety of Australian flying experience. As part of the qualitative and quantitative analysis team's I supported routine reporting, targeted studies and expanded the teams capability.
-					</p>
-			<p>
-			While my primary role was to prepare data for analysis I also liaised with multiple other internal and external teams to collect data. In doing so I expanded the breadth of available data, allowing new analysis, and worked towards improved access to data. In doing this I reduced the workload for my colleagues and increasing the frequency of reporting.
-			</p>
-			<p>
-			I worked with a team from USA's Federal Aviation Administration to perform the first statistical analysis of altimeter errors using ADS-B data. In the process I identified and compensated for errors in the ADS-B reporting. I also contributed to multiple internal agency reports and a paper submitted to the International Separation and Airspace Safety Panel.
-			</p>
-				</Job>
-
-			<Job
-				id="signav"
-				company="SigNav"
-				title="Embedded Systems Engineer"
-				start='2006-07-01' end='2009-07-01'
-				href="https://www.u-blox.com/en/press-release/u-blox-acquires-signav-ip"
-				responsibilities={[
-					"Firmware development",
-					"Manufacturing testing",
-					"Development testing",
-				]}
-			>
-				<p>
-					SigNav was a venture capital based startup developing GPS modules targeting weak signal timing markets such as femtocells. As a member of the hardware team I developed the programming firmware, functional tester, and firmware for supporting microprocessors. I automated several development tests allowing for significant improvements to the RF chain. The manufacturing tests I designed enabled the manufacture of over 35,000 devices with under 1% rejected by the client. I also contributed functionality to the core firmware and coordinated staff performing in testing roles.
-				</p>
-			</Job>
-
-			<Job
-				id="cmhr"
-				company="Centre for Mental Health Research"
-				title="Lead Developer"
-				start="2005-03-01" end="2006-03-01"
-				href="http://cmhr.anu.edu.au/"
-				responsibilities={[
-					"Developed web framework for online cognitive behaviour therapy",
-					"Supported other online projects",
-				]}
-			>
-				<p>
-					The Centre for Mental Health Research is a grant funded research group embedded in the Australian National University specialising in online based research and treatment programs.  I developed a product called E-Couch which was designed to provide online cognitive behaviour therapy, produce data for research programs and allow easy repurposing for new languages and specialised research programs.
-				</p>
-			</Job>
 
 				<div className="pagebreak vspace"></div>
 
-				<Timeline startYear={2010} endYear={2020}>
+				<Timeline startYear={2011} endYear={2021}>
 					<div>
 						<p className="heading">Speaking</p>
 						<Event date='2020-01-15'>Linux.conf.au Speaker</Event>
@@ -381,6 +358,21 @@ class App extends Component {
 
 				<div className="skills">
 					<div className="group">
+						<h2>General skills</h2>
+						<Skill num="4">Management and Leadership</Skill>
+						<Skill num="5">Explaining technical concepts</Skill>
+						<Skill num="4">Teaching</Skill>
+						<Skill num="3">Marketing</Skill>
+					</div>
+					<div className="group">
+						<h2>Cloud Orchestration</h2>
+						<Skill num="4">Terraform</Skill>
+						<Skill num="3">Ansible</Skill>
+						<Skill num="3">AWS</Skill>
+						<Skill num="3">Google Cloud</Skill>
+						<Skill num="3">Kubernetes</Skill>
+					</div>
+					<div className="group">
 						<h2>Languages</h2>
 						<Skill num="5">C</Skill>
 						<Skill num="5">Python</Skill>
@@ -419,21 +411,6 @@ class App extends Component {
 						<Skill num="3">Military grade security</Skill>
 						<Skill num="3">Encryption techniques</Skill>
 					</div>
-					<div className="group">
-						<h2>Cloud Orchestration</h2>
-						<Skill num="4">Terraform</Skill>
-						<Skill num="3">Ansible</Skill>
-						<Skill num="3">AWS</Skill>
-						<Skill num="3">Google Cloud</Skill>
-						<Skill num="3">Kubernetes</Skill>
-					</div>
-					<div className="group">
-						<h2>General skills</h2>
-						<Skill num="5">Explaining technical concepts</Skill>
-						<Skill num="4">Management and Leadership</Skill>
-						<Skill num="4">Teaching</Skill>
-						<Skill num="3">Marketing</Skill>
-					</div>
 				</div>
 
 			<h1>Qualifications</h1>
@@ -464,8 +441,8 @@ class App extends Component {
 			/>
 
 			<Qualification
-				title="Australian Security Clearance NV1"
-				details="Currently inactive"
+				title="Australian Security Clearance - NV1"
+				details=""
 			/>
 
 			</div>

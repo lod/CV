@@ -1,3 +1,5 @@
+@import "../variables.scss";
+
 .timeline {
 	& {
 		margin-bottom: 2rem;
@@ -8,6 +10,7 @@
 		display: flex;
 		padding-top: 2em; /* Draw the year dashes here */
 		margin-left: 100px;
+		margin-bottom: 0.5em;
 	}
 	.content {
 		position: relative;
@@ -49,14 +52,15 @@
 	}
 	.period {
 		display: block;
-		background: #c8d0ea;
+		background: $color-primary;
 		@media print {
-			background: #edf0f8; /* lighter shade, for grayscale */
+			background: $color-primary-print;
 		}
 		position: absolute;
 		text-align: center;
 		padding: 0.2em 0;
 		box-shadow: 5px 5px 10px rgba(0,0,0,0.7);
+		@media print { box-shadow: none; }
 		&:focus { /* for accessibility */
 			background-color: #dc9bee; /* pink */
 		}

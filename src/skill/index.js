@@ -13,4 +13,8 @@ class Skill extends Component {
 	}
 }
 
+Skill.defaultProps = {
+	num: 0
+};
+
 export default Skill;
