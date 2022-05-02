@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Switch, Route, BrowserRouter } from 'react-router-dom';
+import { createRoot } from 'react-dom/client';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import './reset.css';
 import './index.css';
 import App from './App';
@@ -19,17 +19,14 @@ class DebugRouter extends BrowserRouter {
   }
 }
 
-const Main = () => {
-	let us_rx = new RegExp('us', 'i'); // Issues getting relative path working
-    return (
-		<DebugRouter>
-      <Switch>
-        <Route path={us_rx} component={US}></Route>
-        <Route component={App}></Route>
-      </Switch>
-		</DebugRouter>
-    );
-}
-          
+const container = document.getElementById('root');
+const root = createRoot(container);
 
-ReactDOM.render(<BrowserRouter basename="/cv"><Main/></BrowserRouter>, document.getElementById('root'));
+root.render(
+	<BrowserRouter basename="/cv">
+      <Routes>
+        <Route path="/us/" element={<US />}></Route>
+        <Route path="*" element={<App />}></Route>
+      </Routes>
+	</BrowserRouter>
+);
