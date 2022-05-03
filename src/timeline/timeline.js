@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './timeline.scss';
 
-export class Period extends Component {
+export class TimeElement extends Component {
 	// See https://stackoverflow.com/a/21015393/2438650
 	getTextWidth(text, font) {
 		// re-use canvas object for better performance
@@ -12,28 +12,46 @@ export class Period extends Component {
 		var metrics = context.measureText(text);
 		return metrics.width;
 	}
-
-	render() {
+	
+	getPosition(pstart_ms, pend_ms) {
 		// Position period vs timeline, using left and width
 		// Percentage based values make us impervious to resizing
 		// Full width includes start, end and a half year at each end
 		// Remember timeline is reverse, newer (end) on left to start on right
-		const year_ms = Date.parse(1971);
-		const tend_ms = Date.parse(this.context.endYear)+year_ms;
+		const year_ms = Date.parse(1971); // length of 1 year, epoch is 1970
+		const tend_ms = Date.parse(this.context.endYear)+year_ms*1.5;
 		const twidth_ms = (this.context.endYear - this.context.startYear + 2)*year_ms;
 
-		const pstart_ms = Date.parse(this.props.start);
-		const pend_ms = Date.parse(this.props.end);
+		if (pstart_ms < Date.parse(this.context.startYear)-year_ms*0.5) {
+			pstart_ms = Date.parse(this.context.startYear)-year_ms*0.5;
+		}
+		if (pend_ms > tend_ms) {
+			pend_ms = tend_ms;
+		}
 
 		const left_p = (tend_ms-pend_ms)/twidth_ms*100;
 		const width_p = (pend_ms-pstart_ms)/twidth_ms*100;
+
+		console.log({entry: this.props.children, year_ms, tend_ms, twidth_ms, pstart_ms, pend_ms, left_p, width_p});
+
+		return [left_p, width_p];
+	}
+}
+
+export class Period extends TimeElement {
+	render() {
+		const year_ms = Date.parse(1971); // length of 1 year, epoch is 1970
+		const pstart_ms = Date.parse(this.props.start);
+		const pend_ms = (this.props.end === 'now') ?
+			Date.parse(this.context.endYear)+year_ms*1.5 :
+			Date.parse(this.props.end);
+
+		const [left_p, width_p] = this.getPosition(pstart_ms, pend_ms);
 
 		// Determine if the content is going to fit in the box
 		// if (this.getTextWidth(this.props.children, "16px Lato") > 
 		// "Lato", sans-serif
 
-
-		console.log({year_ms, tend_ms, twidth_ms, pstart_ms, pend_ms, left_p, width_p});
 
 		return (
 			<a className="period" href={this.props.href} style={{left: left_p+'%', width: width_p+'%'}}>{this.props.children}</a>
@@ -51,20 +69,16 @@ Period.contextTypes = {
 	endYear: PropTypes.number,
 };
 
-export class Event extends Component {
+export class Event extends TimeElement {
 	render() {
 		// Position period vs timeline, using left and width
 		// Percentage based values make us impervious to resizing
 		// Full width includes start, end and a half year at each end
 		// Remember timeline is reverse, newer (end) on left to start on right
-		const year_ms = Date.parse(1971);
-		const tend_ms = Date.parse(this.context.endYear)+year_ms/2;
-		const twidth_ms = (this.context.endYear - this.context.startYear + 1)*year_ms;
 
 		const pstart_ms = Date.parse(this.props.date);
-		const pend_ms = pstart_ms+1000;
+		const [left_p, width_p] = this.getPosition(pstart_ms, pstart_ms);
 
-		const left_p = (tend_ms-pend_ms)/twidth_ms*100;
 
 		// TODO: Content - link, popup? - how to print?
 		return (

@@ -8,7 +8,6 @@ import './US.scss';
 
 class US extends Component {
 	render() {
-		const now = new Date().toISOString();
 		return (
 			<div className="App US">
 				<div className="titleblock">
@@ -34,11 +33,13 @@ class US extends Component {
 			<div id="columns">
 
 			<div id="jobs">
-				<Timeline startYear={2011} endYear={2021}>
+				<Timeline startYear={2011} endYear={2022}>
 					<div>
 						<p className="heading">Employment</p>
 						{/* FD start adjusted to look prettier */}
-			      <Period start='2020-04-01' end={now} href="#fd">FD</Period>
+						{/* Planet end adjusted to look prettier */}
+			      <Period start='2021-06-21' end='now' href="#planet">Planet</Period>
+			      <Period start='2020-04-01' end='2021-05-30' href="#fd">FD</Period>
 						<Period start='2019-02-01' end='2020-03-20' href="#space">UNSW</Period>
 						<Period start='2015-01-01' end='2019-01-01' href="#inventing">Inventoring</Period>
 						<Period start='2012-07-01' end='2014-10-01' href="#m5-network-security" short="NG">Northrop</Period>
@@ -57,7 +58,7 @@ class US extends Component {
 						<Period start='2010-01-01' end='2014-01-01'>TADACT</Period>
 					</div>
 					<div>
-						<Period start='2020-03-01' end={now}>LCA</Period>
+						<Period start='2020-03-01' end='2021-10-01'>LCA</Period>
 						<Period start='2015-01-01' end='2019-04-21' href="#csiro">CSIRO SIS</Period>
 						{/* Extended the period to get the element big enough
 						    real dates, start='2012-09-01' end='2013-02-05' */}
@@ -65,25 +66,44 @@ class US extends Component {
 					</div>
 				</Timeline>
 
-			<div className="summary">
+			<div className="summary" style={{display: 'none'}}>
 				{/* Goal:
 					*    Broad skills
 					*    Technical Mastery
 					*    Soft skills
 					*/}
-				<p>
-					An SRE manager with experience in both software and hardware devolopment.
-					I am looking for engaging work with a skilled team.
-				</p>
-				<p>
-					I offer a broad base of demonstrated technical proficiency, leadership, and creativity developed across diverse fields of experience.  I have the skills and the insight to add value to projects and teams.
-				</p>
 			</div>
+			<Job
+        id="planet"
+        company="Planet Labs"
+        start="2021-06-21" end="present"
+        title="Systems Reliability Engineer"
+        responsibilities={[
+          "Maintain ground stations",
+          "Improve systems",
+          "Design future systems"
+        ]}
+        href="https://www.planet.com/"
+        description="An earth observation company manufacturing and operating over 200 satellites to provide current, quality imagery."
+      >
+			<p>
+      Manage, maintain and operate Planet's 48 ground stations, located in 11 countries around the world, including overseeing the safe download of around x terabytes of data each day.
+      </p>
+      <p>
+      Key achievements in this role include:
+      </p>
+      <ul>
+      <li>Led system design and prototype implementation for next generation of ground station systems across the company.</li>
+      <li>Designed and implemented replacement monitoring system to achieve significant efficiency gains.</li>
+      <li>Working remotely, coordinated across geographically and structurally dispersed teams to manage requirements and achieve consistent, high quality results.</li>
+      </ul>
+      </Job>
+
 
 			<Job
 				id="fd"
 				company="FifthDomain"
-				start='2019-04-25' end='present'
+				start='2019-04-25' end='2021-05-30'
 				title="Engineering Manager"
 				responsibilities={[
 					"Managing multiple squads",
@@ -106,8 +126,6 @@ class US extends Component {
 			<li>Managing a small team and partner organisation to deliver a major cyber range to Defence in a truncated timeframe eliciting positive feedback from the client.</li>
 
 			<li>Led the delivery of Defence's premier cyber skills competition with over 700 domestic and international participants.</li>
-
-			<li>Developed and pitched an innovative server security solution for inclusion in the Defence budget cycle.</li>
 
 			<li>
 			Assisted junior team members in developing their technical and professional skills to achieve their career goals.</li>
@@ -147,10 +165,6 @@ class US extends Component {
 
 			<li>
 			Designed a next generation satellite system, including negotiating buyin from stakeholders for cutting edge technologies to take advantage of the inherent radiation tolerance of new chip layouts.
-			</li>
-
-			<li>
-			Developed the firmware for the secondary camera system as well as test scripts and ground station improvements.
 			</li>
 
 			<li>

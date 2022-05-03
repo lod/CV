@@ -7,6 +7,10 @@ import Qualification from './qualification';
 import './App.scss';
 
 class App extends Component {
+
+	render3() {
+		return (<div>HELLO</div>);
+	}
 	render() {
 		const now = new Date().toISOString();
 		return (
@@ -50,7 +54,8 @@ class App extends Component {
 					<div>
 						<p className="heading">Employment</p>
 						{/* FD start adjusted to look prettier */}
-			      <Period start='2020-04-01' end={now} href="#fd">FD</Period>
+			      <Period start='2021-06-21' end={now} href="#planet">Planet</Period>
+			      <Period start='2020-04-01' end='2021-05-30' href="#fd">FD</Period>
 						<Period start='2019-04-25' end='2020-03-20' href="#space">UNSW</Period>
 						<Period start='2015-01-01' end='2019-01-01' href="#inventing">Inventoring</Period>
 						<Period start='2012-07-01' end='2014-10-01' href="#m5-network-security" short="NG">Northrop</Period>
@@ -61,9 +66,34 @@ class App extends Component {
 					</div>
 				</Timeline>
 			<Job
+			  id="planet"
+			  company="Planet"
+			  start="2021-06-21" end="present"
+			  title="Systems Reliability Engineer"
+				responsibilities={[
+					"Maintain ground stations",
+					"Improve systems",
+					"Design future systems"
+				]}
+				href="https://www.planet.com/"
+			  description="A earth observation company that manufactures and operates over 200 satellites to provide imagery to governments, companies and NGOs."
+			>
+			<p>
+			Manage, maintain and operate Planet's 48 ground stations located at 11 countries around the world. 
+			</p>
+			<p>
+			Key achievements in this role include:
+			</p>
+			<ul>
+			<li>Led system design and prototype implementation for next generation of ground station systems.</li>
+			<li>Designed and implemented replacement monitoring system.</li>
+			<li>Working remotely, coordinated across teams to manage requirements and </li>
+			</ul>
+			</Job>
+			<Job
 				id="fd"
 				company="FifthDomain"
-				start='2019-04-25' end='present'
+				start='2020-04-01' end='2021-05-30'
 				title="Engineering Manager"
 				responsibilities={[
 					"Managing multiple squads",

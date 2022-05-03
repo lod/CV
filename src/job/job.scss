@@ -3,6 +3,9 @@
 		display: flex;
 		flex-direction: row;
 		margin-bottom: 3rem;
+		@media print {
+			margin-bottom: 1.5rem;
+		}
 	}
 
 	@media screen and (max-width: 767px) {
@@ -37,6 +40,9 @@
 			font-weight: 800;
 			margin: 0;
 			margin-top: 2.5em;
+			@media print {
+				margin-top: 1em;
+			}
 		}
 
 		.title {
