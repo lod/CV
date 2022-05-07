@@ -21,7 +21,7 @@ class Titleblock extends Component {
               <dt>online cv</dt><dd><a href={cv_url}>{cv_url}</a></dd>
             </div>
             <div className="screenonly">
-              <dt>printable cv</dt><dd><a href={"https://david.tulloh.id.au/cv/david_tulloh" + cv_pdf}>{ cv_pdf }</a></dd>
+              <dt>printable cv</dt><dd><a href={"https://david.tulloh.id.au/cv/" + cv_pdf}>{ cv_pdf }</a></dd>
             </div>
           </dl>
         </div>
