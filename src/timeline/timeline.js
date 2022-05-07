@@ -77,7 +77,7 @@ export class Event extends TimeElement {
 		// Remember timeline is reverse, newer (end) on left to start on right
 
 		const pstart_ms = Date.parse(this.props.date);
-		const [left_p, width_p] = this.getPosition(pstart_ms, pstart_ms);
+		const [left_p, ] = this.getPosition(pstart_ms, pstart_ms);
 
 
 		// TODO: Content - link, popup? - how to print?

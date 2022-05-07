@@ -9,7 +9,7 @@ class Qualification extends Component {
 		 */
 		return (
 			<div className="qualification">
-			{ Object.keys(Qualification.propTypes).map(k=>
+			{ Object.keys(this.props).map(k=>
 				this.props[k] &&
 				<span className={k} key={k}>{ this.props[k] }</span>
 			) }

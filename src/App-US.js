@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Timeline, {Period,Event} from './timeline/timeline';
-import Job from './job/job';
 import Skill from './skill';
 import Qualification from './qualification';
+import Titleblock from './titleblock';
+import * as Job from './Jobs';
 import './App.scss';
 import './US.scss';
 
@@ -10,26 +11,7 @@ class US extends Component {
 	render() {
 		return (
 			<div className="App US">
-				<div className="titleblock">
-					<div className="row">
-						<div>
-							<div className="name">David Tulloh</div>
-							<div className="role">Manager, Developer, Engineer</div>
-						</div>
-						<dl>
-							<dt>email</dt><dd><a href="mailto:david@tulloh.id.au">david@tulloh.id.au</a></dd>
-							<dt>webpage</dt><dd><a href="https://david.tulloh.id.au/">https://david.tulloh.id.au</a></dd>
-							<dt>phone</dt><dd><a href="tel:+61-439-069-336">+61 439 069 336</a></dd>
-							<dt>github</dt><dd><a href="https://github.com/lod">https://github.com/lod</a></dd>
-							<div className="printonly">
-								<dt>online cv</dt><dd><a href="https://david.tulloh.id.au/cv/us/">https://david.tulloh.id.au/cv/us/</a></dd>
-							</div>
-							<div className="screenonly">
-								<dt>printable cv</dt><dd><a href="https://david.tulloh.id.au/cv/david_tulloh_us.pdf">david_tulloh_us.pdf</a></dd>
-							</div>
-						</dl>
-					</div>
-					</div>
+			<Titleblock variant="us" />
 			<div id="columns">
 
 			<div id="jobs">
@@ -37,7 +19,6 @@ class US extends Component {
 					<div>
 						<p className="heading">Employment</p>
 						{/* FD start adjusted to look prettier */}
-						{/* Planet end adjusted to look prettier */}
 			      <Period start='2021-06-21' end='now' href="#planet">Planet</Period>
 			      <Period start='2020-04-01' end='2021-05-30' href="#fd">FD</Period>
 						<Period start='2019-02-01' end='2020-03-20' href="#space">UNSW</Period>
@@ -66,119 +47,10 @@ class US extends Component {
 					</div>
 				</Timeline>
 
-			<div className="summary" style={{display: 'none'}}>
-				{/* Goal:
-					*    Broad skills
-					*    Technical Mastery
-					*    Soft skills
-					*/}
-			</div>
-			<Job
-        id="planet"
-        company="Planet Labs"
-        start="2021-06-21" end="present"
-        title="Systems Reliability Engineer"
-        responsibilities={[
-          "Maintain ground stations",
-          "Improve systems",
-          "Design future systems"
-        ]}
-        href="https://www.planet.com/"
-        description="An earth observation company manufacturing and operating over 200 satellites to provide current, quality imagery."
-      >
-			<p>
-      Manage, maintain and operate Planet's 48 ground stations, located in 11 countries around the world, including overseeing the safe download of around x terabytes of data each day.
-      </p>
-      <p>
-      Key achievements in this role include:
-      </p>
-      <ul>
-      <li>Led system design and prototype implementation for next generation of ground station systems across the company.</li>
-      <li>Designed and implemented replacement monitoring system to achieve significant efficiency gains.</li>
-      <li>Working remotely, coordinated across geographically and structurally dispersed teams to manage requirements and achieve consistent, high quality results.</li>
-      </ul>
-      </Job>
-
-
-			<Job
-				id="fd"
-				company="FifthDomain"
-				start='2019-04-25' end='2021-05-30'
-				title="Engineering Manager"
-				responsibilities={[
-					"Managing multiple squads",
-					"Leading project delivery",
-					"SRE improvements"
-				]}
-				href="https://www.fifthdomain.com.au/"
-			  description="A cyber security training provider, delivering a platform and services to Defence and educational institutions."
-			>
-			<p>
-			Managing multiple project specific teams to deliver SRE improvements, implement new product features, and deliver special projects.
-			Additionally, reporting directly to the CEO, managing stakeholder relationships and delivering client tailored solutions.
-			</p>
-
-			<p>
-			Key achievements in this role include:
-			</p>
-
-			<ul>
-			<li>Managing a small team and partner organisation to deliver a major cyber range to Defence in a truncated timeframe eliciting positive feedback from the client.</li>
-
-			<li>Led the delivery of Defence's premier cyber skills competition with over 700 domestic and international participants.</li>
-
-			<li>
-			Assisted junior team members in developing their technical and professional skills to achieve their career goals.</li>
-
-			</ul>
-
-
-
-
-			</Job>
-			<Job
-				id="space"
-				company="UNSW Canberra Space"
-				start='2019-04-25' end='2020-03-20'
-				title="Electronics Engineer"
-				responsibilities={[
-					"Electronics design",
-					"Firmware development",
-					"Electronics assembly",
-				]}
-				href="https://www.unsw.adfa.edu.au/space-research/"
-			  description="UNSW Canberra Space designs and builds satellites for research purposes."
-			>
-
-			<p>
-			As a member of the electronics engineering team I developed hardware, firmware, and software, as well as performed manufacturing, testing, and process improvement.
-			</p>
-
-			<p>
-			Key achievements in this role include:
-			</p>
-
-			<ul>
-			<li>
-			Manufactured, tested and cleaned flight boards used in a working satellite.
-			</li>
-
-			<li>
-			Designed a next generation satellite system, including negotiating buyin from stakeholders for cutting edge technologies to take advantage of the inherent radiation tolerance of new chip layouts.
-			</li>
-
-			<li>
-			Drove process improvements such as electronics source control, component inventory management and explored manufacturing capability improvements.
-			</li>
-
-			</ul>
-
-
-				</Job>
-
+				<Job.Planet/>
+				<Job.FD/>
+				<Job.Space/>
 			</div> { /* jobs */ }
-					
-					
 
 			<div id="right">
 
