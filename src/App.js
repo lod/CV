@@ -68,6 +68,7 @@ class App extends Component {
 						<Period start='2010-01-01' end='2014-01-01'>TADACT</Period>
 					</div>
 					<div>
+						<Period start='2019-05-17' end='2020-12-06'>LCA</Period>
 						<Period start='2015-01-01' end='2019-04-21' href="#csiro">CSIRO SIS</Period>
 						{/* Extended the period to get the element big enough
 						    real dates, start='2012-09-01' end='2013-02-05' */}
