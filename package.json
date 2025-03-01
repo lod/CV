@@ -2,46 +2,22 @@
   "name": "cv",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://david.tulloh.id.au/cv/",
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.1.1",
-    "@testing-library/user-event": "^13.5.0",
-    "nth-check": "^2.0.1",
-    "puppeteer": "^13.7.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-router": "^6.3.0",
-    "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "node scripts/pdf.js && react-scripts build && tar --transform='s/build/cv/' -cjf cv.tar.bz2 build/ && ls -l cv.tar.bz2 | awk '{$0=sprintf(\"Packaged %s - %.2f MB\", $9, $5/1024^2)} 1'",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "pdf": "node scripts/pdf.js"
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "next": "15.2.0"
   },
   "devDependencies": {
-    "sass": "^1.50.1"
+    "@tailwindcss/postcss": "^4",
+    "tailwindcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.0",
+    "@eslint/eslintrc": "^3"
   }
 }
