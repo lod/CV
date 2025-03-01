@@ -1,13 +1,42 @@
 import React from 'react';
 import Job from './job/job';
 
+class Capricorn extends Job {
+	render() {
+		return (
+			<Job
+			  id="planet"
+			  company="Planet"
+			  start="2024-08-01" end="present"
+			  title="Systems Reliability Engineer"
+				responsibilities={[
+				]}
+				href="https://www.capricornspace.com.au/"
+			  description="Australian owned and operated ground segment service provider for the space industry."
+			>
+			<p>
+			Engaged specifically to drive critical technical change.
+			</p>
+			<p>
+			Key achievements in this role include:
+Key Achievements so far:
+			</p>
+			<ul>
+			<li>Rearchitected monitoring and control systems to improve operation visibility and significantly reduce ongoing licence costs.</li>
+			<li>Improved the company's development, deployment and testing patterns.</li>
+			</ul>
+			</Job>
+		)
+	}
+}
+
 class Planet extends Job {
 	render() {
 		return (
 			<Job
 			  id="planet"
 			  company="Planet"
-			  start="2021-06-21" end="present"
+			  start="2021-06-21" end="2024-08-01"
 			  title="Systems Reliability Engineer"
 				responsibilities={[
 					"Maintain ground stations",
@@ -18,15 +47,24 @@ class Planet extends Job {
 			  description="An earth observation company manufacturing and operating over 200 satellites to provide responsive and quality imagery."
 			>
 			<p>
-			Manage, maintain and operate Planet's 48 ground stations located at 11 countries around the world. 
-			</p>
-			<p>
-			Key achievements in this role include:
+Led a rebuild of Planet's global ground station server systems, and worked on a
+range of other shoter term projects.
 			</p>
 			<ul>
-			<li>Led system design and prototype implementation for next generation of ground station systems.</li>
-			<li>Designed and implemented replacement monitoring system.</li>
-			<li>Working remotely, coordinated across teams to manage requirements and </li>
+<li>Developed and maintained working relationships with internal and
+external stakeholders located across the world.</li>
+<li>Rearchitected the ground station server deployment automation, driving
+acceptance and adoption. This significantly reduced the system
+complexity improving reliability, enabling new functionality and
+increasing development speed.</li>
+<li>Participated in the design and implementation of the next generation of
+Planet's satellite communication systems. Through documentation drove
+cross team coordination, system design changes and reliability
+improvements.</li>
+<li>Prototyped future changes including high availability server design,
+monitoring alternatives and network hardening.</li>
+<li>Maintained high reliability operational service delivery as the third
+timezone.</li>
 			</ul>
 			</Job>
 		)
@@ -50,24 +88,24 @@ class FD extends Job {
 			  description="A cyber security training provider, delivering a platform and services to Defence and educational institutions."
 			>
 			<p>
-			Managing multiple project specific teams to deliver SRE improvements, implement new product features, and deliver special projects.
-			Additionally, reporting directly to the CEO, managing stakeholder relationships and delivering client tailored solutions.
+Reporting directly to the CTO, led delivery of complex technical solutions
+and systems reliability engineering services while managing diverse
+project teams and key stakeholder relationships.
 			</p>
 
 			<p>
-			Key achievements in this role include:
+Key Achievements:
 			</p>
 
 			<ul>
-			<li>Managing a small team and partner organisation to deliver a major cyber range to Defence in a truncated timeframe eliciting positive feedback from the client.</li>
-
-			<li>Led the delivery of Defence's premier cyber skills competition with over 700 domestic and international participants.</li>
-
-			<li>Developed and pitched an innovative server security solution for inclusion in the Defence budget cycle.</li>
-
-			<li>
-			Assisted junior team members in developing their technical and professional skills to achieve their career goals.</li>
-
+<li>Led development and successful delivery of a cyber skills
+competition for 700+ Defence participants under a compressed
+timeline.</li>
+<li>Co-designed an exercise environment for Defense's joint cyber units
+to prove their operational readiness. Then led a team to develop the
+environment and operate it for the exercise.</li>
+<li>Managed staff in a remote and then hybrid environment including
+contractors and a client placement.</li>
 			</ul>
 			</Job>
 		)
@@ -92,31 +130,25 @@ class Space extends Job {
 			>
 
 			<p>
-			As a member of the electronics engineering team I developed hardware, firmware, and software, as well as performed manufacturing, testing, and process improvement.
-			</p>
-
-			<p>
-			Key achievements in this role include:
+As a senior member of the electronics engineering team at Australia’s leading
+satellite production group, I:
 			</p>
 
 			<ul>
-			<li>
-			Manufactured, tested and cleaned flight boards used in a working satellite.
-			</li>
 
-			<li>
-			Designed a next generation satellite system, including negotiating buyin from stakeholders for cutting edge technologies to take advantage of the inherent radiation tolerance of new chip layouts.
-			</li>
 
-			<li>
-			Developed the firmware for the secondary camera system as well as test scripts and ground station improvements.
-			</li>
 
-			<li>
-			Drove process improvements such as electronics source control, component inventory management and explored manufacturing capability improvements.
-			</li>
+<li>Developed hardware, firmware and software elements of next generation
+satellites;</li>
+<li>Performed manufacturing, testing and process improvement; and</li>
+<li>Developed business plans for expansion of the organisation’s electronics
+capability.</li>
 
 			</ul>
+			<p>
+This role involved navigating and reconciling competing cultural expectations
+between business, academic and defence stakeholders.
+			</p>
 			</Job>
 		)
 	}
@@ -140,23 +172,16 @@ class Inventing extends Job {
 			  description="Worked on independent products to meet gaps I observed in the market."
 			>
 			<p>
-			Enabled by my partner’s move interstate for work, I established myself working on independent projects to meet gaps I observed in the market.
-			</p>
-
-			<p>
-			Key achievements in this role include:
+Enabled by a significant shift in my partner’s career, I explored entrepreneurial
+opportunities including:
 			</p>
 
 			<ul>
-			<li>Developed a heat sensor based microwave that was not commercially viable.</li>
-			<li>Prototyped a presence sensor using thermal vision to replace PIR systems.</li>
-			<li>Prototyped a personal alarm system for travellers in hotel rooms.</li>
-			<li>Prototyped a flexible programmable LED sign.</li>
+<li>Developed innovative products to prototype stage;</li>
+<li>Explored manufactory partnership and regulatory considerations;</li>
+<li>Developed comprehensive business assessment leading to the conclusion
+the product, while technically sound, was not commercially viable.</li>
 			</ul>
-
-			<p>
-			This built my whole of system design experience, bringing together a product from concept to selecting each component of the system, building the environment, software and hardware. It has also been invaluable in building my business, marketing and financial skills.
-			</p>
 
 			</Job>
 		)
@@ -295,6 +320,7 @@ class CSIRO extends Job {
 
 // Call with import * as Job from './Jobs'; Job.CSIRO
 export {
+	Capricorn,
 	Planet,
 	FD,
 	Space,
