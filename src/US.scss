@@ -79,15 +79,19 @@
 		margin-top: 50px;
 		margin-left: 3em;
 
+		z-index: 0;
 
-		background: rgba($color-primary, 0.6);
+		& {
+			background: rgba($color-primary, 0.6);
+		}
 		@media print {
 			/* background: rgba($color-primary-print, 0.6); */
 			background: inherit;
 		}
-		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+		& {
+			box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+		}
 		@media print { box-shadow: none; }
-		z-index: 0;
 
 		h1 {
 			display: block;

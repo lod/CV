@@ -1,101 +1,228 @@
-import Image from "next/image";
+'use client';
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+import React from 'react';
+import Timeline, {Period,Event} from '@/timeline/timeline';
+import Skill from '@/skill';
+import Speaking from '@/speaking';
+import Qualification from '@/qualification';
+import Titleblock from '@/titleblock';
+import * as Job from '@/Jobs';
+import '@/App.scss';
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+class App extends React.Component {
+
+	render() {
+		return (
+			<div className="App">
+			  <Titleblock>
+					<div className="summary">
+						{/* Goal:
+							*    Broad skills
+							*    Technical Mastery
+							*    Soft skills
+						  */}
+					<p>
+						An SRE manager with experience in both software and hardware devolopment.
+						I am looking for engaging work with a skilled team.
+					</p>
+					<p>
+						I offer a broad base of demonstrated technical proficiency, leadership, and creativity developed across diverse fields of experience.  I have the skills and the insight to add value to projects and teams.
+					</p>
+					</div>
+			  </Titleblock>
+
+				<Timeline startYear={2011} endYear={2022}>
+					<div>
+						<p className="heading">Employment</p>
+						{/* FD start adjusted to look prettier */}
+			      <Period start='2021-06-21' end='now' href="#planet">Planet</Period>
+			      <Period start='2020-04-01' end='2021-05-30' href="#fd">FD</Period>
+						<Period start='2019-04-25' end='2020-03-20' href="#space">UNSW</Period>
+						<Period start='2015-01-01' end='2019-01-01' href="#inventing">Inventoring</Period>
+						<Period start='2012-07-01' end='2014-10-01' href="#m5-network-security" short="NG">Northrop</Period>
+						<Period start='2010-08-14' end='2012-04-01' href="#aad" short="AAD">AAD</Period>
+					</div>
+				</Timeline>
+
+				<Job.Planet/>
+				<Job.FD/>
+				<Job.Space/>
+
+				<div className="pagebreak"></div>
+
+				<Job.Inventing/>
+				<Job.M5/>
+				<Job.AAD/>
+
+				<div className="pagebreak vspace"></div>
+
+				<Timeline startYear={2011} endYear={2021}>
+					<div>
+						<p className="heading">Speaking</p>
+						<Event date='2020-01-15'>Linux.conf.au Speaker</Event>
+						<Event date='2018-01-24'>Linux.conf.au Speaker</Event>
+						<Event date='2017-08-04'>PyCon Australia Speaker</Event>
+						<Event date='2016-02-03'>Linux.conf.au Speaker</Event>
+					</div>
+					<div>
+						<p className="heading">Volunteering</p>
+						<Period start='2015-01-01' end='2019-04-21' href="#ses">VICSES</Period>
+						<Period start='2010-01-01' end='2014-01-01'>TADACT</Period>
+					</div>
+					<div>
+						<Period start='2019-05-17' end='2020-12-06'>LCA</Period>
+						<Period start='2015-01-01' end='2019-04-21' href="#csiro">CSIRO SIS</Period>
+						{/* Extended the period to get the element big enough
+						    real dates, start='2012-09-01' end='2013-02-05' */}
+						<Period start='2012-06-01' end='2013-03-05'>LCA</Period>
+					</div>
+				</Timeline>
+
+			<h1>Speaking</h1>
+			<div className="row">
+				<Speaking
+					id="lca2020"
+					company="linux.conf.au"
+					date="2020-01-15"
+					title="Kicad for software developers (tutorial)"
+					href="https://youtu.be/0MzvESM0ZFE"
+				>
+				</Speaking>
+
+				<Speaking
+					id="lca2018"
+					company="linux.conf.au"
+					date="2018-01-24"
+					title="Lessons from three years of volunteering to teach students code"
+					href="https://youtu.be/FLD3Ui80M98"
+				>
+				</Speaking>
+
+				<Speaking
+					id="pycon2017"
+					company="PyCon AU"
+					date="2017-08-04"
+					title="Rapid GUI development for IOT systems"
+					href="https://youtu.be/_LBgIFPct-o"
+				>
+				</Speaking>
+
+				<Speaking
+					id="lca2016"
+					company="linux.conf.au"
+					date="2016-02-03"
+					title="Linux driven microwave"
+					href="https://youtu.be/R3DADx5z-XY"
+				>
+				</Speaking>
+			</div>
+
+			<h1>Volunteering</h1>
+
+			<Job.SES/>
+			<Job.CSIRO/>
+
+			<div className="pagebreak"></div>
+
+			<h1>Skills</h1>
+
+				<div className="skills">
+					<div className="group">
+						<h2>General skills</h2>
+						<Skill num="4">Management and Leadership</Skill>
+						<Skill num="5">Explaining technical concepts</Skill>
+						<Skill num="4">Teaching</Skill>
+						<Skill num="3">Marketing</Skill>
+					</div>
+					<div className="group">
+						<h2>Cloud Orchestration</h2>
+						<Skill num="4">Terraform</Skill>
+						<Skill num="3">Ansible</Skill>
+						<Skill num="3">AWS</Skill>
+						<Skill num="3">Google Cloud</Skill>
+						<Skill num="3">Kubernetes</Skill>
+					</div>
+					<div className="group">
+						<h2>Languages</h2>
+						<Skill num="5">C</Skill>
+						<Skill num="5">Python</Skill>
+						<Skill num="5">Perl</Skill>
+						<Skill num="4">Javascript</Skill>
+						<Skill num="3">PHP</Skill>
+						<Skill num="3">Assembly</Skill>
+					</div>
+					<div className="group">
+						<h2>Electronics</h2>
+						<Skill num="4">Circuit design</Skill>
+						<Skill num="4">Manufacturing</Skill>
+						<Skill num="4">Microprocessors</Skill>
+						<Skill num="3">VHDL &amp; Verilog</Skill>
+						<Skill num="3">RF design</Skill>
+						<Skill num="3">Compliance</Skill>
+					</div>
+					<div className="group">
+						<h2>Operating Environments</h2>
+						<Skill num="5">Linux</Skill>
+						<Skill num="4">Android</Skill>
+						<Skill num="4">Windows</Skill>
+						<Skill num="4">Virtual Machines</Skill>
+						<Skill num="3">Containerisation</Skill>
+					</div>
+					<div className="group">
+						<h2>Databases</h2>
+							<Skill num="4">SQL design</Skill>
+							<Skill num="3">Key Store</Skill>
+							<Skill num="3">Database scripting</Skill>
+							<Skill num="3">Version control</Skill>
+					</div>
+					<div className="group">
+						<h2>Networking</h2>
+						<Skill num="4">Full OSI 1-7 layer experience</Skill>
+						<Skill num="3">Military grade security</Skill>
+						<Skill num="3">Encryption techniques</Skill>
+					</div>
+				</div>
+
+			<h1>Qualifications</h1>
+
+			<div className="qualifications">
+
+			<Qualification
+				title="Bachelor of Information Technology"
+				institution="Australian National University"
+				details="Majoring in software development"
+				start="2000"
+				end="2004"
+			/>
+
+			<Qualification
+				title="Bachelor of Engineering with Honours"
+				institution="Australian National University"
+				details="Majoring in Robotics and Computer Vision"
+				start="2000"
+				end="2004"
+			/>
+
+			<Qualification
+				title="Certificate III in Public Safety (SES Rescue)"
+				details="PUA30412"
+				start="2014"
+				end="2018"
+			/>
+
+			<Qualification
+				title="Australian Security Clearance - NV1"
+				details=""
+			/>
+
+			</div>
+
+
+			</div>
+		);
+	}
 }
+
+export default App;
+
+// vim: ts=2 sw=2

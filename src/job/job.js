@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import './job.scss';
 
-export default class Job extends Component {
+export default class Job extends React.Component {
 	render() {
 		const start_date = new Date(this.props.start);
 		const end_date = new Date(this.props.end);

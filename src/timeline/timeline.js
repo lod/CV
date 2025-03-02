@@ -1,8 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import './timeline.scss';
 
-export class TimeElement extends Component {
+const TimeContext = React.createContext();
+
+export class TimeElement extends React.Component {
+	static contextType = TimeContext;
+
 	// See https://stackoverflow.com/a/21015393/2438650
 	getTextWidth(text, font) {
 		// re-use canvas object for better performance
@@ -64,12 +68,9 @@ Period.propTypes = {
 	end: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
 };
 
-Period.contextTypes = {
-	startYear: PropTypes.number,
-	endYear: PropTypes.number,
-};
-
 export class Event extends TimeElement {
+	static contextType = TimeContext;
+
 	render() {
 		// Position period vs timeline, using left and width
 		// Percentage based values make us impervious to resizing
@@ -91,39 +92,13 @@ Event.propTypes = {
 	date: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
 };
 
-Event.contextTypes = {
-	startYear: PropTypes.number,
-	endYear: PropTypes.number,
-};
-
-class Timeline extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			mql: window.matchMedia("(max-device-width: 767px)"),
-		}
-	}
-
-	getChildContext() {
-		return {
-			startYear: Number(this.props.startYear),
-			endYear: Number(this.props.endYear),
-		};
-	}
-
+class Timeline extends React.Component {
 	render() {
 		const start = Number(this.props.startYear);
 		const end = Number(this.props.endYear);
 		const years = Array.from(new Array(end-start+1),(v,i)=>i+start).reverse();
 		// Marker is at the start of the year, covers six months either side
 		
-		console.log("TL RENDER", this.state.mql, this.state.mql.matches);
-
-		if (this.state.mql.matches) {
-			// Mobile mode
-			return "";
-		}
-
 		return (
 			<div className="timeline">
 				<div className="years">
@@ -132,7 +107,9 @@ class Timeline extends Component {
 					<div className="halfyear"></div>
 				</div>
 				<div className="content">
-			{this.props.children}
+					<TimeContext value={{ startYear: start, endYear: end }}>
+						{this.props.children}
+					</TimeContext>
 				</div>
 			</div>
 		);
@@ -142,11 +119,6 @@ class Timeline extends Component {
 Timeline.propTypes = {
 	startYear: PropTypes.number.isRequired,
 	endYear: PropTypes.number.isRequired,
-};
-
-Timeline.childContextTypes = {
-	startYear: PropTypes.number,
-	endYear: PropTypes.number,
 };
 
 export default Timeline;

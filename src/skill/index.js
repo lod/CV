@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './style.scss';
 
-class Skill extends Component {
+class Skill extends React.Component {
 	render() {
 		return (
 			<div className="skill">

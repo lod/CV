@@ -5,6 +5,10 @@
 		margin-bottom: 2rem;
 	}
 
+	@media screen and (max-device-width: 640px){
+		display: none;
+	}
+
 	.years {
 		flex-direction: row;
 		display: flex;
@@ -84,5 +88,4 @@
 			box-shadow: none;
 		}
 	}
-
 }

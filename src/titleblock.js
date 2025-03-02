@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-class Titleblock extends Component {
+class Titleblock extends React.Component {
   render() {
 	const cv_url = "https://david.tulloh.id.au/cv/" + (this.props.variant ? this.props.variant + '/' : '');
 	const cv_pdf = "david_tulloh" + (this.props.variant ? '_' + this.props.variant : '') + ".pdf";
