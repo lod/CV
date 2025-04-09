@@ -9,6 +9,9 @@ import Titleblock from '@/titleblock';
 import * as Job from '@/Jobs';
 import '@/App.scss';
 
+// Timeline idea https://codepen.io/rogerkuik/pen/JjyGmdo
+// Blurry image placeholder, conflicts with background image shading https://leanrada.com/notes/css-only-lqip/
+
 class App extends React.Component {
 
 	render() {
@@ -35,18 +38,20 @@ class App extends React.Component {
 					<div>
 						<p className="heading">Employment</p>
 						{/* FD start adjusted to look prettier */}
+			      <Period start='2021-06-21' end='now' href="#capricorn">Capricorn</Period>
 			      <Period start='2021-06-21' end='now' href="#planet">Planet</Period>
 			      <Period start='2020-04-01' end='2021-05-30' href="#fd">FD</Period>
-						<Period start='2019-04-25' end='2020-03-20' href="#space">UNSW</Period>
+						<Period start='2019-04-25' end='2020-03-20' href="#unsw">UNSW</Period>
 						<Period start='2015-01-01' end='2019-01-01' href="#inventing">Inventoring</Period>
 						<Period start='2012-07-01' end='2014-10-01' href="#m5-network-security" short="NG">Northrop</Period>
 						<Period start='2010-08-14' end='2012-04-01' href="#aad" short="AAD">AAD</Period>
 					</div>
 				</Timeline>
 
+				<Job.Capricorn/>
 				<Job.Planet/>
 				<Job.FD/>
-				<Job.Space/>
+				<Job.Unsw/>
 
 				<div className="pagebreak"></div>
 

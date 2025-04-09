@@ -6,7 +6,6 @@ import './index.css';
 import App from './App';
 import US from './App-US';
 
-// eslint-disable-next-line
 class DebugRouter extends BrowserRouter {
   constructor(props){
     super(props);

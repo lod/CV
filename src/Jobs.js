@@ -1,18 +1,23 @@
 import React from 'react';
 import Job from './job/job';
 
+import capricorn_img from "./images/capricorn-drone-green1-crop.jpg"
+
 class Capricorn extends Job {
 	render() {
 		return (
 			<Job
-			  id="planet"
-			  company="Planet"
+			  id="capricorn"
+			  company="Capricorn"
 			  start="2024-08-01" end="present"
 			  title="Systems Reliability Engineer"
 				responsibilities={[
 				]}
 				href="https://www.capricornspace.com.au/"
 			  description="Australian owned and operated ground segment service provider for the space industry."
+        background={capricorn_img}
+				background_tint="rgba(0, 0, 0, 0.7)"
+			  font_color="#FFF"
 			>
 			<p>
 			Engaged specifically to drive critical technical change.
@@ -23,13 +28,14 @@ Key Achievements so far:
 			</p>
 			<ul>
 			<li>Rearchitected monitoring and control systems to improve operation visibility and significantly reduce ongoing licence costs.</li>
-			<li>Improved the company's development, deployment and testing patterns.</li>
+			<li>Improved the company&apos;s development, deployment and testing patterns.</li>
 			</ul>
 			</Job>
 		)
 	}
 }
 
+import planet_img from "./images/planet_otowa.jpg"
 class Planet extends Job {
 	render() {
 		return (
@@ -45,9 +51,12 @@ class Planet extends Job {
 				]}
 				href="https://www.planet.com/"
 			  description="An earth observation company manufacturing and operating over 200 satellites to provide responsive and quality imagery."
+        background={planet_img}
+				background_tint="rgba(0, 0, 0, 0.7)"
+			  font_color="#FFF"
 			>
 			<p>
-Led a rebuild of Planet's global ground station server systems, and worked on a
+Led a rebuild of Planet&apos;s global ground station server systems, and worked on a
 range of other shoter term projects.
 			</p>
 			<ul>
@@ -58,7 +67,7 @@ acceptance and adoption. This significantly reduced the system
 complexity improving reliability, enabling new functionality and
 increasing development speed.</li>
 <li>Participated in the design and implementation of the next generation of
-Planet's satellite communication systems. Through documentation drove
+Planet&apos;s satellite communication systems. Through documentation drove
 cross team coordination, system design changes and reliability
 improvements.</li>
 <li>Prototyped future changes including high availability server design,
@@ -71,6 +80,7 @@ timezone.</li>
 	}
 }
 
+import fd_img from "./images/fd-logo-9.png"
 class FD extends Job {
 	render() {
 		return (
@@ -86,6 +96,9 @@ class FD extends Job {
 				]}
 				href="https://www.fifthdomain.com.au/"
 			  description="A cyber security training provider, delivering a platform and services to Defence and educational institutions."
+        background={fd_img}
+				background_tint="rgba(0, 17, 55, 0.8)"
+			  font_color="#FFF"
 			>
 			<p>
 Reporting directly to the CTO, led delivery of complex technical solutions
@@ -101,7 +114,7 @@ Key Achievements:
 <li>Led development and successful delivery of a cyber skills
 competition for 700+ Defence participants under a compressed
 timeline.</li>
-<li>Co-designed an exercise environment for Defense's joint cyber units
+<li>Co-designed an exercise environment for Defense&apos;s joint cyber units
 to prove their operational readiness. Then led a team to develop the
 environment and operate it for the exercise.</li>
 <li>Managed staff in a remote and then hybrid environment including
@@ -112,11 +125,12 @@ contractors and a client placement.</li>
 	}
 }
 
-class Space extends Job {
+import unsw_img from "./images/unsw-1616471297782.jpeg"
+class Unsw extends Job {
 	render() {
 		return (
 			<Job
-				id="space"
+				id="unsw"
 				company="UNSW Canberra Space"
 				start='2019-04-25' end='2020-03-20'
 				title="Electronics Engineer"
@@ -127,6 +141,9 @@ class Space extends Job {
 				]}
 				href="https://www.unsw.adfa.edu.au/space-research/"
 			  description="UNSW Canberra Space designs and builds satellites for research purposes."
+        background={unsw_img}
+				background_tint="rgba(0, 0, 0, 0.7)"
+			  font_color="#FFF"
 			>
 
 			<p>
@@ -154,6 +171,7 @@ between business, academic and defence stakeholders.
 	}
 }
 
+import microwave_img from "./images/microwave-notebook.jpg"
 class Inventing extends Job {
 	render() {
 		return (
@@ -170,6 +188,9 @@ class Inventing extends Job {
 				]}
 				href="https://youtu.be/R3DADx5z-XY"
 			  description="Worked on independent products to meet gaps I observed in the market."
+        background={microwave_img}
+				background_tint="rgba(255, 255, 255, 0.8)"
+			  font_color="#000"
 			>
 			<p>
 Enabled by a significant shift in my partner’s career, I explored entrepreneurial
@@ -188,6 +209,7 @@ the product, while technically sound, was not commercially viable.</li>
 	}
 }
 
+import m5_img from "./images/m5-SCS400.jpg"
 class M5 extends Job {
 	render() {
 		return (
@@ -203,6 +225,9 @@ class M5 extends Job {
 				]}
 				href="https://www.northropgrumman.com/who-we-are/global-locations/australian-intelligence-cyber-solutions/"
 				description="M5 Network security, a branch of NG, designs and manufactures devices to facilitate secure communications over insecure networks."
+        background={m5_img}
+				background_tint="rgba(0, 0, 0, 0.7)"
+			  font_color="#FFF"
 			>
 			<p>
 			Developed firmware for multiple systems as well as contributing to the electronics design, testing and certification processes.
@@ -224,6 +249,8 @@ class M5 extends Job {
 	}
 }
 
+import aad_img from "./images/aad-ia28318.1920x768.jpg";
+
 class AAD extends Job {
 	render() {
 		return (
@@ -240,6 +267,14 @@ class AAD extends Job {
 				]}
 				href="http://www.antarctica.gov.au/science"
 				description="The AAD maintains several stations on Antarctica to support scientific research."
+        background={aad_img}
+				background_tint="rgba(255, 255, 255, 0.90)"
+			  font_color="#000"
+  // background-image: linear-gradient(rgba(255, 255, 255, 0.90), rgba(255, 255, 255, 0.90)), url("images/aad-ia28318.1920x768.jpeg");
+  // background-size: cover;
+  // background-position: center;
+  // color: #000;
+			//
 			>
 			<p>
 			As the support engineer I spent three seasons living at Davis Station, I was responsible for providing technical assistance to over twenty different experiments.
@@ -261,6 +296,8 @@ class AAD extends Job {
 	}
 }
 
+import ses_img from "./images/ses-truck.webp";
+
 class SES extends Job {
 	render() {
 		return (
@@ -275,6 +312,9 @@ class SES extends Job {
 					"Ensure operational readiness",
 					"Divisional commander",
 				]}
+        background={ses_img}
+				background_tint="rgba(255, 210, 190, 0.85)"
+			  font_color="#000"
 			>
 			<p>
 					I was a senior member of the VICSES, a volunteer emergency response service responsible for storm, flood, rescue and assisting other emergency agencies on the Bellarine peninsula.
@@ -291,6 +331,8 @@ class SES extends Job {
 	}
 }
 
+import csiro_img from "./images/CSIRO_Logo.svg";
+
 class CSIRO extends Job {
 	render() {
 		return (
@@ -305,6 +347,9 @@ class CSIRO extends Job {
 					"Assist teacher with professional development",
 					"Extend skills of advanced students",
 				]}
+        background={csiro_img}
+				background_tint="rgba(255, 255, 255, 0.7)"
+			  font_color="#000"
 			>
 			<p>
 			The CSIRO STEM Professionals in Schools program matches school teachers with STEM professionals to enhance science and technical learning in classrooms.
@@ -323,7 +368,7 @@ export {
 	Capricorn,
 	Planet,
 	FD,
-	Space,
+	Unsw,
 	Inventing,
 	M5,
 	AAD,

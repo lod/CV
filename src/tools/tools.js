@@ -8,7 +8,7 @@ export default class Tools extends Component {
 			<p>Tools used included:</p>
 			<ul className="tools">
 			  { Object.entries(this.props.map).map(([k,v]) => { return (
-				  <li>{ k }: &nbsp; { v.join(', ') }</li>
+				  <li key={k}>{ k }: &nbsp; { v.join(', ') }</li>
 			  ); }) }
 			</ul>
 			</div>

@@ -1,13 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './job.scss';
+import Image from "next/image";
+import styles from './job.scss';
+//import styles from "../../styles.module.css";
+// import img from "../images/aad-ia28318.1920x768.jpg";
+
+
+// If backgrounds are hard to read, add a filter: blur(5px) property
+//
+// White filter: 80% = filter: invert(calc(0.8 / 2)) brightness(calc(1 + 0.8));
+// Black filter: 20% = brightness(0.2)
+// hue-rotate should allow for coloured tints, green = 120deg
 
 export default class Job extends React.Component {
 	render() {
 		const start_date = new Date(this.props.start);
 		const end_date = new Date(this.props.end);
 		return (
-			<div className="job" id={this.props.id}>
+			<job id={this.props.id}>
+				<div className="bgWrap">
+          <Image
+            alt="Mountains"
+            src={this.props.background}
+            placeholder={this.props.background.src.endsWith('.svg') ? "empty" : "blur"}
+            quality={100}
+            fill
+            sizes="100vw"
+            style={{
+              objectFit: "cover",
+            }}
+          />
+				</div>
+        <div className="job-content" style={{ backgroundColor: this.props.background_tint, color: this.props.font_color }}>
 				<div className="metadata">
 					<p className="title">{this.props.title}</p>
 					<ul className="responsibilities">
@@ -33,7 +57,8 @@ export default class Job extends React.Component {
 				<div className="description">
 					{ this.props.children }
 				</div>
-			</div>
+        </div>
+			</job>
 		);
 	}
 }

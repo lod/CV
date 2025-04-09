@@ -22,7 +22,7 @@ export default function Home() {
 					{/* FD start adjusted to look prettier */}
 				<Period start='2021-06-21' end='now' href="#planet">Planet</Period>
 				<Period start='2020-04-01' end='2021-05-30' href="#fd">FD</Period>
-					<Period start='2019-02-01' end='2020-03-20' href="#space">UNSW</Period>
+					<Period start='2019-02-01' end='2020-03-20' href="#unsw">UNSW</Period>
 					<Period start='2015-01-01' end='2019-01-01' href="#inventing">Inventoring</Period>
 					<Period start='2012-07-01' end='2014-10-01' href="#m5-network-security" short="NG">Northrop</Period>
 					<Period start='2010-08-14' end='2012-04-01' href="#aad" short="AAD">AAD</Period>
@@ -50,7 +50,7 @@ export default function Home() {
 
 			<Job.Planet/>
 			<Job.FD/>
-			<Job.Space/>
+			<Job.Unsw/>
 		</div> { /* jobs */ }
 
 		<div id="right">
