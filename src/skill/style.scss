@@ -1,10 +1,12 @@
-@import "../variables.scss";
+@use "../variables.scss";
 
 .skill {
 
-    display: flex;
-    flex-direction: row;
-    width: 300px;
+    & {
+      display: flex;
+      flex-direction: row;
+      width: 300px;
+    }
 
 	.spacer {
 		flex-grow: 1;
@@ -27,11 +29,13 @@
 }
 
 .skills {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	margin-left: 20px;
-	justify-content: space-between;
+    & {
+	  display: flex;
+	  flex-direction: row;
+	  flex-wrap: wrap;
+	  margin-left: 20px;
+	  justify-content: space-between;
+    }
 
 	@media print {
 		margin-left: 0;

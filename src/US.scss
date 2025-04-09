@@ -1,4 +1,4 @@
-@import "./variables.scss";
+@use "variables.scss";
 
 .US {
 	#columns {
@@ -25,16 +25,10 @@
 		margin-top: 0.1em;
 	}
 
-	h1,
-	.pagebreak, .row,
-	#ses, #csiro
-	{
-		/* display: none; */
-	}
-
 	.summary {
 		margin-top: 3em;
 		margin-bottom: 3em;
+		margin-left: 30px;
 
 		width: 480px; /* Same as job description block in practice */
 		@media print {
@@ -42,7 +36,6 @@
 		}
 
 		/* Line up with job descriptions */
-		margin-left: 30px;
 		@media screen and (max-width: 767px) {
 			margin-left: 0;
 		}
@@ -57,7 +50,7 @@
 	}
 
 	.timeline .event {
-		background: $color-primary;
+		background: variables.$color-primary;
 	}
 
 	.titleblock .row {
@@ -82,7 +75,7 @@
 		z-index: 0;
 
 		& {
-			background: rgba($color-primary, 0.6);
+			background: rgba(variables.$color-primary, 0.6);
 		}
 		@media print {
 			/* background: rgba($color-primary-print, 0.6); */
@@ -145,13 +138,13 @@
 	}
 
 	.name {
-		font-family: $font-heading;
+		font-family: variables.$font-heading;
 		font-size: 48px;
 		letter-spacing: 0.05em;
 		margin-bottom: 1rem;
 	}
 	.role {
-		font-family: $font-heading;
+		font-family: variables.$font-heading;
 		font-size: 32px;
 		letter-spacing: 0.02em;
 		margin: 1rem 0;

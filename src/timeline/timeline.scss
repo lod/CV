@@ -1,4 +1,4 @@
-@import "../variables.scss";
+@use "../variables.scss";
 
 .timeline {
 	& {
@@ -55,21 +55,23 @@
 		background: #222;
 	}
 	.period {
-		display: block;
-		background: $color-primary;
+        & {
+		  display: block;
+		  background: variables.$color-primary;
+		  position: absolute;
+		  text-align: center;
+		  padding: 0.2em 0;
+		  box-shadow: 5px 5px 10px rgba(0,0,0,0.7);
+        }
 		@media print {
-			background: $color-primary-print;
-		}
-		position: absolute;
-		text-align: center;
-		padding: 0.2em 0;
-		box-shadow: 5px 5px 10px rgba(0,0,0,0.7);
-		@media print { box-shadow: none; }
+			background: variables.$color-primary-print;
+		    box-shadow: none;
+        }
 		&:focus { /* for accessibility */
 			background-color: #dc9bee; /* pink */
 		}
 		/* No link styling */
-		text-decoration: none;
+		& { text-decoration: none; }
 		&:link    { color: inherit; }
 		&:visited { color: inherit; }
 		&:hover   { color: inherit; }

@@ -28,72 +28,15 @@ body {
 .job-content, .titleblock, .timeline {
   @include snap-group
 }
-job {
-}
-job .metadata {
+.job .metadata {
   padding-bottom: 0.5em;
 }
-job .metadata .company {
+.job .metadata .company {
   margin-top: 0;
 }
 
-/*
-h1, h2 {
-  text-align: center;
-}
-*/
-job#capricorn {
-  // background-image: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url("images/capricorn-drone-brown1.jpg");
-  background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("images/capricorn-drone-green1-crop.jpg");
-  background-size: cover;
-  background-position: center;
-  color: #fff;  /* Pure white is boring but easier to read */
-}
-job#planet {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("images/planet_otowa.jpg");
-  background-size: cover;
-  /* color: #d4dfeb; /* Lightened version of snow blue from image */
-  color: #fff;  /* Pure white is boring but easier to read */
-}
-job#fd {
-  background-image: linear-gradient( rgba(0, 17, 55, 0.8), rgba(0, 17, 55, 0.8) ), url("images/fd-logo-9.png");
-  background-size: cover;
-  background-position: center;
-  color: #fff;  /* Pure white is boring but easier to read */
-}
-job#unsw {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("images/unsw-1616471297782.jpeg");
-  background-size: cover;
-  background-position: bottom;
-  color: #fff;  /* Pure white is boring but easier to read */
-}
-job#m5-network-security {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.85),rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url("images/m5-SCS400.jpg");
-  background-size: cover;
-  background-position: bottom;
-  color: #fff;  /* Pure white is boring but easier to read */
-}
-job#aad {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.90), rgba(255, 255, 255, 0.90)), url("images/aad-ia28318.1920x768.jpeg");
-  background-size: cover;
-  background-position: center;
-  color: #000;
-}
-job#inventing {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url("images/microwave-notebook.jpg");
-  background-size: cover;
-  background-position: center;
-  color: #000;
-}
-job#ses {
-  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("images/ses-truck.jpg");
-  background-size: cover;
-  background-position: center;
-  color: #000;
-}
 
-
-job .metadata .title, job .metadata .responsibilities, job .metadata .link {
+.job .metadata .title, .job .metadata .responsibilities, .job .metadata .link {
   display: none;
 }
 
@@ -111,10 +54,6 @@ job .metadata .title, job .metadata .responsibilities, job .metadata .link {
 	size: A4 portrait; /* poorly supported */
 	margin: 0; /* removes header and footer */
 	margin-top: 15mm;
-	/*
-	margin-left: 5mm;
-	margin-right: 5mm;
-	*/
 	margin-left: 18mm;
 	margin-right: 18mm;
 	margin-bottom: 10mm;
@@ -150,14 +89,8 @@ job .metadata .title, job .metadata .responsibilities, job .metadata .link {
 
 
 body {
-	/*
-	font-family: 'Pathway Gothic One', sans-serif;
-	font-size: 20px;
-	letter-spacing: 0.01em;
-	*/
 	font-family: "Lato", sans-serif;
 	font-weight: 400;
-	// margin: 1rem;
 
 	/* Fix underscores under links */
 	text-decoration-skip-ink: none;

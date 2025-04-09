@@ -20,7 +20,9 @@ async function Titleblock({ variant, children }) {
               <dt>online cv</dt><dd><a href={cv_url}>{cv_url}</a></dd>
             </div>
             <div className="screenonly">
+		{ /* TODO: Need to build the pdf in the build process
               <dt>printable cv</dt><dd><a href={"https://david.tulloh.id.au/cv/" + cv_pdf}>{ cv_pdf }</a></dd>
+		*/ }
             </div>
           </dl>
         </div>
