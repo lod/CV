@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import styles from './job.scss';
 //import styles from "../../styles.module.css";
 // import img from "../images/aad-ia28318.1920x768.jpg";
@@ -17,8 +17,8 @@ async function Job ({ children, id, company, start, end, title, description, res
 		return (
 			<div className="job" id={id}>
 				<div className="bgWrap">
-          <Image
-            alt="Mountains"
+          <ExportedImage
+            alt="Background image related to job"
             src={background}
             placeholder={background.src.endsWith('.svg') ? "empty" : "blur"}
             quality={100}

@@ -31,13 +31,14 @@ async function App() {
 					</div>
 			  </Titleblock>
 
-			// TODO Do I need some context like the timeline?
-			// TODO: Do I need context for the volunteering?
+			{ /* TODO Do I need some context like the timeline? */ }
+			{ /* TODO: Do I need context for the volunteering? */ }
 
 			{ /*
 				<Timeline startYear={2011} endYear={2022}>
 					<div>
 						<p className="heading">Employment</p>
+			/*}
 						{/* FD start adjusted to look prettier */}
 			{/* 
 			      <Period start='2021-06-21' end='now' href="#capricorn">Capricorn</Period>
@@ -81,6 +82,7 @@ async function App() {
 					<div>
 						<Period start='2019-05-17' end='2020-12-06'>LCA</Period>
 						<Period start='2015-01-01' end='2019-04-21' href="#csiro">CSIRO SIS</Period>
+			/*}
 						{/* Extended the period to get the element big enough
 						    real dates, start='2012-09-01' end='2013-02-05' */}
 			{ /*

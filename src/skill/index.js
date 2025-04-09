@@ -5,7 +5,7 @@ async function Skill({ children, num }) {
 			<div className="skill">
 				{ children }
 				<span className="spacer"/>
-				{[...Array(Number(num))].map((e, i) => <span className="star" key={i}/>)}
+				{[...Array(Number(num ?? 0))].map((e, i) => <span className="star" key={i}/>)}
 			</div>
 		);
 }

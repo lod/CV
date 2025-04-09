@@ -1,6 +1,4 @@
-'use client';
-
-import Timeline, {Period,Event} from '@/timeline/timeline';
+// import Timeline, {Period,Event} from '@/timeline/timeline';
 import Skill from '@/skill';
 import Qualification from '@/qualification';
 import Titleblock from '@/titleblock';
@@ -9,17 +7,19 @@ import '@/App.scss';
 import '@/US.scss';
 
 
-export default function Home() {
+async function Home() {
 	return (
 		<div className="App US">
-		<Titleblock variant="us" />
+		{ /* <Titleblock variant="us" /> */ }
 		<div id="columns">
 
 		<div id="jobs">
+		{ /*
 			<Timeline startYear={2011} endYear={2022}>
 				<div>
 					<p className="heading">Employment</p>
 					{/* FD start adjusted to look prettier */}
+		{ /*
 				<Period start='2021-06-21' end='now' href="#planet">Planet</Period>
 				<Period start='2020-04-01' end='2021-05-30' href="#fd">FD</Period>
 					<Period start='2019-02-01' end='2020-03-20' href="#unsw">UNSW</Period>
@@ -44,9 +44,11 @@ export default function Home() {
 					<Period start='2015-01-01' end='2019-04-21' href="#csiro">CSIRO SIS</Period>
 					{/* Extended the period to get the element big enough
 						real dates, start='2012-09-01' end='2013-02-05' */}
+		{ /*
 					<Period start='2012-06-01' end='2013-03-05'>LCA</Period>
 				</div>
 			</Timeline>
+		*/ }
 
 			<Job.Planet/>
 			<Job.FD/>
@@ -119,5 +121,7 @@ export default function Home() {
 		</div>
 	);
 }
+
+export default Home;
 
 // vim: ts=2 sw=2
