@@ -2,20 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './style.scss';
 
-class Qualification extends React.Component {
-	render() {
+async function Qualification( {title, institution, details, start, end} ) {
 		/* Each supported proptype becomes a span, in order.
 		 * Then all the layout is done by CSS
 		 */
+	    const args = {title, institution, details, start, end};
 		return (
 			<div className="qualification">
-			{ Object.keys(this.props).map(k=>
-				this.props[k] &&
-				<span className={k} key={k}>{ this.props[k] }</span>
+			{ Object.keys(args).map(k=>
+				args[k] &&
+				<span className={k} key={k}>{ args[k] }</span>
 			) }
 			</div>
 		);
-	}
 }
 
 Qualification.propTypes = {

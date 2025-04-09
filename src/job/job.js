@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import Image from "next/image";
 import styles from './job.scss';
@@ -12,17 +11,16 @@ import styles from './job.scss';
 // Black filter: 20% = brightness(0.2)
 // hue-rotate should allow for coloured tints, green = 120deg
 
-export default class Job extends React.Component {
-	render() {
-		const start_date = new Date(this.props.start);
-		const end_date = new Date(this.props.end);
+async function Job ({ children, id, company, start, end, title, description, responsibilities, href, background, background_tint, font_color }) {
+		const start_date = new Date(start);
+		const end_date = new Date(end);
 		return (
-			<job id={this.props.id}>
+			<div className="job" id={id}>
 				<div className="bgWrap">
           <Image
             alt="Mountains"
-            src={this.props.background}
-            placeholder={this.props.background.src.endsWith('.svg') ? "empty" : "blur"}
+            src={background}
+            placeholder={background.src.endsWith('.svg') ? "empty" : "blur"}
             quality={100}
             fill
             sizes="100vw"
@@ -31,36 +29,35 @@ export default class Job extends React.Component {
             }}
           />
 				</div>
-        <div className="job-content" style={{ backgroundColor: this.props.background_tint, color: this.props.font_color }}>
+        <div className="job-content" style={{ backgroundColor: background_tint, color: font_color }}>
 				<div className="metadata">
-					<p className="title">{this.props.title}</p>
+					<p className="title">{title}</p>
 					<ul className="responsibilities">
-						{ this.props.responsibilities && this.props.responsibilities.map(r => 
+						{ responsibilities && responsibilities.map(r => 
 							<li key={r}>{r}</li>
 						) }
 					</ul>
-					<p className="company">{this.props.company}</p>
+					<p className="company">{company}</p>
 					<p className="period">
 						<span className="start">
 							{start_date.toLocaleString(["en-au", "en-us"], { month: "short", year: "numeric" })}
 						</span>
 						<span className="seperator"> &#8680; </span>
 						<span className="end">
-							{isNaN(end_date) ? this.props.end : end_date.toLocaleString(["en-au", "en-us"], { month: "short", year: "numeric" })}
+							{isNaN(end_date) ? end : end_date.toLocaleString(["en-au", "en-us"], { month: "short", year: "numeric" })}
 						</span>
 					</p>
-			        <p className="description">{this.props.description}</p>
+			        <p className="description">{description}</p>
 					<p className="link">
-						<a href={this.props.href}>{this.props.href}</a>
+						<a href={href}>{href}</a>
 					</p>
 				</div>
 				<div className="description">
-					{ this.props.children }
+					{ children }
 				</div>
         </div>
-			</job>
+			</div>
 		);
-	}
 }
 
 Job.propTypes = {
@@ -72,3 +69,5 @@ Job.propTypes = {
 	responsibilities: PropTypes.array,
 	href: PropTypes.string,
 }
+
+export default Job;

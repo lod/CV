@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class Titleblock extends React.Component {
-  render() {
-	const cv_url = "https://david.tulloh.id.au/cv/" + (this.props.variant ? this.props.variant + '/' : '');
-	const cv_pdf = "david_tulloh" + (this.props.variant ? '_' + this.props.variant : '') + ".pdf";
+async function Titleblock({ variant, children }) {
+	const cv_url = "https://david.tulloh.id.au/cv/" + (variant ? variant + '/' : '');
+	const cv_pdf = "david_tulloh" + (variant ? '_' + variant : '') + ".pdf";
     return (
       <div className="titleblock">
         <div className="row">
@@ -25,14 +24,21 @@ class Titleblock extends React.Component {
             </div>
           </dl>
         </div>
-        {this.props.children}
+        { children }
       </div>
     )
-  }
 }
 
 Titleblock.propTypes = {
 	variant: PropTypes.string
 }
+
+/*
+export async function getServerSideProps() {
+  return {
+    props: { ["", "us"] },
+  };
+}
+*/
 
 export default Titleblock

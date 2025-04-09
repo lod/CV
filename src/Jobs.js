@@ -3,8 +3,7 @@ import Job from './job/job';
 
 import capricorn_img from "./images/capricorn-drone-green1-crop.jpg"
 
-class Capricorn extends Job {
-	render() {
+async function Capricorn() {
 		return (
 			<Job
 			  id="capricorn"
@@ -32,12 +31,10 @@ Key Achievements so far:
 			</ul>
 			</Job>
 		)
-	}
 }
 
 import planet_img from "./images/planet_otowa.jpg"
-class Planet extends Job {
-	render() {
+async function Planet() {
 		return (
 			<Job
 			  id="planet"
@@ -77,12 +74,10 @@ timezone.</li>
 			</ul>
 			</Job>
 		)
-	}
 }
 
 import fd_img from "./images/fd-logo-9.png"
-class FD extends Job {
-	render() {
+async function FD() {
 		return (
 			<Job
 				id="fd"
@@ -122,12 +117,10 @@ contractors and a client placement.</li>
 			</ul>
 			</Job>
 		)
-	}
 }
 
 import unsw_img from "./images/unsw-1616471297782.jpeg"
-class Unsw extends Job {
-	render() {
+async function Unsw() {
 		return (
 			<Job
 				id="unsw"
@@ -168,12 +161,10 @@ between business, academic and defence stakeholders.
 			</p>
 			</Job>
 		)
-	}
 }
 
 import microwave_img from "./images/microwave-notebook.jpg"
-class Inventing extends Job {
-	render() {
+async function Inventing() {
 		return (
 			<Job
 				id="inventing"
@@ -206,12 +197,10 @@ the product, while technically sound, was not commercially viable.</li>
 
 			</Job>
 		)
-	}
 }
 
 import m5_img from "./images/m5-SCS400.jpg"
-class M5 extends Job {
-	render() {
+async function M5() {
 		return (
 			<Job
 				id="m5-network-security"
@@ -246,13 +235,11 @@ class M5 extends Job {
 			</ul>
 			</Job>
 		)
-	}
 }
 
 import aad_img from "./images/aad-ia28318.1920x768.jpg";
 
-class AAD extends Job {
-	render() {
+async function AAD() {
 		return (
 			<Job
 				id="aad"
@@ -293,13 +280,11 @@ class AAD extends Job {
 
 			</Job>
 		)
-	}
 }
 
 import ses_img from "./images/ses-truck.webp";
 
-class SES extends Job {
-	render() {
+async function SES() {
 		return (
 			<Job
 				id="ses"
@@ -312,6 +297,7 @@ class SES extends Job {
 					"Ensure operational readiness",
 					"Divisional commander",
 				]}
+				description="Respond to floods, storms, and rescues such as car accidents"
         background={ses_img}
 				background_tint="rgba(255, 210, 190, 0.85)"
 			  font_color="#000"
@@ -328,13 +314,11 @@ class SES extends Job {
 			</p>
 			</Job>
 		)
-	}
 }
 
 import csiro_img from "./images/CSIRO_Logo.svg";
 
-class CSIRO extends Job {
-	render() {
+async function CSIRO() {
 		return (
 			<Job
 				id="csiro"
@@ -347,6 +331,7 @@ class CSIRO extends Job {
 					"Assist teacher with professional development",
 					"Extend skills of advanced students",
 				]}
+				description="Partnering with a teacher to support students"
         background={csiro_img}
 				background_tint="rgba(255, 255, 255, 0.7)"
 			  font_color="#000"
@@ -360,7 +345,6 @@ class CSIRO extends Job {
 
 			</Job>
 		)
-	}
 }
 
 // Call with import * as Job from './Jobs'; Job.CSIRO

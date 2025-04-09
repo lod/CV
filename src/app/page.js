@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import Timeline, {Period,Event} from '@/timeline/timeline';
 import Skill from '@/skill';
@@ -12,9 +10,8 @@ import '@/App.scss';
 // Timeline idea https://codepen.io/rogerkuik/pen/JjyGmdo
 // Blurry image placeholder, conflicts with background image shading https://leanrada.com/notes/css-only-lqip/
 
-class App extends React.Component {
+async function App() {
 
-	render() {
 		return (
 			<div className="App">
 			  <Titleblock>
@@ -34,10 +31,15 @@ class App extends React.Component {
 					</div>
 			  </Titleblock>
 
+			// TODO Do I need some context like the timeline?
+			// TODO: Do I need context for the volunteering?
+
+			{ /*
 				<Timeline startYear={2011} endYear={2022}>
 					<div>
 						<p className="heading">Employment</p>
 						{/* FD start adjusted to look prettier */}
+			{/* 
 			      <Period start='2021-06-21' end='now' href="#capricorn">Capricorn</Period>
 			      <Period start='2021-06-21' end='now' href="#planet">Planet</Period>
 			      <Period start='2020-04-01' end='2021-05-30' href="#fd">FD</Period>
@@ -47,6 +49,7 @@ class App extends React.Component {
 						<Period start='2010-08-14' end='2012-04-01' href="#aad" short="AAD">AAD</Period>
 					</div>
 				</Timeline>
+				*/ }
 
 				<Job.Capricorn/>
 				<Job.Planet/>
@@ -61,6 +64,7 @@ class App extends React.Component {
 
 				<div className="pagebreak vspace"></div>
 
+			{/*
 				<Timeline startYear={2011} endYear={2021}>
 					<div>
 						<p className="heading">Speaking</p>
@@ -79,9 +83,11 @@ class App extends React.Component {
 						<Period start='2015-01-01' end='2019-04-21' href="#csiro">CSIRO SIS</Period>
 						{/* Extended the period to get the element big enough
 						    real dates, start='2012-09-01' end='2013-02-05' */}
+			{ /*
 						<Period start='2012-06-01' end='2013-03-05'>LCA</Period>
 					</div>
 				</Timeline>
+			*/ }
 
 			<h1>Speaking</h1>
 			<div className="row">
@@ -225,9 +231,10 @@ class App extends React.Component {
 
 			</div>
 		);
-	}
 }
 
 export default App;
+
+// export async function getStaticProps() { return {props: {}} }
 
 // vim: ts=2 sw=2
