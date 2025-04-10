@@ -1,21 +1,24 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-export default class Tools extends Component {
-	render() {
-		return (
-			<div className="tools">
+async function Tools({ map }) {
+	return (
+		<div className="tools">
 			<p>Tools used included:</p>
 			<ul className="tools">
-			  { Object.entries(this.props.map).map(([k,v]) => { return (
-				  <li key={k}>{ k }: &nbsp; { v.join(', ') }</li>
-			  ); }) }
+				{Object.entries(map).map(([k, v]) => {
+					return (
+						<li key={k}>
+							{k}: &nbsp; {v.join(", ")}
+						</li>
+					);
+				})}
 			</ul>
-			</div>
-		);
-	}
+		</div>
+	);
 }
 
 Tools.propTypes = {
 	map: PropTypes.object.isRequired,
-}
+};
+
+export default Tools;
