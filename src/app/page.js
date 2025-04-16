@@ -30,12 +30,12 @@ async function App() {
 					</p>
 					<p>
 							Education:
+					</p>
 							<ul>
 								<li>Global Executive Master of Business Administration Duke University 2024</li>
 								<li>Bachelor of Engineering with Honours Australian National University 2004</li>
 								<li>Bachelor of Information Technology Australian National University 2004</li>
 							</ul>
-					</p>
 				</div>
 			</Titleblock>
 

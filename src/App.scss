@@ -33,7 +33,7 @@ body {
   border-bottom: 1px solid white;
   padding: 1rem;
   min-height: 100vh;
-  overflow-y: scroll;
+  overflow-y: auto;
   scroll-snap-align: start;
   position: relative;
 }
@@ -94,11 +94,12 @@ body {
 	}
 }
 
-.App {
-	/* max-width: 1000px; */ /* TODO: Set lower down, want the background to go full width */
-	margin: 0 auto;
-}
 
+/* Constrain width and center for larger screens */
+.titleblock, .job-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
 body {
 	font-family: "Lato", sans-serif;
