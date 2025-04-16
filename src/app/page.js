@@ -20,14 +20,21 @@ async function App() {
 					 *    Soft skills
 					 */}
 					<p>
-						An SRE manager with experience in both software and hardware
-						devolopment. I am looking for engaging work with a skilled team.
+					  An experienced technical lead looking to pivot into management to further
+		        increase the impact I can have.
 					</p>
 					<p>
-						I offer a broad base of demonstrated technical proficiency,
-						leadership, and creativity developed across diverse fields of
-						experience. I have the skills and the insight to add value to
-						projects and teams.
+		        I have a broad base of technical experience as a SRE, software developer,
+		        hardware developer, team leader and project leader.  I provide creative
+		        solutions and deliver complex projects.
+					</p>
+					<p>
+							Education:
+							<ul>
+								<li>Global Executive Master of Business Administration Duke University 2024</li>
+								<li>Bachelor of Engineering with Honours Australian National University 2004</li>
+								<li>Bachelor of Information Technology Australian National University 2004</li>
+							</ul>
 					</p>
 				</div>
 			</Titleblock>
@@ -132,6 +139,8 @@ async function App() {
 			<Job.SES />
 			<Job.CSIRO />
 
+			{ /*
+
 			<div className="pagebreak" />
 
 			<h1>Skills</h1>
@@ -221,6 +230,7 @@ async function App() {
 
 				<Qualification title="Australian Security Clearance - NV1" details="" />
 			</div>
+			*/ }
 		</div>
 	);
 }

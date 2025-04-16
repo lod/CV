@@ -5,7 +5,19 @@
 }
 
 /* Hide bits that are incomplete/unconverted */
-Titleblock, Timeline, .titleblock, .timeline { display: none !important }
+Timeline, .timeline { display: none !important }
+
+.titleblock {
+  .role {
+    display: none;
+  }
+
+  .summary ul {
+    list-style: disc;
+    padding-left: 1em;
+  }
+}
+
 
 
 html {
@@ -83,7 +95,7 @@ body {
 }
 
 .App {
-	max-width: 1000px;
+	/* max-width: 1000px; */ /* TODO: Set lower down, want the background to go full width */
 	margin: 0 auto;
 }
 
