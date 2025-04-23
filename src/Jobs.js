@@ -21,6 +21,10 @@ async function Capricorn() {
 			<p>Key achievements in this role include: Key Achievements so far:</p>
 			<ul>
 				<li>
+				  Rearchitected alerting systems to provide clearer signals and 
+		      reduce cognitive load of those on call.
+				</li>
+				<li>
 					Rearchitected monitoring and control systems to improve operation
 					visibility and significantly reduce ongoing licence costs.
 				</li>
@@ -375,7 +379,7 @@ async function CSIRO() {
 			]}
 			description="Partnering with a teacher to support students"
 			background={csiro_img}
-			background_tint="rgba(255, 255, 255, 0.7)"
+			background_tint="rgba(120, 217, 255, 0.85)"
 			font_color="#000"
 		>
 			<p>
@@ -396,7 +400,41 @@ async function CSIRO() {
 	);
 }
 
+import lca_img from "./images/tasmanian_tux_reference.png";
+
+async function LCA() {
+	return (
+		<Job
+			id="lca"
+			company="linux.conf.au"
+			title="Participant"
+			start="2015-01-01"
+			end="2019-04-21"
+			href="https://www.csiro.au/en/Education/Programs/STEM-Professionals-in-Schools"
+			responsibilities={[
+				"Support and guide year 12 IT students",
+				"Assist teacher with professional development",
+				"Extend skills of advanced students",
+			]}
+			description="Partnering with a teacher to support students"
+			background={lca_img}
+			background_tint="rgba(0, 0, 0, 0.75)"
+			font_color="#FFF"
+		>
+		  <ul>
+		  <li>Volunteered LCA Canberra 2005</li>
+		  <li>Organising committee LCA Canberra 2013</li>
+		  <li>Organising committee LCA Canberra 2021/2022 (cancelled due to COVID)</li>
+		  <li>2016 - Presentation, Linux driven Microwave <a href="https://youtu.be/R3DADx5z-XY">https://youtu.be/R3DADx5z-XY</a></li>
+		  <li>2017 - PyConf Presentation,  Rapid GUI development for IOT systems <a href="https://youtu.be/_LBgIFPct-o">https://youtu.be/_LBgIFPct-o</a></li>
+		  <li>2018 - Lessons from three years of volunteering to teach students code <a href="https://youtu.be/FLD3Ui80M98">https://youtu.be/FLD3Ui80M98</a></li>
+		  <li>2020 - Tutorial, Kicad for software developers <a href="https://youtu.be/0MzvESM0ZFE">https://youtu.be/0MzvESM0ZFE</a></li>
+		  </ul>
+		</Job>
+	);
+}
+
 // Call with import * as Job from './Jobs'; Job.CSIRO
-export { Capricorn, Planet, FD, Unsw, Inventing, M5, AAD, SES, CSIRO };
+export { Capricorn, Planet, FD, Unsw, Inventing, M5, AAD, SES, CSIRO, LCA };
 
 // vim: ts=2 sw=2

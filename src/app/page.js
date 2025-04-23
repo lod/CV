@@ -4,14 +4,30 @@ import Speaking from "@/speaking";
 import Qualification from "@/qualification";
 import Titleblock from "@/titleblock";
 import * as Job from "@/Jobs";
+import ExportedImage from "next-image-export-optimizer";
 import "@/App.scss";
 
 // Timeline idea https://codepen.io/rogerkuik/pen/JjyGmdo
 // Blurry image placeholder, conflicts with background image shading https://leanrada.com/notes/css-only-lqip/
 
+import selfie_img from "../images/PXL_20230519_081103465.jpg";
+
 async function App() {
 	return (
 		<div className="App">
+		<div>
+				<div className="bgWrap">
+                <ExportedImage
+                    alt="Terrible selfie"
+                    src={selfie_img}
+                    placeholder={selfie_img.src.endsWith(".svg") ? "empty" : "blur"}
+                    fill
+                    sizes="100vw"
+                    style={{
+                        objectFit: "cover",
+                    }}
+                />
+            </div>
 			<Titleblock>
 				<div className="summary">
 					{/* Goal:
@@ -38,6 +54,7 @@ async function App() {
 							</ul>
 				</div>
 			</Titleblock>
+		</div>
 
 			{/* TODO Do I need some context like the timeline? */}
 			{/* TODO: Do I need context for the volunteering? */}
@@ -138,6 +155,7 @@ async function App() {
 
 			<Job.SES />
 			<Job.CSIRO />
+			<Job.LCA />
 
 			{ /*
 

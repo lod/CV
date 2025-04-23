@@ -33,7 +33,6 @@ async function Job({
 					alt="Background image related to job"
 					src={background}
 					placeholder={background.src.endsWith(".svg") ? "empty" : "blur"}
-					quality={100}
 					fill
 					sizes="100vw"
 					style={{
