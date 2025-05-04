@@ -117,8 +117,6 @@ async function App() {
 			*/}
 
 
-			<h1 style={{display: "none"}}>Volunteering</h1> <!-- for structure -->
-
 			<Job.SES />
 			<Job.CSIRO />
 			<Job.LCA />
