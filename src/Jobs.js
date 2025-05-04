@@ -18,7 +18,7 @@ async function Capricorn() {
 			font_color="#FFF"
 		>
 			<p>Engaged specifically to drive critical technical change.</p>
-			<p>Key achievements in this role include: Key Achievements so far:</p>
+			<p>Key Achievements so far:</p>
 			<ul>
 				<li>
 				  Rearchitected alerting systems to provide clearer signals and 
@@ -59,7 +59,7 @@ async function Planet() {
 		>
 			<p>
 				Led a rebuild of Planet&apos;s global ground station server systems, and
-				worked on a range of other shoter term projects.
+				worked on a range of other shorter term projects.
 			</p>
 			<ul>
 				<li>

@@ -116,42 +116,8 @@ async function App() {
 				</Timeline>
 			*/}
 
-			<h1>Speaking</h1>
-			<div className="row">
-				<Speaking
-					id="lca2020"
-					company="linux.conf.au"
-					date="2020-01-15"
-					title="Kicad for software developers (tutorial)"
-					href="https://youtu.be/0MzvESM0ZFE"
-				/>
 
-				<Speaking
-					id="lca2018"
-					company="linux.conf.au"
-					date="2018-01-24"
-					title="Lessons from three years of volunteering to teach students code"
-					href="https://youtu.be/FLD3Ui80M98"
-				/>
-
-				<Speaking
-					id="pycon2017"
-					company="PyCon AU"
-					date="2017-08-04"
-					title="Rapid GUI development for IOT systems"
-					href="https://youtu.be/_LBgIFPct-o"
-				/>
-
-				<Speaking
-					id="lca2016"
-					company="linux.conf.au"
-					date="2016-02-03"
-					title="Linux driven microwave"
-					href="https://youtu.be/R3DADx5z-XY"
-				/>
-			</div>
-
-			<h1>Volunteering</h1>
+			<h1 style={{display: "none"}}>Volunteering</h1> <!-- for structure -->
 
 			<Job.SES />
 			<Job.CSIRO />
