@@ -1,11 +1,10 @@
 import PropTypes from "prop-types";
 
 async function Titleblock({ variant, children }) {
-	const cv_url = `https://david.tulloh.id.au/cv/${variant ? `${variant}/` : ""}`;
+	const cv_url = `https://cv.david.tulloh.id.au/${variant ? `${variant}/` : ""}`;
 	const cv_pdf = `david_tulloh${variant ? `_${variant}` : ""}.pdf`;
 	return (
 		<div className="titleblock">
-			<div className="row">
 				<div>
 					<div className="name">David Tulloh</div>
 					<div className="role">Manager, Developer, Engineer</div>
@@ -33,14 +32,18 @@ async function Titleblock({ variant, children }) {
 							<a href={cv_url}>{cv_url}</a>
 						</dd>
 					</div>
+		{ /* TODO: Need to generate and upload
 					<div className="screenonly">
-						{/* TODO: Need to build the pdf in the build process
-              <dt>printable cv</dt><dd><a href={"https://david.tulloh.id.au/cv/" + cv_pdf}>{ cv_pdf }</a></dd>
-		*/}
+						<dt>download cv</dt>
+						<dd>
+							<a href={cv_url}>{cv_url}{cv_pdf}</a>
+						</dd>
 					</div>
+					*/ }
 				</dl>
+			<div>
+				{children}
 			</div>
-			{children}
 		</div>
 	);
 }

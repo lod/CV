@@ -7,7 +7,11 @@
 
 body {
 	line-height: 1.5;
+  @media print {
+	line-height: 1.0;
+  }
 }
+
 
 /* Hide bits that are incomplete/unconverted */
 Timeline, .timeline { display: none !important }
@@ -40,11 +44,13 @@ body {
 }
 @mixin snap-group {
   border-bottom: 1px solid white;
-  padding: 1rem;
-  min-height: 100vh;
   overflow-y: auto;
-  scroll-snap-align: start;
   position: relative;
+  @media not print {
+    padding: 1rem;
+    min-height: 100vh;
+    scroll-snap-align: start;
+  }
 }
 .job-content, .titleblock, .timeline {
   @include snap-group
@@ -95,18 +101,32 @@ body {
 @media print {
 	body {
 		color: #000; /* When printing, actually go black */
+        /*
 		margin-left:  3cm;
 		margin-right: 3cm;
+        */
 		font-size: 14px;
 		/* body { transform: scale(0.8) } /* Sneaking way to gain margins */
 		/* font-size: 0.7em; */
 	}
+    .job-content {
+      height: auto;
+      // Colors are set per-element, override them
+      color: #000 !important;
+      background-color: #FFF !important;
+    }
+    .bgWrap {  /* background image */
+      display: none;
+    }
 }
 
 
 /* Constrain width and center for larger screens */
 .titleblock, .job-content {
   max-width: 1000px;
+  @media print {
+    max-width: 200mm; /* a4 width is 210mm */
+  }
   margin: 0 auto;
 }
 
@@ -149,8 +169,6 @@ h2 {
 		flex-direction: column;
 	}
 
-
-
 	@media screen and (max-width: 767px) {
 		flex-direction: column;
 	}
@@ -160,6 +178,10 @@ h2 {
 		font-size: 48px;
 		letter-spacing: 0.05em;
 		margin-bottom: 1rem;
+        @media print {
+          margin-top: 0.5rem;
+          margin-bottom: 0rem; /* picks up some margin from the description contents */
+        }
 	}
 	.role {
 		font-family: variables.$font-heading;
@@ -181,6 +203,9 @@ h2 {
 		margin-right: 30px;
 		@media print {
 			margin-right: 0;
+            position: absolute;
+            right: 0;
+            margin-top: 1em;
 		}
 	}
 
@@ -197,6 +222,14 @@ h2 {
 		margin: 0 0 0 110px;
 		padding: 0 0 0.5em 0;
 	}
+}
+
+h1.printonly {
+    /* Stands alone */
+    margin: 0 auto;
+    max-width: 200mm;
+    margin-bottom: 1rem;
+    font-size: 130%;
 }
 
 .printonly {

@@ -10,7 +10,8 @@ job {
         width: 100%;
 		margin-bottom: 3rem;
 		@media print {
-			margin-bottom: 1.5rem;
+			margin-bottom: 1rem;
+            height: auto;
 		}
 	}
 
@@ -29,8 +30,8 @@ job {
 		}
 
 		@media print {
-			max-width: 70mm;
-			padding-right: 8mm;
+			max-width: 50mm;
+			/* padding-right: 8mm; */
 			margin-left: 0; /* Tighter horizontal space, line up left edge */
 		}
 
@@ -43,7 +44,9 @@ job {
 			margin: 0;
 			/* margin-top: 2.5em; */
 			@media print {
+              /*
 				margin-top: 1em;
+              */
 			}
 		}
 
@@ -58,6 +61,10 @@ job {
 
 		.description {
 			padding-right: 50px;
+			@media print {
+              border-left: 5px solid green;
+              padding-left: 10px;
+            }
 		}
 
 		.responsibilities {
@@ -88,7 +95,9 @@ job {
 			margin-bottom: 1.2em;
 			max-width: 600px;
 			@media print {
-				max-width: 700px;
+              margin: 0;
+              max-width: auto;
+              margin-bottom: 0.2em;
 			}
 			&:last-child {
 				margin-bottom: 0; /* Flex won't collapse margins */
@@ -99,11 +108,21 @@ job {
 		ul {
 			list-style: outside;
 			margin-top: -0.7em; /* Get closer: 1.5-0.8em */
+			@media print {
+              margin-top: 0em;  /* Shrunk the main value */
+			}
 			li {
 				margin-bottom: 0.5em; /* Override * 1.5em */
 				margin-left: 1em; /* Line bullets up with adjacent <p> */
 			}
 		}
+
+        a {
+          @media print {
+            /* Links are weird youtube short urls, look weird if you can't click em */
+            display: none;
+          }
+        }
 
 		.tools {
 			ul {

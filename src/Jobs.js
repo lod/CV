@@ -2,13 +2,15 @@ import Job from "./job/job";
 
 import capricorn_img from "./images/capricorn-drone-green1-crop.jpg";
 
+const present = new Date().toISOString().substring(0, 10);  // year-month-day
+
 async function Capricorn() {
 	return (
 		<Job
 			id="capricorn"
-			company="Capricorn"
+			company="Capricorn Space"
 			start="2024-08-01"
-			end="present"
+			end="2025-02-01"
 			title="Systems Reliability Engineer"
 			responsibilities={[]}
 			href="https://www.capricornspace.com.au/"
@@ -18,7 +20,7 @@ async function Capricorn() {
 			font_color="#FFF"
 		>
 			<p>Engaged specifically to drive critical technical change.</p>
-			<p>Key Achievements so far:</p>
+			<p>Key Achievements:</p>
 			<ul>
 				<li>
 				  Rearchitected alerting systems to provide clearer signals and 
@@ -409,7 +411,7 @@ async function LCA() {
 			company="linux.conf.au"
 			title="Participant"
 			start="2015-01-01"
-			end="2019-04-21"
+			end={present}
 			href="https://www.csiro.au/en/Education/Programs/STEM-Professionals-in-Schools"
 			responsibilities={[
 				"Support and guide year 12 IT students",
@@ -424,17 +426,46 @@ async function LCA() {
 		  <ul>
 		  <li>Volunteered LCA Canberra 2005</li>
 		  <li>Organising committee LCA Canberra 2013</li>
-		  <li>Organising committee LCA Canberra 2021/2022 (cancelled due to COVID)</li>
+		  <li>Organising committee LCA Canberra 2021 & 2022 (cancelled due to COVID)</li>
 		  <li>2016 - Presentation, Linux driven Microwave <a href="https://youtu.be/R3DADx5z-XY">https://youtu.be/R3DADx5z-XY</a></li>
 		  <li>2017 - PyConf Presentation,  Rapid GUI development for IOT systems <a href="https://youtu.be/_LBgIFPct-o">https://youtu.be/_LBgIFPct-o</a></li>
 		  <li>2018 - Lessons from three years of volunteering to teach students code <a href="https://youtu.be/FLD3Ui80M98">https://youtu.be/FLD3Ui80M98</a></li>
 		  <li>2020 - Tutorial, Kicad for software developers <a href="https://youtu.be/0MzvESM0ZFE">https://youtu.be/0MzvESM0ZFE</a></li>
+		  <li>Organising committee Everything Open Canberra 2026</li>
 		  </ul>
 		</Job>
 	);
 }
 
+import tadact_img from "./images/tadact_woman.jpg";
+
+async function TADACT() {
+	return (
+		<Job
+			id="tadact"
+			company="TADACT"
+			title="Board Secretary"
+			start="2014-03-03"
+			end={present}
+			href="https://tadact.org.au/"
+			responsibilities={[
+				"Support and guide year 12 IT students",
+				"Assist teacher with professional development",
+				"Extend skills of advanced students",
+			]}
+			description="Technology for Aging and Disability, ACT"
+			background={tadact_img}
+			background_tint="rgba(0, 0, 0, 0.75)"
+			font_color="#FFF"
+		>
+		  <p>Volunteer and Board Secretary.</p>
+		  <p>As a volunteer I have been developing marketing plans to reinvigorate TADACT.</p>
+		  <p>My original involvement with TADACT started as a volunteer in 2014, ceasing when I moved to Geelong and only recently being reinvigorated in 2025.</p>
+		</Job>
+	);
+}
+
 // Call with import * as Job from './Jobs'; Job.CSIRO
-export { Capricorn, Planet, FD, Unsw, Inventing, M5, AAD, SES, CSIRO, LCA };
+export { Capricorn, Planet, FD, Unsw, Inventing, M5, AAD, SES, CSIRO, LCA, TADACT };
 
 // vim: ts=2 sw=2

@@ -45,13 +45,16 @@ async function App() {
 		        solutions and deliver complex projects.
 					</p>
 					<p>
-							Education:
+							<b>Education</b>:
 					</p>
 							<ul>
 								<li>Global Executive Master of Business Administration Duke University 2024</li>
 								<li>Bachelor of Engineering with Honours Australian National University 2004</li>
 								<li>Bachelor of Information Technology Australian National University 2004</li>
 							</ul>
+					<p>
+						<b>Clearance</b>: NV2
+					</p>
 				</div>
 			</Titleblock>
 		</div>
@@ -90,6 +93,8 @@ async function App() {
 
 			<div className="pagebreak vspace" />
 
+		  <h1 className="printonly">Volunteering</h1>
+
 			{/*
 				<Timeline startYear={2011} endYear={2021}>
 					<div>
@@ -117,9 +122,10 @@ async function App() {
 			*/}
 
 
+			<Job.TADACT />
+			<Job.LCA />
 			<Job.SES />
 			<Job.CSIRO />
-			<Job.LCA />
 
 			{ /*
 
