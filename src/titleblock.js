@@ -32,14 +32,12 @@ async function Titleblock({ variant, children }) {
 							<a href={cv_url}>{cv_url}</a>
 						</dd>
 					</div>
-		{ /* TODO: Need to generate and upload
 					<div className="screenonly">
 						<dt>download cv</dt>
 						<dd>
-							<a href={cv_url}>{cv_url}{cv_pdf}</a>
+							<a href={cv_url+cv_pdf}>{cv_url}{cv_pdf}</a>
 						</dd>
 					</div>
-					*/ }
 				</dl>
 			<div>
 				{children}
