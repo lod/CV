@@ -110,10 +110,6 @@ async function Home() {
 							end="2018"
 						/>
 
-						<Qualification
-							title="Australian Security Clearance - NV1"
-							details=""
-						/>
 					</div>
 				</div>
 			</div>

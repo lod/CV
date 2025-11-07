@@ -52,9 +52,6 @@ async function App() {
 								<li>Bachelor of Engineering with Honours Australian National University 2004</li>
 								<li>Bachelor of Information Technology Australian National University 2004</li>
 							</ul>
-					<p>
-						<b>Clearance</b>: NV2
-					</p>
 				</div>
 			</Titleblock>
 		</div>
