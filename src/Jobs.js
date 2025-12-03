@@ -314,6 +314,30 @@ async function AAD() {
 	);
 }
 
+import modem_img from "./images/modem.jpg";
+
+async function PriorAAD() {
+	return (
+		<Job
+			id="old"
+			company="Older Jobs"
+			start="1999-10-01"
+			end="2010-08-01"
+			background={modem_img}
+			background_tint="rgba(0, 0, 0, 0.70)"
+			font_color="#FFF"
+		>
+			<p><ul>
+				<li>2009-2010 &mdash; Airservices Australia &mdash; Safety data analysis</li>
+				<li>2006-2009 &mdash; Signav &mdash; Firmware and Manufacturing</li>
+				<li>2005-2006 &mdash; Center for Mental Health Research, ANU &mdash; Web developer</li>
+				<li>2004-2004 &mdash; Burgmann College &mdash; Technical support</li>
+				<li>1999-2000 &mdash; TekNet/ACTweb dialup ISP &mdash; Business client support</li>
+			</ul></p>
+		</Job>
+	);
+}
+
 import ses_img from "./images/ses-truck.webp";
 
 async function SES() {
@@ -408,17 +432,17 @@ async function LCA() {
 	return (
 		<Job
 			id="lca"
-			company="linux.conf.au"
+			company="Conferences"
 			title="Participant"
 			start="2015-01-01"
 			end={present}
-			href="https://www.csiro.au/en/Education/Programs/STEM-Professionals-in-Schools"
+			href="https://linux.conf.au/"
 			responsibilities={[
 				"Support and guide year 12 IT students",
 				"Assist teacher with professional development",
 				"Extend skills of advanced students",
 			]}
-			description="Partnering with a teacher to support students"
+			description="Technology conference with a focus on linux and other open source technology"
 			background={lca_img}
 			background_tint="rgba(0, 0, 0, 0.75)"
 			font_color="#FFF"
@@ -431,7 +455,6 @@ async function LCA() {
 		  <li>2017 - PyConf Presentation,  Rapid GUI development for IOT systems <a href="https://youtu.be/_LBgIFPct-o">https://youtu.be/_LBgIFPct-o</a></li>
 		  <li>2018 - Lessons from three years of volunteering to teach students code <a href="https://youtu.be/FLD3Ui80M98">https://youtu.be/FLD3Ui80M98</a></li>
 		  <li>2020 - Tutorial, Kicad for software developers <a href="https://youtu.be/0MzvESM0ZFE">https://youtu.be/0MzvESM0ZFE</a></li>
-		  <li>Organising committee Everything Open Canberra 2026</li>
 		  </ul>
 		</Job>
 	);
@@ -449,9 +472,6 @@ async function TADACT() {
 			end={present}
 			href="https://tadact.org.au/"
 			responsibilities={[
-				"Support and guide year 12 IT students",
-				"Assist teacher with professional development",
-				"Extend skills of advanced students",
 			]}
 			description="Technology for Aging and Disability, ACT"
 			background={tadact_img}
@@ -466,6 +486,6 @@ async function TADACT() {
 }
 
 // Call with import * as Job from './Jobs'; Job.CSIRO
-export { Capricorn, Planet, FD, Unsw, Inventing, M5, AAD, SES, CSIRO, LCA, TADACT };
+export { Capricorn, Planet, FD, Unsw, Inventing, M5, AAD, PriorAAD, SES, CSIRO, LCA, TADACT };
 
 // vim: ts=2 sw=2

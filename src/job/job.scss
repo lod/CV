@@ -1,17 +1,18 @@
 job {
-  position: relative;
+	position: relative;
 }
 
 .job-content {
-    & {
+	& {
 		display: flex;
 		flex-direction: row;
-        height: 100vh;
-        width: 100%;
+		height: 100vh;
+		width: 100%;
 		margin-bottom: 3rem;
 		@media print {
 			margin-bottom: 1rem;
-            height: auto;
+			height: auto;
+			overflow-y : hidden;
 		}
 	}
 
@@ -42,12 +43,6 @@ job {
 		.company {
 			font-weight: 800;
 			margin: 0;
-			/* margin-top: 2.5em; */
-			@media print {
-              /*
-				margin-top: 1em;
-              */
-			}
 		}
 
 		.title {
@@ -55,16 +50,15 @@ job {
 			margin: 0;
 		}
 
-		.period {
-			/* display: none; */
-		}
-
 		.description {
 			padding-right: 50px;
 			@media print {
-              border-left: 5px solid green;
-              padding-left: 10px;
-            }
+				border-left: 5px solid green;
+				padding-left: 10px;
+				&:empty {
+					border-left: 0;
+				}
+			}
 		}
 
 		.responsibilities {
@@ -95,9 +89,9 @@ job {
 			margin-bottom: 1.2em;
 			max-width: 600px;
 			@media print {
-              margin: 0;
-              max-width: auto;
-              margin-bottom: 0.2em;
+				margin: 0;
+				max-width: auto;
+				margin-bottom: 0.2em;
 			}
 			&:last-child {
 				margin-bottom: 0; /* Flex won't collapse margins */
@@ -109,7 +103,7 @@ job {
 			list-style: outside;
 			margin-top: -0.7em; /* Get closer: 1.5-0.8em */
 			@media print {
-              margin-top: 0em;  /* Shrunk the main value */
+				margin-top: 0em;  /* Shrunk the main value */
 			}
 			li {
 				margin-bottom: 0.5em; /* Override * 1.5em */
@@ -117,12 +111,12 @@ job {
 			}
 		}
 
-        a {
-          @media print {
-            /* Links are weird youtube short urls, look weird if you can't click em */
-            display: none;
-          }
-        }
+		a {
+			@media print {
+				/* Links are weird youtube short urls, look weird if you can't click em */
+				display: none;
+			}
+		}
 
 		.tools {
 			ul {
@@ -136,11 +130,11 @@ job {
 }
 
 .bgWrap {
-  /* position: fixed; */
-  position: absolute;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  z-index: -1;
-  object-fit: cover;
+	/* position: fixed; */
+	position: absolute;
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+	z-index: -1;
+	object-fit: cover;
 }

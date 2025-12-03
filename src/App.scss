@@ -247,6 +247,7 @@ h1.printonly {
 .pagebreak {
 	@media print {
 		page-break-before: always;
+        margin-top: 15mm;  /* @page margin doesn't seem to work */
 	}
 	@media not print {
 	}

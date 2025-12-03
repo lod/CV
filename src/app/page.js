@@ -87,6 +87,7 @@ async function App() {
 			<Job.Inventing />
 			<Job.M5 />
 			<Job.AAD />
+			<Job.PriorAAD />
 
 			<div className="pagebreak vspace" />
 
